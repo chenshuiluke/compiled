@@ -6,10 +6,10 @@
 // Font
 
 @font-face {
-  font-family: "HKGroteskPro";
+  font-family: "RedHatText";
   font-weight: 400;
-  src: url("#{$path-to-fonts}/HK%20Grotesk%20Pro/HKGroteskPro-Regular.woff2") format("woff2"),
-  url("#{$path-to-fonts}/HK%20Grotesk%20Pro/HKGroteskPro-Regular.woff") format("woff");
+  src: url("#{$path-to-fonts}/Red%20Hat%20Text/RedHatText-Regular.ttf") format("ttf"),
+  url("#{$path-to-fonts}/Red%20Hat%20Text/RedHatText-Regular.ttf") format("tff");
 }
 
 @font-face {

@@ -15,7 +15,6 @@ const paths = {
     img: './src/img',
     js: './src/js',
     scss: './src/scss',
-    video: './src/video',
   },
   dist: {
     css: './assets/css',
@@ -23,7 +22,6 @@ const paths = {
     fonts: './assets/fonts',
     img: './assets/img',
     js: './assets/js',
-    video: './assets/video',
   },
 };
 
@@ -103,10 +101,6 @@ module.exports = {
         {
           from: paths.src.img,
           to: paths.dist.img,
-        },
-        {
-          from: paths.src.video,
-          to: paths.dist.video,
         },
       ],
     }),
