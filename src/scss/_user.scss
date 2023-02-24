@@ -168,8 +168,8 @@ ul.paragraph.large{
 
 @media screen and (max-width: 991px) {
   .tab-nav-wrap{
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:10px;
+    padding-right:10px;
   }
 
   .tab-subheading {
@@ -215,14 +215,74 @@ ul.paragraph.large{
   padding-right: 20px;
  }
 
- .paragraph.large.bold-mobile {
+ #paragraph-mobile.paragraph.large.bold-mobile {
   font-weight: 400;
+  width: 323px;
+  font-size: 16px;
+}
+
+.reseller-paragraph{
+  text-align: center;
+  margin-bottom: 70px !important;
 }
 
 .hero-text{
   padding-left: 20px;
   padding-right: 20px;
 }
+
+.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+  width: 160px;
+  margin-right: 0;
+  font-weight: bold;
+  padding: 10px 10px;
+}
+
+.nav-fill > .nav-link, .nav-fill .nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.nav-link {
+  font: normal normal normal 15px/32px Red Hat Text;
+  letter-spacing: -0.96px;
+  color: #002856;
+}
+
+.nav-link.active {
+  text-align: center;
+  /* font: normal normal bold 23px/28px RedHatText-Bold; */
+  letter-spacing: -0.92px;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 28px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+#heading-h3.heading.h3{
+  white-space: initial;
+  text-align: center;
+}
+
+.form-headings{
+  white-space: initial !important;
+}
+
+#bronze-tier h2, 
+#silver-tier h2, 
+#gold-tier h2, 
+#diamond-tier h2{
+  text-align: center;
+}
+
+.img-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 }
 
 /* Generated on: Thu Feb 16 2023 22:00:14 GMT+0000 (Coordinated Universal Time) */
