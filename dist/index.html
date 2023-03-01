@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="./assets/favicon/di-favicon.png" type="image/x-icon" />
     
     <!-- Map CSS -->
     <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
@@ -21,825 +21,877 @@
   </head>
   <body>
 
-     <!-- NAVBAR -->
-     {{> partials/navbar classList="navbar-light bg-white" container="container" button="primary"}}
+       <!-- NAVBAR -->
+       <nav class="navbar navbar-expand-lg navbar-light bg-white">
+         <div class="navbar7_container">
+       
+           <!-- Brand -->
+           <a class="navbar7_logo-link w-nav-brand w--current" href="./index.html">
+             <img src="./assets/img/DI-logo-header.svg" class="navbar7_logo" alt="...">
+           </a>
+       
+           <!-- Toggler -->
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+       
+           <!-- Collapse -->
+           <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+             <!-- Toggler -->
+             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+               <i class="fe fe-x"></i>
+             </button>
+             
+           </div>
+       
+         </div>
+       </nav>
 
 
-    <!-- WELCOME -->
-    <section class="pt-4 pt-md-11">
-      <div class="navbar7_container">
-        <div class="row align-items-center">
-          <div class="col-12 col-md-7 col-lg-6" data-aos="fade-up">
-
-            <!-- Heading -->
-            <h1 class="heading h1">
-              Dental Intelligence Reseller Partner Program
-            </h1>
-
-            <!-- Text -->
-            <p class="paragraph large bold-mobile hero-text">
-              We pride ourselves on helping intelligently shape the future of dentistry, and we couldn’t do that without our valued partner relationships. Together, we can better the lives of dentists, team members, and patients. Visit our Reseller Program tab to learn more. We appreciate your partnership.            
-            </p>
-
-          </div>
-
-          <div class="col-12 col-md-5 col-lg-6">
-
-            <!-- Image -->
-            <img src="assets/img/illustrations/di_reseller_badges_header.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
-    </section>
-
-    <!-- FEATURES -->
-    <section class="py-8 py-md-11 border-bottom">
-      <div class="navbar7_container">
-        <div class="col-12 col-md-12" data-aos="fade-up">
-
-          <!-- Card -->
-          <div class="card">
-            <div class=" card-bottom ">
-                <!-- Tabs -->
-                <ul class="nav nav-pills nav-fill tab-nav-wrap" id="myTab" role="tablist">
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reseller Program</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
-                  </li>
-                  <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
-                  </li>
-                </ul>
-            </div>
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <div class="col-12 col-md-12">
-
-                  <!-- Card -->
-                  <div id="reseller-program" class="">
-                    <div class="tab-heading-wrap">
-        
-                      <!-- Heading -->
-                      <h2 class="heading h2 text-center">
-                        Reseller Program
-                      </h2>
-        
-                      <p class="paragraph large bold-mobile text-center tab-subheading mx-auto">
-                        The Dental Intelligence Reseller Program provides opportunities to partner with a trusted company in the dental space to propel your brand and monetary growth goals. We offer four different packages for our Reseller Partners with varying levels of involvement. 
-                      </p>
-        
-                    </div>
-                    <div id="bronze-tier" class="card-body">
-        
-                      <h2 class="heading h2">
-                        Bronze Tier
-                      </h2>
-                      
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up">
-                
-                            <!-- Image -->
-                            <img src="assets/img/illustrations/bronze.png" class="img-fluid mw-md-130 mw-lg-10 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-        
-                
-                          </div>
-                          <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
-                
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              1 year
-                            </h3>
-                
-                            <!-- Text -->
-                            <p class="paragraph large bold-mobile">
-                              Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies looking to understand Dental Intelligence and how to sell and activate new clients.                    
-                            </p>
-                
-                          </div>
-                          <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
-              
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                                <ul class="paragraph large bold-mobile">
-                                <li>Swag Box</li>
-                                <li>Quarterly Live Webinar Training</li>
-                                <li>Online Help Center</li>
-                                <li>In-app product training</li>
-                                <li>On-demand learning courses</li>
-                                <li>Annual Growth Reports</li>
-                                <li>Premium Support (chat, email, phone)</li>
-                                <li>Online help center and community access</li>
-                                <li>Early Access Monthly Newsletter </li>
-                                <li>Snapshots for your clients</li>
-                              </ul>
-                             
-                          </div>
-                        </div> <!-- / .row -->
-                      </div>
-        
-        
-                    </div>
-                    <div id="silver-tier" class="card-body">
-        
-                      <h2 class="heading h2">
-                        Silver Tier
-                      </h2>
-                      
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up">
-                
-                            <!-- Image -->
-                            <img src="assets/img/illustrations/silver.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-        
-                
-                          </div>
-                          <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
-                
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              1 year
-                            </h3>
-                
-                            <!-- Text -->
-                            <p class="paragraph large bold-mobile">
-                              Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules and are looking to expand services and reach the new tier minimums in order to receive discounted pricing and gain additional perks.                    
-                            </p>
-                
-                          </div>
-                          <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
-              
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                                <ul class="paragraph large bold-mobile">
-                                <li>Swag Box</li>
-                                <li>Quarterly Live Webinar Training</li>
-                                <li>Online Help Center</li>
-                                <li>In-app product training</li>
-                                <li>On-demand learning courses</li>
-                                <li>Annual Growth Reports</li>
-                                <li>Premium Support (chat, email, phone)</li>
-                                <li>Online help center and community access</li>
-                                <li>Early Access Monthly Newsletter </li>
-                                <li>Snapshots for your clients</li>
-                                <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
-                                <li>Quarterly business review</li> 
-                                <li>Premium Mastery Summit pricing</li>
-                                <li>Invitation to the Partner Product Focus Group</li>
-                                <li>Access to a Partner Success Manager (pooled)</li>
-                              </ul>
-                             
-                          </div>
-                        </div> <!-- / .row -->
-                      </div>
-                    </div>
-                    <div id="gold-tier" class="card-body">
-        
-                      <h2 class="heading h2">
-                        Gold Tier
-                      </h2>
-                      
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up">
-                
-                            <!-- Image -->
-                            <img src="assets/img/illustrations/gold.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-        
-                
-                          </div>
-                          <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
-                
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              1 year
-                            </h3>
-                
-                            <!-- Text -->
-                            <p class="paragraph large bold-mobile">
-                              Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet gold tier discounts and gain additional perks.                    
-                            </p>
-                
-                          </div>
-                          <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
-              
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                            <ul class="paragraph large bold-mobile">
-                              <li>Swag Box</li>
-                              <li>Quarterly Live Webinar Training</li>
-                              <li>Online Help Center</li>
-                              <li>In-app product training</li>
-                              <li>On-demand learning courses</li>
-                              <li>Annual Growth Reports</li>
-                              <li>Premium Support (chat, email, phone)</li>
-                              <li>Online help center and community access</li>
-                              <li>Early Access Monthly Newsletter </li>
-                              <li>Snapshots for your clients</li>
-                              <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
-                              <li>Quarterly business review</li> 
-                              <li>Premium Mastery Summit pricing</li>
-                              <li>Invitation to the Partner Product Focus Group</li>
-                              <li>Access to a Named Partner Success Manager</li>
-                              <li>Featured on Dental Intelligence’s website as a “Certified Partner”</li> 
-                              <li>Co-host of Dental Intelligence Sponsored CE Webinar</li>
-                              <li>Special Mastery Summit breakout session</li>
-                            </ul>
-                             
-                          </div>
-                        </div> <!-- / .row -->
-                      </div>
-                    </div>
-                    <div id="diamond-tier" class="card-body">
-        
-                      <h2 class="heading h2">
-                        Diamond Tier
-                      </h2>
-                      
-                      <div class="container">
-                        <div class="row">
-                          <div class="col-12 col-md-3 aos-init aos-animate" data-aos="fade-up">
-                
-                            <!-- Image -->
-                            <img src="assets/img/illustrations/diamond.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-        
-                
-                          </div>
-                          <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
-                
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              1 year
-                            </h3>
-                
-                            <!-- Text -->
-                            <p class="paragraph large bold-mobile">
-                              Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br>Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet diamond-tier discounts and gain additional perks.                     
-                            </p>
-                
-                          </div>
-                          <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
-              
-                            <!-- Heading -->
-                            <h3 class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                            <ul class="paragraph large bold-mobile">
-                              <li>Swag Box</li>
-                              <li>Quarterly Live Webinar Training</li>
-                              <li>Online Help Center</li>
-                              <li>In-app product training</li>
-                              <li>On-demand learning courses</li>
-                              <li>Annual Growth Reports</li>
-                              <li>Premium Support (chat, email, phone)</li>
-                              <li>Online help center and community access</li>
-                              <li>Early Access Monthly Newsletter </li>
-                              <li>Snapshots for your clients</li>
-                              <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
-                              <li>Quarterly business review</li> 
-                              <li>Premium Mastery Summit pricing</li>
-                              <li>Invitation to the Partner Product Focus Group</li>
-                              <li>Access to a Named Partner Success Manager</li>
-                              <li>Featured on Dental Intelligence’s website as a “Certified Partner”</li>
-                              <li>Co-host of Dental Intelligence Sponsored CE Webinar</li>
-                              <li>Special Mastery Summit breakout session</li>
-                            </ul>
-                             
-                          </div>
-                        </div> <!-- / .row -->
-                      </div>
-                    </div>
-                  </div>
-        
-                </div>
-              </div>
-              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                <div id="license-activation" class="">
-                  <div class="tab-heading-wrap">
-      
-                    <!-- Heading -->
-                    <h2 class="heading h2 text-center">
-                      License Activation
-                    </h2>
-      
-                  </div>
-                  <div class="card-body">
-      
-                   <!-- Form -->
-                    <form>
-                      <div class="row">
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Partner Information
-                          </h3>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                             <input class="form-control" id="partner-id" type="text" placeholder="Partner ID">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                              <input class="form-control" id="partner-email" type="email" placeholder="Partner Email">
-                            </div>
-        
-                          </div>
-                        </div>
-      
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Practice Contact Information
-                          </h3>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                              <input class="form-control" id="pactice-name" type="text" placeholder="Practice Name">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-account-no" type="text" placeholder="Practice Account Number">
-                            </div>
-        
-                          </div>
-                        </div>
-
-                        <div class="row justify-content-start justify-content-lg-end">
-                          <div class="col-auto">
-                            <!-- Button -->
-                            <button type="submit" class="btn btn-primary lift form-btn">
-                              Submit
-                            </button>
-                          </div>
-                        </div>
-      
-                      </div>
-                    </form> 
-      
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                <div id="license-cancellation" class="">
-                  <div class="tab-heading-wrap">
-      
-                    <!-- Heading -->
-                    <h2 class="heading h2 text-center">
-                      License Cancellation
-                    </h2>
-      
-                  </div>
-                  <div class="card-body">
-      
-                   <!-- Form -->
-                    <form>
-                      <div class="row">
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Partner Information
-                          </h3>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                             <input class="form-control" id="partner-id" type="text" placeholder="Partner ID">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                              <input class="form-control" id="partner-email" type="email" placeholder="Partner Email">
-                            </div>
-        
-                          </div>
-                        </div>
-      
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Practice Contact Information
-                          </h3>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                              <input class="form-control" id="pactice-name" type="text" placeholder="Practice Name">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-account-no" type="text" placeholder="Practice Account Number">
-                            </div>
-        
-                          </div>
-                        </div>
-
-                        <div class="row justify-content-start justify-content-lg-end">
-                          <div class="col-auto">
-                            <!-- Button -->
-                            <button type="submit" class="btn btn-primary lift form-btn">
-                              Submit
-                            </button>
-                          </div>
-                        </div>
-      
-                      </div>
-                    </form> 
-      
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="snapshot-tab-pane" role="tabpanel" aria-labelledby="snapshot-tab" tabindex="0">
-                <div id="snapshot" class="">
-                  <div class="tab-heading-wrap">
-      
-                    <!-- Heading -->
-                    <h2 class="heading h2 text-center">
-                      Practice Snapshot Request
-                    </h2>
-      
-                  </div>
-                  <div class="card-body">
-      
-                   <!-- Form -->
-                    <form>
-                      <div class="row">
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Partner Information
-                          </h3>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                             <input class="form-control" id="partner-id" type="text" placeholder="Partner ID">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                              <input class="form-control" id="partner-email" type="email" placeholder="Partner Email">
-                            </div>
-        
-                          </div>
-                        </div>
-
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Practice Owner / Doctor Information
-                          </h3>
-                          
-                              <div class="col-12 col-md-6">
-            
-                                <!-- First Name -->
-                                <div class="form-group">
-                                <input class="form-control" id="doctor-firstname" type="text" placeholder="First Name">
-                                </div>
-            
-                              </div>
-                              <div class="col-12 col-md-6">
-            
-                                <!-- Last Name -->
-                                <div class="form-group">
-                                  <input class="form-control" id="doctor-lastname" type="text" placeholder="Last Name">
-                                </div>
-            
-                              </div>
+       <!-- WELCOME -->
+       <section class="pt-4 pt-md-11">
+         <div class="navbar7_container">
+           <div class="row align-items-center">
+             <div class="col-12 col-md-7 col-lg-6" data-aos="fade-up">
+   
+               <!-- Heading -->
+               <h1 class="heading h1">
+                 Dental Intelligence Reseller Partner Program
+               </h1>
+   
+               <!-- Text -->
+               <p id="paragraph-mobile" class="paragraph large bold-mobile hero-text">
+                 We pride ourselves on helping intelligently shape the future of dentistry, and we couldn’t do that without our valued partner relationships. Together, we can better the lives of dentists, team members, and patients. Visit our Reseller Program tab to learn more. We appreciate your partnership.            
+               </p>
+   
+             </div>
+   
+             <div class="col-12 col-md-5 col-lg-6">
+   
+               <!-- Image -->
+               <img src="assets/img/illustrations/di_reseller_badges_header.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+   
+             </div>
+           </div> <!-- / .row -->
+         </div> <!-- / .container -->
+       </section>
+   
+       <!-- FEATURES -->
+       <section class="py-8 py-md-11 border-bottom">
+         <div class="navbar7_container">
+           <div class="col-12 col-md-12" data-aos="fade-up">
+   
+             <!-- Card -->
+             <div class="card">
+               <div class=" card-bottom ">
+                   <!-- Tabs -->
+                   <ul class="nav nav-pills nav-fill tab-nav-wrap" id="myTab" role="tablist">
+                     <li class="nav-item" role="presentation">
+                       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reseller Program</button>
+                     </li>
+                     <li class="nav-item" role="presentation">
+                       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
+                     </li>
+                     <li class="nav-item" role="presentation">
+                       <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
+                     </li>
+                     <li class="nav-item" role="presentation">
+                       <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
+                     </li>
+                   </ul>
+               </div>
+               <div class="tab-content" id="myTabContent">
+                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                   <div class="col-12 col-md-12">
+   
+                     <!-- Card -->
+                     <div id="reseller-program" class="">
+                       <div class="tab-heading-wrap">
+           
+                         <!-- Heading -->
+                         <h2 class="heading h2 text-center">
+                           Reseller Program
+                         </h2>
+           
+                         <p id="paragraph-mobile" class="paragraph large bold-mobile text-center tab-subheading mx-auto">
+                           The Dental Intelligence Reseller Program provides opportunities to partner with a trusted company in the dental space to propel your brand and monetary growth goals. We offer four different packages for our Reseller Partners with varying levels of involvement. 
+                         </p>
+           
+                       </div>
+                       <div id="bronze-tier" class="card-body">
+           
+                         <h2 class="heading h2">
+                           Bronze Tier
+                         </h2>
                          
+                         <div class="container">
+                           <div class="row">
+                             <div class="col-12 col-md-3 aos-init aos-animate img-wrap" data-aos="fade-up">
+                   
+                               <!-- Image -->
+                               <img src="assets/img/illustrations/bronze.png" class="img-fluid mw-md-130 mw-lg-10 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+           
+                   
+                             </div>
+                             <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                   
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 1 year
+                               </h3>
+                   
+                               <!-- Text -->
+                               <p class="paragraph large bold-mobile reseller-paragraph">
+                                 Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies looking to understand Dental Intelligence and how to sell and activate new clients.                    
+                               </p>
+                   
+                             </div>
+                             <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
+                 
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 Perks
+                               </h3>
+                   
+                               <!-- List -->
+                                   <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
+                                   <li>Swag Box</li>
+                                   <li>Quarterly Live Webinar Training</li>
+                                   <li>Online Help Center</li>
+                                   <li>In-app product training</li>
+                                   <li>On-demand learning courses</li>
+                                   <li>Annual Growth Reports</li>
+                                   <li>Premium Support (chat, email, phone)</li>
+                                   <li>Online help center and community access</li>
+                                   <li>Early Access Monthly Newsletter </li>
+                                   <li>Snapshots for your clients</li>
+                                 </ul>
+                                
+                             </div>
+                           </div> <!-- / .row -->
+                         </div>
+           
+           
+                       </div>
+                       <div id="silver-tier" class="card-body">
+           
+                         <h2 class="heading h2">
+                           Silver Tier
+                         </h2>
                          
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Email -->
-                            <div class="form-group">
-                             <input class="form-control" id="practice-email" type="email" placeholder="Email">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Phone -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-phone" type="tel" placeholder="Phone">
-                            </div>
-        
-                          </div>
-                      </div>
-      
-                        <div class="row form-row">
-                          <h3 class="heading h3">
-                            Practice Contact Information
-                          </h3>
-                        
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Name -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-name" type="text" placeholder="Practice Name">
-                            </div>
-        
-                          </div>
-                          <div class="col-12 col-md-6">
-        
-                            <!-- Management Software -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-management" type="text" placeholder="Practice Management Software">
-                            </div>
-        
-                          </div>
-                          
-                          <div class="col-12 col-md-12">
-        
-                            <!-- Address -->
-                            <div class="form-group">
-                              <input class="form-control" id="practice-address" type="text" placeholder="Address">
-                            </div>
-        
-                          </div>
-                          
-                            <div class="col-12 col-md-3">
-          
-                              <!-- Zip -->
-                              <div class="form-group">
-                                <input class="form-control" id="practice-zip" type="text" placeholder="Zip">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-3">
-          
-                              <!-- State -->
-                              <div class="form-group">
-                                <input class="form-control" id="practice-state" type="text" placeholder="State">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- City -->
-                              <div class="form-group">
-                                <input class="form-control" id="practice-city" type="text" placeholder="City">
-                              </div>
-          
-                            </div>
+                         <div class="container">
+                           <div class="row">
+                             <div class="col-12 col-md-3 aos-init aos-animate img-wrap" data-aos="fade-up">
+                   
+                               <!-- Image -->
+                               <img src="assets/img/illustrations/silver.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+           
+                   
+                             </div>
+                             <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                   
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 1 year
+                               </h3>
+                   
+                               <!-- Text -->
+                               <p class="paragraph large bold-mobile reseller-paragraph">
+                                 Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules and are looking to expand services and reach the new tier minimums in order to receive discounted pricing and gain additional perks.                    
+                               </p>
+                   
+                             </div>
+                             <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
+                 
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 Perks
+                               </h3>
+                   
+                               <!-- List -->
+                                   <ul class="paragraph large bold-mobile reseller-paragraph">
+                                   <li>Swag Box</li>
+                                   <li>Quarterly Live Webinar Training</li>
+                                   <li>Online Help Center</li>
+                                   <li>In-app product training</li>
+                                   <li>On-demand learning courses</li>
+                                   <li>Annual Growth Reports</li>
+                                   <li>Premium Support (chat, email, phone)</li>
+                                   <li>Online help center and community access</li>
+                                   <li>Early Access Monthly Newsletter </li>
+                                   <li>Snapshots for your clients</li>
+                                   <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
+                                   <li>Quarterly business review</li> 
+                                   <li>Premium Mastery Summit pricing</li>
+                                   <li>Invitation to the Partner Product Focus Group</li>
+                                   <li>Access to a Partner Success Manager (pooled)</li>
+                                 </ul>
+                                
+                             </div>
+                           </div> <!-- / .row -->
+                         </div>
+                       </div>
+                       <div id="gold-tier" class="card-body">
+           
+                         <h2 class="heading h2">
+                           Gold Tier
+                         </h2>
                          
-                        </div>
+                         <div class="container">
+                           <div class="row">
+                             <div class="col-12 col-md-3 aos-init aos-animate img-wrap" data-aos="fade-up">
+                   
+                               <!-- Image -->
+                               <img src="assets/img/illustrations/gold.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+           
+                   
+                             </div>
+                             <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                   
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 1 year
+                               </h3>
+                   
+                               <!-- Text -->
+                               <p class="paragraph large bold-mobile reseller-paragraph">
+                                 Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br> Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet gold tier discounts and gain additional perks.                    
+                               </p>
+                   
+                             </div>
+                             <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
+                 
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 Perks
+                               </h3>
+                   
+                               <!-- List -->
+                               <ul class="paragraph large bold-mobile reseller-paragraph">
+                                 <li>Swag Box</li>
+                                 <li>Quarterly Live Webinar Training</li>
+                                 <li>Online Help Center</li>
+                                 <li>In-app product training</li>
+                                 <li>On-demand learning courses</li>
+                                 <li>Annual Growth Reports</li>
+                                 <li>Premium Support (chat, email, phone)</li>
+                                 <li>Online help center and community access</li>
+                                 <li>Early Access Monthly Newsletter </li>
+                                 <li>Snapshots for your clients</li>
+                                 <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
+                                 <li>Quarterly business review</li> 
+                                 <li>Premium Mastery Summit pricing</li>
+                                 <li>Invitation to the Partner Product Focus Group</li>
+                                 <li>Access to a Named Partner Success Manager</li>
+                                 <li>Featured on Dental Intelligence’s website as a “Certified Partner”</li> 
+                                 <li>Co-host of Dental Intelligence Sponsored CE Webinar</li>
+                                 <li>Special Mastery Summit breakout session</li>
+                               </ul>
+                                
+                             </div>
+                           </div> <!-- / .row -->
+                         </div>
+                       </div>
+                       <div id="diamond-tier" class="card-body">
+           
+                         <h2 class="heading h2">
+                           Diamond Tier
+                         </h2>
+                         
+                         <div class="container">
+                           <div class="row">
+                             <div class="col-12 col-md-3 aos-init aos-animate img-wrap" data-aos="fade-up">
+                   
+                               <!-- Image -->
+                               <img src="assets/img/illustrations/diamond.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
+           
+                   
+                             </div>
+                             <div class="col-12 col-md-4 aos-init aos-animate" data-aos="fade-up" data-aos-delay="50">
+                   
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 1 year
+                               </h3>
+                   
+                               <!-- Text -->
+                               <p class="paragraph large bold-mobile reseller-paragraph">
+                                 Membership Commitment </br> </br>  Product(s): Analytics (most often) </br>  </br>Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet diamond-tier discounts and gain additional perks.                     
+                               </p>
+                   
+                             </div>
+                             <div class="col-12 col-md-5 aos-init aos-animate perks-wrap" data-aos="fade-up" data-aos-delay="100">
+                 
+                               <!-- Heading -->
+                               <h3 id="heading-h3" class="heading h3">
+                                 Perks
+                               </h3>
+                   
+                               <!-- List -->
+                               <ul class="paragraph large bold-mobile reseller-paragraph">
+                                 <li>Swag Box</li>
+                                 <li>Quarterly Live Webinar Training</li>
+                                 <li>Online Help Center</li>
+                                 <li>In-app product training</li>
+                                 <li>On-demand learning courses</li>
+                                 <li>Annual Growth Reports</li>
+                                 <li>Premium Support (chat, email, phone)</li>
+                                 <li>Online help center and community access</li>
+                                 <li>Early Access Monthly Newsletter </li>
+                                 <li>Snapshots for your clients</li>
+                                 <li>Guest opportunity on “Growth in Dentistry” Podcast</li>
+                                 <li>Quarterly business review</li> 
+                                 <li>Premium Mastery Summit pricing</li>
+                                 <li>Invitation to the Partner Product Focus Group</li>
+                                 <li>Access to a Named Partner Success Manager</li>
+                                 <li>Featured on Dental Intelligence’s website as a “Certified Partner”</li>
+                                 <li>Co-host of Dental Intelligence Sponsored CE Webinar</li>
+                                 <li>Special Mastery Summit breakout session</li>
+                               </ul>
+                                
+                             </div>
+                           </div> <!-- / .row -->
+                         </div>
+                       </div>
+                     </div>
+           
+                   </div>
+                 </div>
+                 <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                   <div id="license-activation" class="">
+                     <div class="tab-heading-wrap">
+         
+                       <!-- Heading -->
+                       <h2 class="heading h2 text-center">
+                         License Activation
+                       </h2>
+         
+                     </div>
+                     <div class="card-body">
+         
+                      <!-- Form -->
+                       <form  
+                       action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                       method="POST">
+                       <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                       <input
+                         type="hidden"
+                         name="retURL"
+                         value="http://www.dentalintel.com/partner-snapshot-success"
+                       />
+                       <input type="hidden" name="status" value="New" />
+                       <input
+                         type="hidden"
+                         name="recordType"
+                         value="0126A000000luTi"
+                       />
+                       <input
+                         type="hidden"
+                         name="type"
+                         value="Partner License Activation"
+                       />
+                       <input
+                         type="hidden"
+                         name="subject"
+                         value="Partner License Change"
+                       />
+                       <input
+                         type="hidden"
+                         name="description"
+                         value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                       />
+                       <input
+                         type="hidden"
+                         name="00N2G00000ClUxV"
+                         value="Growth Platform"
+                       />
+                         <div class="row">
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Partner Information
+                             </h3>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                <input    id="00N6A00000NVPQq"
+                                maxlength="50"
+                                name="00N6A00000NVPQq"
+                                size="20"
+                                type="text"
+                                class="form-control"
+                                required="" placeholder="Partner ID">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Email -->
+                               <div class="form-group">
+                                 <input 
+                                 id="email"
+                                 maxlength="80"
+                                 name="email"
+                                 size="20"
+                                 type="text"
+                                 class="form-control"
+                                 required="" placeholder="Partner Email">
+                               </div>
+           
+                             </div>
+                           </div>
+         
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Practice Contact Information
+                             </h3>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                 <input  id="00N6A00000NVZUe"
+                                 name="00N6A00000NVZUe"
+                                 type="text"
+                                 wrap="soft"
+                                 class="form-control"
+                                 size="20"
+                                 maxlength="50"
+                                 required="" placeholder="Practice Name">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Email -->
+                               <div class="form-group">
+                                 <input  id="00N6A00000NVPQ7"
+                                 name="00N6A00000NVPQ7"
+                                 size="20"
+                                 type="text"
+                                 class="form-control"
+                                 maxlength="50"
+                                 required="" placeholder="Practice Account Number">
+                               </div>
+           
+                             </div>
+                           </div>
+   
+                           <div class="row justify-content-start justify-content-lg-end">
+                             <div class="col-auto">
+                               <!-- Button -->
+                               <button type="submit" class="btn btn-primary lift form-btn">
+                                 Submit
+                               </button>
+                             </div>
+                           </div>
+         
+                         </div>
+                       </form> 
+         
+                     </div>
+                   </div>
+                 </div>
+                 <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                   <div id="license-cancellation" class="">
+                     <div class="tab-heading-wrap">
+         
+                       <!-- Heading -->
+                       <h2 class="heading h2 text-center">
+                         License Cancellation
+                       </h2>
+         
+                     </div>
+                     <div class="card-body">
+         
+                      <!-- Form -->
+                       <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                       method="POST">
+                       <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                       <input
+                         type="hidden"
+                         name="retURL"
+                         value="http://www.dentalintel.com/partner-snapshot-success"
+                       />
+                       <input type="hidden" name="status" value="New" />
+                       <input
+                         type="hidden"
+                         name="recordType"
+                         value="0126A000000luTi"
+                       />
+                       <input
+                         type="hidden"
+                         name="type"
+                         value="Partner License Cancellation"
+                       />
+                       <input
+                         type="hidden"
+                         name="subject"
+                         value="Partner License Change"
+                       />
+                       <input
+                         type="hidden"
+                         name="description"
+                         value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                       />
+                       <input
+                         type="hidden"
+                         name="00N2G00000ClUxL"
+                         value="Growth Platform"
+                       />
+                       <input
+                  type="hidden"
+                  name="retURL"
+                  value="http://www.dentalintel.com/licensing"
+                />
+                         <div class="row">
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Partner Information
+                             </h3>
+                             <div class="col-12 col-md-6">
+           
+                              <!-- Email -->
+                              <div class="form-group">
+                                <input  id="email"
+                                maxlength="80"
+                                name="email"
+                                size="20"
+                                class="form-control"
+                                required="" type="email" placeholder="Partner Email">
+                              </div>
+          
+                            </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                <input  id="00N6A00000NVPQq"
+                                maxlength="50"
+                                name="00N6A00000NVPQq"
+                                size="20"
+                                type="text"
+                                class="form-control"
+                                required="" placeholder="Partner ID">
+                               </div>
+           
+                             </div>
+                             
+                           </div>
+         
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Practice Contact Information
+                             </h3>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                 <input  id="00N6A00000NVZUe"
+                                 name="00N6A00000NVZUe"
+                                 type="text"
+                                 wrap="soft"
+                                 class="form-control"
+                                 size="20"
+                                 maxlength="50"
+                                 required="" placeholder="Practice Name">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Email -->
+                               <div class="form-group">
+                                 <input           id="00N6A00000NVPQ7"
+                                 name="00N6A00000NVPQ7"
+                                 size="20"
+                                 type="text"
+                                 class="form-control"
+                                 maxlength="50"
+                                 required="" placeholder="Practice Account Number">
+                               </div>
+           
+                             </div>
+                           </div>
+   
+                           <div class="row justify-content-start justify-content-lg-end">
+                             <div class="col-auto">
+                               <!-- Button -->
+                               <button type="submit" class="btn btn-primary lift form-btn">
+                                 Submit
+                               </button>
+                             </div>
+                           </div>
+         
+                         </div>
+                       </form> 
+         
+                     </div>
+                   </div>
+                 </div>
+                 <div class="tab-pane fade" id="snapshot-tab-pane" role="tabpanel" aria-labelledby="snapshot-tab" tabindex="0">
+                   <div id="snapshot" class="">
+                     <div class="tab-heading-wrap">
+         
+                       <!-- Heading -->
+                       <h2 class="heading h2 text-center">
+                         Practice Snapshot Request
+                       </h2>
+         
+                     </div>
+                     <div class="card-body">
+         
+                      <!-- Form -->
+                       <form  name="snapshotRequestData"
+                       action=""
+                       method="post"
+                       enctype="multipart/form-data">
+                       <input
+                        type="hidden"
+                        name="retURL"
+                        value="http://dentalintel.com"
+                      />
+                         <div class="row">
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Partner Information
+                             </h3>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                <input    id="partnerCode"
+                                maxlength="50"
+                                name="partnerCode"
+                                size="20"
+                                type="text"
+                                class="form-control validateThis"
+                                required="" placeholder="Partner ID">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Email -->
+                               <div class="form-group">
+                                 <input  id="partnerEmail"
+                                 maxlength="50"
+                                 name="partnerEmail"
+                                 size="20"
+                                 type="email"
+                                 class="form-control validateThis"
+                                 required="" placeholder="Partner Email">
+                               </div>
+           
+                             </div>
+                           </div>
+   
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Practice Owner / Doctor Information
+                             </h3>
+                             
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- First Name -->
+                                   <div class="form-group">
+                                   <input id="contactFirstname"
+                                   maxlength="40"
+                                   name="contactFirstname"
+                                   size="20"
+                                   type="text"
+                                   class="form-control validateThis"
+                                   required="" placeholder="First Name">
+                                   </div>
+               
+                                 </div>
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Last Name -->
+                                   <div class="form-group">
+                                     <input id="contactLastname"
+                                     maxlength="40"
+                                     name="contactLastname"
+                                     size="20"
+                                     type="text"
+                                     class="form-control validateThis"
+                                     required="" placeholder="Last Name">
+                                   </div>
+               
+                                 </div>
+                            
+                            
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Email -->
+                               <div class="form-group">
+                                <input  id="email"
+                                maxlength="80"
+                                name="email"
+                                size="20"
+                                type="email"
+                                class="form-control validateThis"
+                                required="" placeholder="Email">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Phone -->
+                               <div class="form-group">
+                                 <input  id="phone"
+                                 maxlength="40"
+                                 name="phone"
+                                 size="20"
+                                 type="text"
+                                 class="form-control validateThis"
+                                 required=""
+                                 inputmode="text" placeholder="Phone">
+                               </div>
+           
+                             </div>
+                         </div>
+         
+                           <div class="row form-row">
+                             <h3 class="heading h3 form-headings">
+                               Practice Contact Information
+                             </h3>
+                           
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Name -->
+                               <div class="form-group">
+                                 <input  id="practiceName"
+                                 maxlength="40"
+                                 name="practiceName"
+                                 size="20"
+                                 type="text"
+                                 class="form-control validateThis"
+                                 required="" placeholder="Practice Name">
+                               </div>
+           
+                             </div>
+                             <div class="col-12 col-md-6">
+           
+                               <!-- Management Software -->
+                               <div class="form-group">
+                                 <input   id="PMS"
+                                 name="PMS"
+                                 title="Practice Management Software"
+                                 class="form-control validateThis"
+                                 required="" placeholder="Practice Management Software">
+                               </div>
+           
+                             </div>
+                             
+                             <div class="col-12 col-md-12">
+           
+                               <!-- Address -->
+                               <div class="form-group">
+                                 <input  id="address1"
+                                 maxlength="80"
+                                 name="address1"
+                                 size="20"
+                                 type="text"
+                                 class="form-control validateThis"
+                                 required="" placeholder="Address">
+                               </div>
+           
+                             </div>
+                             
+                               <div class="col-12 col-md-3">
+             
+                                 <!-- Zip -->
+                                 <div class="form-group">
+                                   <input  id="zip"
+                                   maxlength="40"
+                                   name="zipcode"
+                                   size="20"
+                                   type="text"
+                                   class="form-control validateThis"
+                                   required="" placeholder="Zip">
+                                 </div>
+             
+                               </div>
+                               <div class="col-12 col-md-3">
+             
+                                 <!-- State -->
+                                 <div class="form-group">
+                                   <input          id="state"
+                                   maxlength="40"
+                                   name="state"
+                                   size="20"
+                                   type="text"
+                                   class="form-control validateThis"
+                                   required="" placeholder="State">
+                                 </div>
+             
+                               </div>
+                               <div class="col-12 col-md-6">
+             
+                                 <!-- City -->
+                                 <div class="form-group">
+                                   <input  id="city"
+                                   maxlength="80"
+                                   name="city"
+                                   size="20"
+                                   type="text"
+                                   class="form-control validateThis"
+                                   required="" placeholder="City">
+                                 </div>
+             
+                               </div>
+                            
+                           </div>
+   
+                           <div class="row justify-content-start justify-content-lg-end ">
+                             <div class="col-auto">
+                               <!-- Button -->
+                               <button type="submit" class="btn btn-primary lift form-btn">
+                                 Submit
+                               </button>
+                             </div>
+                           </div>
+   
+                           <div class="row">
+                             <p class="tab-footnote">
+                               *Please note that after the 30-day snapshot period, our sales team can engage with potential customers. If you are still working to sell the practice on Dental Intelligence, an extension of the snapshot must be requested at premiumsupport@dentalintel.com.
+                             </p>
+                           </div>
+         
+                         </div>
+                       </form> 
+         
+                     </div>
+                   </div>
+                 </div>
+               </div>
+   
+             </div>
+   
+             </div>
+   
+   
+           </div>
+         </div> <!-- / .container -->
+       </section>
 
-                        <div class="row justify-content-start justify-content-lg-end ">
-                          <div class="col-auto">
-                            <!-- Button -->
-                            <button type="submit" class="btn btn-primary lift form-btn">
-                              Submit
-                            </button>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <p class="tab-footnote">
-                            *Please note that after the 30-day snapshot period, our sales team can engage with potential customers. If you are still working to sell the practice on Dental Intelligence, an extension of the snapshot must be requested at premiumsupport@dentalintel.com.
-                          </p>
-                        </div>
-      
-                      </div>
-                    </form> 
-      
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          </div>
-
-
-        </div>
-      </div> <!-- / .container -->
-    </section>
 
     <!-- FOOTER -->
-    <footer class="py-8 py-md-11 bg-gray-200">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-4 col-lg-3">
-    
-            <!-- Brand -->
-            <img src="./assets/img/brand.svg" alt="..." class="footer-brand img-fluid mb-2">
-    
-            <!-- Text -->
-            <p class="text-gray-700 mb-2">
-              A better way to build.
-            </p>
-    
-            <!-- Social -->
-            <ul class="list-unstyled list-inline list-social mb-6 mb-md-0">
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#!" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/instagram.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#!" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/facebook.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-              <li class="list-inline-item list-social-item me-3">
-                <a href="#!" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/twitter.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-              <li class="list-inline-item list-social-item">
-                <a href="#!" class="text-decoration-none">
-                  <img src="./assets/img/icons/social/pinterest.svg" class="list-social-icon" alt="...">
-                </a>
-              </li>
-            </ul>
-    
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-    
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Products
-            </h6>
-    
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Page Builder
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  UI Kit
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Styleguide
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-            </ul>
-    
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-    
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Services
-            </h6>
-    
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-6 mb-md-8 mb-lg-0">
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Pagebuilder
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  UI Kit
-                </a>
-              </li>
-            </ul>
-    
-          </div>
-          <div class="col-6 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
-    
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Connect
-            </h6>
-    
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-0">
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Page Builder
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  UI Kit
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Styleguide
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-            </ul>
-    
-          </div>
-          <div class="col-6 col-md-4 col-lg-2">
-    
-            <!-- Heading -->
-            <h6 class="fw-bold text-uppercase text-gray-700">
-              Legal
-            </h6>
-    
-            <!-- List -->
-            <ul class="list-unstyled text-muted mb-0">
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Documentation
-                </a>
-              </li>
-              <li class="mb-3">
-                <a href="#!" class="text-reset">
-                  Changelog
-                </a>
-              </li>
-              <li>
-                <a href="#!" class="text-reset">
-                  Pagebuilder
-                </a>
-              </li>
-            </ul>
-    
-          </div>
-        </div> <!-- / .row -->
-      </div> <!-- / .container -->
+    <footer class="section footer wf-section">
+      <div class="container"><div class="w-layout-grid footer-grid"><div id="w-node-_523ebe57-8de5-dc95-3df8-3db79c2a022f-9c2a022c" class="footer-grid-wrap"><img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62cca72bdb70ce646ea6617c_DI-logo-footer.svg" loading="lazy" alt="" class="footer-logo"><a href="/about" class="footer-link">About Us</a><a href="/contact" class="footer-link">Contact</a><a href="/careers" class="footer-link">Careers</a></div><div id="w-node-_523ebe57-8de5-dc95-3df8-3db79c2a0237-9c2a022c" class="footer-grid-wrap"><div class="footer-link bold no-underline">Resources</div><a href="/education" class="footer-link">Education</a><a href="/podcast" class="footer-link">Podcast</a><a href="/blog" class="footer-link">Blog</a></div><div id="w-node-_523ebe57-8de5-dc95-3df8-3db79c2a0246-9c2a022c" class="footer-grid-wrap"><div class="footer-link bold no-underline">Product</div><a href="https://www.dentalintel.com/#solutions" class="footer-link">Analytics</a><a href="https://www.dentalintel.com/#engagement-section" class="footer-link">Engagement</a></div><div id="w-node-_523ebe57-8de5-dc95-3df8-3db79c2a024d-9c2a022c" class="footer-grid-wrap"><div class="footer-link bold no-underline">Social</div><div class="social-wrap"><div class="social-icon w-embed"><svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.402 21V14.034H17.735L18.084 11.326H15.402V9.598C15.402 8.814 15.62 8.279 16.744 8.279H18.178V5.857C17.4838 5.78334 16.7861 5.74762 16.088 5.75C14.021 5.75 12.606 7.012 12.606 9.33V11.326H10.268V14.034H12.606V21H4C3.73478 21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V20C21 20.2652 20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H15.402V21Z" fill="currentColor"></path>
+        </svg>
+        </div><a href="https://www.facebook.com/DentalIntel" target="_blank" class="footer-link social">Facebook</a></div><div class="social-wrap"><div class="social-icon w-embed"><svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22 9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987 14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717 2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215 7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215 15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7V7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317 7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839 13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9V9Z" fill="currentColor"></path>
+        </svg>
+        </div><a href="https://www.instagram.com/dental.intelligence" target="_blank" class="footer-link social">Instagram</a></div><div class="social-wrap"><div class="social-icon w-embed"><svg width="420" height="420" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18.335 18.339H15.67V14.162C15.67 13.166 15.65 11.884 14.28 11.884C12.891 11.884 12.679 12.968 12.679 14.089V18.339H10.013V9.75H12.573V10.92H12.608C12.966 10.246 13.836 9.533 15.136 9.533C17.836 9.533 18.336 11.311 18.336 13.624V18.339H18.335ZM7.003 8.575C6.79956 8.57526 6.59806 8.53537 6.41006 8.45761C6.22207 8.37984 6.05127 8.26574 5.90746 8.12184C5.76365 7.97793 5.64965 7.80706 5.57201 7.61901C5.49437 7.43097 5.4546 7.22944 5.455 7.026C5.4552 6.71983 5.54618 6.4206 5.71644 6.16615C5.8867 5.91169 6.12859 5.71343 6.41153 5.59645C6.69447 5.47947 7.00574 5.44902 7.30598 5.50894C7.60622 5.56886 7.88196 5.71647 8.09831 5.93311C8.31466 6.14974 8.46191 6.42566 8.52145 6.72598C8.58099 7.0263 8.55013 7.33753 8.43278 7.62032C8.31544 7.9031 8.11687 8.14474 7.86219 8.31467C7.60751 8.4846 7.30817 8.5752 7.002 8.575H7.003ZM8.339 18.339H5.666V9.75H8.34V18.339H8.339ZM19.67 3H4.329C3.593 3 3 3.58 3 4.297V19.703C3 20.42 3.594 21 4.328 21H19.666C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3H19.669H19.67Z" fill="currentColor"></path>
+        </svg>
+        </div><a href="https://www.linkedin.com/company/dental-intel" target="_blank" class="footer-link social">LinkedIn</a></div><div class="social-wrap"><div class="twitter w-embed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z" fill="currentColor"></path></svg></div><a href="https://www.twitter.com/dental_intel" target="_blank" class="footer-link social">Twitter</a></div></div></div><div class="legal-wrap"><a href="/terms" class="footer-link legal">Terms</a><a href="/business-associate-agreement" class="footer-link legal">Business Associate Agreement</a><a href="https://secure.hipaaone.com/cpsweb/3f/?userId=13516&amp;sealCode=HPSeal--1853BE5CEAA-6977EF30&amp;action=returnCertificate&amp;assessmentId=5682" target="_blank" class="footer-link legal">HIPAA</a><a href="/patient-terms-of-service" class="footer-link legal">Patient Terms of Service</a><a href="/privacy-policy" class="footer-link legal">Privacy Policy</a><a href="/cancellation-policy" class="footer-link legal">Cancellation Policy</a></div><div class="copyright-wrap"><div><strong>© Dental Intelligence, Inc 2023</strong></div></div></div>
     </footer>
 
     <!-- JAVASCRIPT -->
-    <!-- Map JS -->
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
-    
     <!-- Vendor JS -->
     <script src="./assets/js/vendor.bundle.js"></script>
     

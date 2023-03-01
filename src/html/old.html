@@ -1,0 +1,492 @@
+<div class="container">
+  <div style="text-align: left; width: 100%">
+    <img
+      style="width: 160px"
+      src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62cca72b3c5c5ef7ac757ef0_DI-logo-header.svg"
+      class="Responsive image d-block logoTopper"
+    />
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div
+        class="nav flex-column nav-pills"
+        id="v-pills-tab"
+        role="tablist"
+        aria-orientation="vertical"
+      >
+        <a
+          class="nav-link active"
+          id="v-pills-home-tab"
+          data-toggle="pill"
+          href="#v-pills-home"
+          role="tab"
+          aria-controls="v-pills-home"
+          aria-selected="true"
+          >Practice Snapshot</a
+        >
+        <a
+          class="nav-link"
+          id="v-pills-profile-tab"
+          data-toggle="pill"
+          href="#v-pills-profile"
+          role="tab"
+          aria-controls="v-pills-profile"
+          aria-selected="false"
+          >License Activation</a
+        >
+        <a
+          class="nav-link"
+          id="v-pills-messages-tab"
+          data-toggle="pill"
+          href="#v-pills-messages"
+          role="tab"
+          aria-controls="v-pills-messages"
+          aria-selected="false"
+          >License Cancellation</a
+        >
+      </div>
+    </div>
+    <div class="col-sm-9">
+      <div class="tab-content" id="v-pills-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="v-pills-home"
+          role="tabpanel"
+          aria-labelledby="v-pills-home-tab"
+        >
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>Practice Snapshot Request</h4>
+            </div>
+            <div class="card-body">
+              <div class="card-title">
+                <h5 class="text-center">Partner Information</h5>
+              </div>
+              <hr />
+              <form
+                name="snapshotRequestData"
+                action=""
+                method="post"
+                enctype="multipart/form-data"
+              >
+                <input
+                  type="hidden"
+                  name="retURL"
+                  value="http://dentalintel.com"
+                />
+                <div class="row">
+                  <div class="col-sm-12">
+                    Partner ID:
+                    <input
+                      id="partnerCode"
+                      maxlength="50"
+                      name="partnerCode"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                    <br />
+                  </div>
+                  <div class="col-sm-12">
+                    Partner Email:
+                    <input
+                      id="partnerEmail"
+                      maxlength="50"
+                      name="partnerEmail"
+                      size="20"
+                      type="email"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                    <br />
+                  </div>
+                </div>
+                <div class="card-title">
+                  <h5 class="text-center">
+                    Practice Owner / Doctor Information
+                  </h5>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>First Name</label>
+                    <input
+                      id="contactFirstname"
+                      maxlength="40"
+                      name="contactFirstname"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Last Name</label>
+                    <input
+                      id="contactLastname"
+                      maxlength="40"
+                      name="contactLastname"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Email</label>
+                    <input
+                      id="email"
+                      maxlength="80"
+                      name="email"
+                      size="20"
+                      type="email"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Phone</label>
+                    <input
+                      id="phone"
+                      maxlength="40"
+                      name="phone"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                      inputmode="text"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="card-title">
+                  <h5 class="text-center">Practice Contact Information</h5>
+                </div>
+                <hr />
+                <div class="row">
+                  <div class="col-sm-6">
+                    <label>Practice Name</label>
+                    <input
+                      id="practiceName"
+                      maxlength="40"
+                      name="practiceName"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Practice Management Software:</label>
+                    <select
+                      id="PMS"
+                      name="PMS"
+                      title="Practice Management Software"
+                      class="form-control validateThis"
+                      required=""
+                    >
+                      <option value="">--None--</option>
+                      <option value="Dentrix">Dentrix</option>
+                      <option value="Eaglesoft">Eaglesoft</option>
+                      <option value="OpenDental">OpenDental</option>
+                      <option value="Practice Web">Practice Web</option>
+                      <option value="Fuse">Fuse</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row fuse-section mt-4" style="display: none">
+                  <div class="col-sm-6">
+                    <label>Practice ID:</label>
+                    <input
+                      id="practiceID"
+                      maxlength="40"
+                      name="practiceName"
+                      size="20"
+                      practiceid=""
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="col-sm-6">
+                    <label>Location ID:</label>
+                    <input
+                      id="locationID"
+                      maxlength="40"
+                      name="locationID"
+                      size="20"
+                      type="text"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <br />
+                <div class="row">
+                  <div class="col-sm-12">
+                    <label>Address</label>
+                    <input
+                      id="address1"
+                      maxlength="80"
+                      name="address1"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <br /><br />
+                </div>
+                <br />
+                <div class="row location-container">
+                  <div class="col-sm-2">
+                    <label>Zip</label>
+                    <input
+                      id="zip"
+                      maxlength="40"
+                      name="zipcode"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-2">
+                    <label>State</label>
+                    <input
+                      id="state"
+                      maxlength="40"
+                      name="state"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                  <div class="col-sm-8">
+                    <label>City</label>
+                    <input
+                      id="city"
+                      maxlength="80"
+                      name="city"
+                      size="20"
+                      type="text"
+                      class="form-control validateThis"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <br /><input
+                  type="button"
+                  name="submit"
+                  class="btn btn-primary btn-lg btn-block submitRequest"
+                  value="Submit"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-pills-profile"
+          role="tabpanel"
+          aria-labelledby="v-pills-profile-tab"
+        >
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>License Activation</h4>
+            </div>
+            <div class="card-body">
+              <form
+                action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                method="POST"
+              >
+                <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                <input
+                  type="hidden"
+                  name="retURL"
+                  value="http://www.dentalintel.com/partner-snapshot-success"
+                />
+                <input type="hidden" name="status" value="New" />
+                <input
+                  type="hidden"
+                  name="recordType"
+                  value="0126A000000luTi"
+                />
+                <input
+                  type="hidden"
+                  name="type"
+                  value="Partner License Activation"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Partner License Change"
+                />
+                <input
+                  type="hidden"
+                  name="description"
+                  value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                />
+                <input
+                  type="hidden"
+                  name="00N2G00000ClUxV"
+                  value="Growth Platform"
+                />
+                <h5 class="text-center">Partner Information</h5>
+                <hr />
+                Partner ID:<input
+                  id="00N6A00000NVPQq"
+                  maxlength="50"
+                  name="00N6A00000NVPQq"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  required=""
+                /><br /><br /><label for="email">Partner Email</label
+                ><input
+                  id="email"
+                  maxlength="80"
+                  name="email"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  required=""
+                /><br /><br />
+                <h5 class="text-center">Practice Contact Information</h5>
+                <hr />
+                Practice Name:<input
+                  id="00N6A00000NVZUe"
+                  name="00N6A00000NVZUe"
+                  type="text"
+                  wrap="soft"
+                  class="form-control"
+                  size="20"
+                  maxlength="50"
+                  required=""
+                /><br /><br />Practice Account Number:<input
+                  id="00N6A00000NVPQ7"
+                  name="00N6A00000NVPQ7"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  maxlength="50"
+                  required=""
+                /><br /><br /><input
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary btn-lg btn-block"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="v-pills-messages"
+          role="tabpanel"
+          aria-labelledby="v-pills-messages-tab"
+        >
+          <div class="card">
+            <div class="card-header text-center">
+              <h4>License Cancellation</h4>
+            </div>
+            <div class="card-body">
+              <form
+                action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                method="POST"
+              >
+                <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                <input
+                  type="hidden"
+                  name="retURL"
+                  value="http://www.dentalintel.com/partner-snapshot-success"
+                />
+                <input type="hidden" name="status" value="New" />
+                <input
+                  type="hidden"
+                  name="recordType"
+                  value="0126A000000luTi"
+                />
+                <input
+                  type="hidden"
+                  name="type"
+                  value="Partner License Cancellation"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="Partner License Change"
+                />
+                <input
+                  type="hidden"
+                  name="description"
+                  value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                />
+                <input
+                  type="hidden"
+                  name="00N2G00000ClUxL"
+                  value="Growth Platform"
+                />
+                <h5 class="text-center">Partner Information</h5>
+                <hr />
+                <input
+                  type="hidden"
+                  name="retURL"
+                  value="http://www.dentalintel.com/licensing"
+                />
+                <label for="email">Partner Email</label
+                ><input
+                  id="email"
+                  maxlength="80"
+                  name="email"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  required=""
+                /><br /><br />Partner ID:<input
+                  id="00N6A00000NVPQq"
+                  maxlength="50"
+                  name="00N6A00000NVPQq"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  required=""
+                /><br /><br />
+                <h5 class="text-center">Practice Contact Information</h5>
+                <hr />
+                Practice Name:<input
+                  id="00N6A00000NVZUe"
+                  name="00N6A00000NVZUe"
+                  type="text"
+                  wrap="soft"
+                  class="form-control"
+                  size="20"
+                  maxlength="50"
+                  required=""
+                /><br /><br />Practice Account Number:<input
+                  id="00N6A00000NVPQ7"
+                  name="00N6A00000NVPQ7"
+                  size="20"
+                  type="text"
+                  class="form-control"
+                  maxlength="50"
+                  required=""
+                /><br />
+                <br /><input
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary btn-lg btn-block"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br /><br /><br />
+</div>
