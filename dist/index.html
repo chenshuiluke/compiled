@@ -78,14 +78,15 @@
                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reseller Program</button>
                      </li>
                      <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
+                    </li>
+                     <li class="nav-item" role="presentation">
                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
                      </li>
                      <li class="nav-item" role="presentation">
                        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
                      </li>
-                     <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
-                     </li>
+
                    </ul>
                </div>
                <div class="tab-content" id="myTabContent">
@@ -762,11 +763,19 @@
            
                                <!-- Management Software -->
                                <div class="form-group">
-                                 <input   id="PMS"
+                                 <select  id="PMS"
                                  name="PMS"
                                  title="Practice Management Software"
                                  class="form-control validateThis"
                                  required="" placeholder="Practice Management Software">
+                                  <option value="">Practice Management Software</option>
+                                  <option value="Dentrix">Dentrix</option>
+                                  <option value="Eaglesoft">Eaglesoft</option>
+                                  <option value="OpenDental">OpenDental</option>
+                                  <option value="Practice Web">Practice Web</option>
+                                  <option value="Fuse">Fuse</option>
+                                  <option value="Other">Other</option>
+                                 </select>
                                </div>
            
                              </div>
