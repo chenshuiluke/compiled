@@ -444,7 +444,6 @@
                                 name="Partner_Activation_Cancellation_Date__c"
                                 type="text"
                                 onfocus="(this.type='date')"
-                                onblur="(this.type='text')"
                                 class="form-control"
                                 required="" placeholder="Date to be activated">
                               </div>
@@ -932,7 +931,39 @@ font-family: 'Red Hat Text';
            
                              </div>
                            </div>
-   
+                           <div class="row form-row">
+                            <h3 class="heading h3 form-headings">
+                              Product Information
+                            </h3>
+                            <div class="col-12 col-md-6">
+          
+                              <!-- Product -->
+                              <div class="form-group" >
+                                <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary">
+                                  <option selected>Select Product</option>
+                                  <option value="Analytics">Analytics</option>
+                                  <option value="Engagement">Engagement</option>
+                                  <option value="LocalMed">LocalMed</option>
+                                  <option value="DSO Reports">DSO Reports</option>
+                                  <option value="Data Reports">Data Reports</option>
+                                </select>
+                              </div>
+          
+                            </div>
+                            <div class="col-12 col-md-6">
+          
+                              <!-- Date -->
+                              <div class="form-group">
+                                <input  id="Partner_Activation_Cancellation_Date__c"
+                                name="Partner_Activation_Cancellation_Date__c"
+                                type="text"
+                                onfocus="(this.type='date')"
+                                class="form-control"
+                                required="" placeholder="Date to be cancelled">
+                              </div>
+          
+                            </div>
+                          </div>
                            <div class="row justify-content-start justify-content-lg-end">
                              <div class="col-auto">
                                <!-- Button -->
