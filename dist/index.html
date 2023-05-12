@@ -442,9 +442,9 @@
                               <div class="form-group">
                                 <input  id="Partner_Activation_Cancellation_Date__c"
                                 name="Partner_Activation_Cancellation_Date__c"
-                                type="text"
-                                onfocus="(this.type='date')"
-                                class="form-control"
+                                
+                                class="form-control datepicker"
+                                data-date-format="mm/dd/yyyy"
                                 required="" placeholder="Date to be activated">
                               </div>
           
@@ -1237,6 +1237,8 @@ font-family: 'Red Hat Text';
     <!-- JAVASCRIPT -->
     <!-- Vendor JS -->
    
-
+<script>
+  $('.datepicker').datepicker();
+</script>
   </body>
 </html>
