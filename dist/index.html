@@ -1264,28 +1264,21 @@ font-family: 'Red Hat Text';
   if ((el.val().length == 5) && (is_int(el.val()))) {
    
     $.ajax({
-      url: "https://zip.getziptastic.com/v3/US/" + el.val(),
+      url: "https://zip.getziptastic.com/v2/US/" + el.val(),
       cache: false,
-      beforeSend: function(request) {
-        request.setRequestHeader("x-key", "123examplekey456");
-      },
       dataType: "json",
       type: "GET",
       success: function(result, success) {
         debugger
-        $(".fancy-form div > div").slideDown(); /* Show the fields */
 
         $("#city").val(result.city); /* Fill the data */
         $("#state").val(result.state);
 
-        $(".zip-error").hide(); /* In case they failed once before */
 
         $("#address-line-1").focus(); /* Put cursor where they need it */
 
       },
       error: function(result, success) {
-
-        $(".zip-error").show(); /* Ruh row */
 
       }
 
