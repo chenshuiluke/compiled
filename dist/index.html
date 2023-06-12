@@ -1173,7 +1173,7 @@ font-family: 'Red Hat Text';
                                  <!-- Zip -->
                                  <div class="form-group">
                                    <input  id="zip"
-                                   maxlength="40"
+                                   pattern="[0-9]*" maxlength="5" required
                                    name="zipcode"
                                    size="20"
                                    type="text"
@@ -1251,6 +1251,49 @@ font-family: 'Red Hat Text';
    
 <script>
   $('.datepicker').datepicker();
+  function is_int(value){ 
+    if ((parseFloat(value) == parseInt(value)) && !isNaN(value)) {
+      return true;
+    } else { 
+      return false;
+    } 
+  }
+  $("#zip").keyup(function() {
+  var el = $(this);
+
+  if ((el.val().length == 5) && (is_int(el.val()))) {
+   
+    // Make Ajax call, etc
+ 
+  }
+
+  })
+
+  $.ajax({
+  url: "http://zip.elevenbasetwo.com",
+  cache: false,
+  dataType: "json",
+  type: "GET",
+  data: "zip=" + el.val(),
+  success: function(result, success) {
+    debugger
+    $(".fancy-form div > div").slideDown(); /* Show the fields */
+
+    $("#city").val(result.city); /* Fill the data */
+    $("#state").val(result.state);
+
+    $(".zip-error").hide(); /* In case they failed once before */
+
+    $("#address-line-1").focus(); /* Put cursor where they need it */
+
+  },
+  error: function(result, success) {
+
+    $(".zip-error").show(); /* Ruh row */
+
+  }
+
+});
 </script>
   </body>
 </html>
