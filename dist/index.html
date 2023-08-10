@@ -1005,14 +1005,18 @@ font-family: 'Red Hat Text';
          
                       <!-- Form -->
                        <form  name="snapshotRequestData"
-                       action=""
-                       method="post"
-                       enctype="multipart/form-data">
+                       action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                       method="POST">
                        <input
                         type="hidden"
                         name="retURL"
                         value="http://dentalintel.com"
                       />
+                      <input type="hidden" name="RecordTypeId" value="0126A000000luTi" />
+                      <input type="hidden" name="Type" value="Partner Snapshot Request" />
+                      <input type="hidden" name="Subject" value="Partner Snapshot Request" />
+                      <input type="hidden" name="Status" value="New" />
+                      <input type="hidden" name="OwnerId" value="0053o000009YVPb" />
                          <div class="row">
                            <div class="row form-row">
                              <h3 class="heading h3 form-headings">
@@ -1024,7 +1028,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                 <input    id="partnerCode"
                                 maxlength="50"
-                                name="partnerCode"
+                                name="Partner_ID__c"
                                 size="20"
                                 type="text"
                                 class="form-control validateThis"
@@ -1038,7 +1042,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                  <input  id="partnerEmail"
                                  maxlength="50"
-                                 name="partnerEmail"
+                                 name="SuppliedEmail"
                                  size="20"
                                  type="email"
                                  class="form-control validateThis"
@@ -1059,7 +1063,7 @@ font-family: 'Red Hat Text';
                                    <div class="form-group">
                                    <input id="contactFirstname"
                                    maxlength="40"
-                                   name="contactFirstname"
+                                   name="Practice_Owner_First_Name__c"
                                    size="20"
                                    type="text"
                                    class="form-control validateThis"
@@ -1073,7 +1077,7 @@ font-family: 'Red Hat Text';
                                    <div class="form-group">
                                      <input id="contactLastname"
                                      maxlength="40"
-                                     name="contactLastname"
+                                     name="Practice_Owner_Last_Name__c"
                                      size="20"
                                      type="text"
                                      class="form-control validateThis"
@@ -1089,7 +1093,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                 <input  id="email"
                                 maxlength="80"
-                                name="email"
+                                name="Practice_Owner_Email__c"
                                 size="20"
                                 type="email"
                                 class="form-control validateThis"
@@ -1103,7 +1107,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                  <input  id="phone"
                                  maxlength="40"
-                                 name="phone"
+                                 name="Practice_Owner_Phone__c"
                                  size="20"
                                  type="text"
                                  class="form-control validateThis"
@@ -1125,7 +1129,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                  <input  id="practiceName"
                                  maxlength="40"
-                                 name="practiceName"
+                                 name="Practice_Name__c"
                                  size="20"
                                  type="text"
                                  class="form-control validateThis"
@@ -1138,7 +1142,7 @@ font-family: 'Red Hat Text';
                                <!-- Management Software -->
                                <div class="form-group">
                                  <select  id="PMS"
-                                 name="PMS"
+                                 name="Practice_Management_Software__c"
                                  title="Practice Management Software"
                                  class="form-control validateThis"
                                  required="" placeholder="Practice Management Software">
@@ -1160,7 +1164,7 @@ font-family: 'Red Hat Text';
                                <div class="form-group">
                                  <input  id="address1"
                                  maxlength="80"
-                                 name="address1"
+                                 name="Practice_Street_Address__c"
                                  size="20"
                                  type="text"
                                  class="form-control validateThis"
@@ -1175,7 +1179,7 @@ font-family: 'Red Hat Text';
                                  <div class="form-group">
                                    <input  id="zip"
                                    pattern="[0-9]*" maxlength="5" required
-                                   name="zipcode"
+                                   name="Practice_Postal_Code__c"
                                    size="20"
                                    type="text"
                                    class="form-control validateThis"
@@ -1189,7 +1193,7 @@ font-family: 'Red Hat Text';
                                  <div class="form-group">
                                    <input          id="state"
                                    maxlength="40"
-                                   name="state"
+                                   name="Practice_State__c"
                                    size="20"
                                    type="text"
                                    class="form-control validateThis"
@@ -1203,7 +1207,7 @@ font-family: 'Red Hat Text';
                                  <div class="form-group">
                                    <input  id="city"
                                    maxlength="80"
-                                   name="city"
+                                   name="Practice_City__c"
                                    size="20"
                                    type="text"
                                    class="form-control validateThis"
@@ -1211,13 +1215,32 @@ font-family: 'Red Hat Text';
                                  </div>
              
                                </div>
+
+                               <br/>
+
+                               <div class="col-12 col-md-6">
+           
+                                <!-- Who should we send this info to? -->
+                                <div class="form-group">
+                                  <select  id="Send_Sync_Credentials_To__c"
+                                  name="Send_Sync_Credentials_To__c"
+                                  title="Practice Management Software"
+                                  class="form-control "
+                                  required="" placeholder="Who should we send sync information to?">
+                                   <option value="">Who should we send sync information to?</option>
+                                   <option value="Partner Email and Practice Email">Partner Email and Practice Email</option>
+                                   <option value="Partner Email Only">Partner Email Only</option>
+                                  </select>
+                                </div>
+            
+                              </div>
                             
                            </div>
    
                            <div class="row justify-content-start justify-content-lg-end ">
                              <div class="col-auto">
                                <!-- Button -->
-                               <input type="button" name="submit" class="btn btn-primary lift form-btn submitRequest" value="Submit">
+                               <input type="button" name="submit" class="btn btn-primary lift form-btn" value="Submit">
                              </div>
                            </div>
    
