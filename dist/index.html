@@ -120,18 +120,8 @@
                        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reseller Program</button>
                      </li>
                      <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
+                      <button class="nav-link" id="licensing-tab" data-bs-toggle="tab" data-bs-target="#licensing-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Licensing</button>
                     </li>
-                     <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
-                     </li>
-                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="partner-bundle-tab" data-bs-toggle="tab" data-bs-target="#partner-bundle-tab-pane" type="button" role="tab" aria-controls="partner-bundle-tab-pane" aria-selected="false">Partner Bundle</button>
-                    </li>
-                     <li class="nav-item" role="presentation">
-                       <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
-                     </li>
-
                    </ul>
                </div>
                <div class="tab-content" id="myTabContent">
@@ -299,965 +289,986 @@
            
                    </div>
                  </div>
-                 <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                   <div id="license-activation" class="">
-                     <div class="tab-heading-wrap">
-         
-                       <!-- Heading -->
-                       <h2 class="heading h2 text-center">
-                         License Activation
-                       </h2>
-         
-                     </div>
-                     <div class="card-body">
-         
-                      <!-- Form -->
-                       <form  
-                       action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                       method="POST">
-                       <input type="hidden" name="orgid" value="00D6A000000uD5X" />
-                       <input
-                         type="hidden"
-                         name="retURL"
-                         value="http://www.dentalintel.com/partner-snapshot-success"
-                       />
-                       <input type="hidden" name="status" value="New" />
-                       <input
-                         type="hidden"
-                         name="recordType"
-                         value="0126A000000luTi"
-                       />
-                       <input
-                         type="hidden"
-                         name="type"
-                         value="Partner License Activation"
-                       />
-                       <input
-                         type="hidden"
-                         name="subject"
-                         value="Partner License Change"
-                       />
-                       <input
-                         type="hidden"
-                         name="description"
-                         value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
-                       />
-                       <input
-                         type="hidden"
-                         name="00N2G00000ClUxV"
-                         value="Growth Platform"
-                       />
-                         <div class="row">
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Partner Information
-                             </h3>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                <input    id="00N6A00000NVPQq"
-                                maxlength="50"
-                                name="00N6A00000NVPQq"
-                                size="20"
-                                type="text"
-                                class="form-control"
-                                required="" placeholder="Partner ID">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Email -->
-                               <div class="form-group">
-                                 <input 
-                                 id="email"
-                                 maxlength="80"
-                                 name="email"
-                                 size="20"
-                                 type="text"
-                                 class="form-control"
-                                 required="" placeholder="Partner Email">
-                               </div>
-           
-                             </div>
-                           </div>
-         
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Practice Contact Information
-                             </h3>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                 <input  id="00N6A00000NVZUe"
-                                 name="00N6A00000NVZUe"
-                                 type="text"
-                                 wrap="soft"
-                                 class="form-control"
-                                 size="20"
-                                 maxlength="50"
-                                 required="" placeholder="Practice Name">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Email -->
-                               <div class="form-group">
-                                 <input  id="00N6A00000NVPQ7"
-                                 name="00N6A00000NVPQ7"
-                                 size="20"
-                                 type="text"
-                                 class="form-control"
-                                 maxlength="50"
-                                 required="" placeholder="Practice Account Number">
-                               </div>
-           
-                             </div>
-                           </div>
-                           <div class="row form-row">
-                            <h3 class="heading h3 form-headings">
-                              Product Information
-                            </h3>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Product -->
-                              <div class="form-group" >
-                                <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
-                                  <option value="Analytics">Analytics</option>
-                                  <option value="Engagement">Engagement</option>
-                                  <option value="LocalMed">LocalMed</option>
-                                  <option value="DSO Reports">DSO Reports</option>
-                                  <option value="Data Reports">Data Reports</option>
-                                </select>
+                 <div class="tab-pane" id="licensing-tab-panel" role="tabpanel">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="partner-bundle-tab" data-bs-toggle="tab" data-bs-target="#partner-bundle-tab-pane" type="button" role="tab" aria-controls="partner-bundle-tab-pane" aria-selected="false">Partner Bundle</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
+                    </li>
+
+                    <div class="tab-content">
+                      <div class="tab-pane fade" id="snapshot-tab-pane" role="tabpanel" aria-labelledby="snapshot-tab" tabindex="0">
+                        <div id="snapshot" class="">
+                          <div class="tab-heading-wrap">
+              
+                            <!-- Heading -->
+                            <h2 class="heading h2 text-center">
+                              Practice Snapshot Request
+                            </h2>
+              
+                          </div>
+                          <div class="card-body">
+              
+                           <!-- Form -->
+                            <form  name="snapshotRequestData"
+                            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                            method="POST">
+                            <input
+                             type="hidden"
+                             name="retURL"
+                             value="http://dentalintel.com"
+                           />
+                           <input type="hidden" name="recordType" value="0126A000000luTi" />
+                           <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                           <input type="hidden" name="type" value="Partner Snapshot Request" />
+                           <input type="hidden" name="subject" value="Partner Snapshot Request" />
+                           <input type="hidden" name="status" value="New" />
+                           <input type="hidden" name="OwnerId" value="0053o000009YVPb" />
+                              <div class="row">
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Partner Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                     <input    id="partnerCode"
+                                     maxlength="50"
+                                     name="Partner_ID__c"
+                                     size="20"
+                                     type="text"
+                                     class="form-control validateThis"
+                                     required="" placeholder="Partner ID">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                      <input  id="partnerEmail"
+                                      maxlength="50"
+                                      name="email"
+                                      size="20"
+                                      type="email"
+                                      class="form-control validateThis"
+                                      required="" placeholder="Partner Email">
+                                    </div>
+                
+                                  </div>
+                                </div>
+        
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Practice Owner / Doctor Information
+                                  </h3>
+                                  
+                                      <div class="col-12 col-md-6">
+                    
+                                        <!-- First Name -->
+                                        <div class="form-group">
+                                        <input id="contactFirstname"
+                                        maxlength="40"
+                                        name="Practice_Owner_First_Name__c"
+                                        size="20"
+                                        type="text"
+                                        class="form-control validateThis"
+                                        required="" placeholder="First Name">
+                                        </div>
+                    
+                                      </div>
+                                      <div class="col-12 col-md-6">
+                    
+                                        <!-- Last Name -->
+                                        <div class="form-group">
+                                          <input id="contactLastname"
+                                          maxlength="40"
+                                          name="Practice_Owner_Last_Name__c"
+                                          size="20"
+                                          type="text"
+                                          class="form-control validateThis"
+                                          required="" placeholder="Last Name">
+                                        </div>
+                    
+                                      </div>
+                                 
+                                 
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                     <input  id="email"
+                                     maxlength="80"
+                                     name="Practice_Owner_Email__c"
+                                     size="20"
+                                     type="email"
+                                     class="form-control validateThis"
+                                     required="" placeholder="Email">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Phone -->
+                                    <div class="form-group">
+                                      <input  id="phone"
+                                      maxlength="40"
+                                      name="Practice_Owner_Phone__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      inputmode="text" placeholder="Phone">
+                                    </div>
+                
+                                  </div>
                               </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Date -->
-                              <div class="form-group">
-                                <input  id="Partner_Activation_Cancellation_Date__c"
-                                name="Partner_Activation_Cancellation_Date__c"
+              
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Practice Contact Information
+                                  </h3>
                                 
-                                class="form-control datepicker"
-                                data-date-format="mm/dd/yyyy"
-                                required="" placeholder="Date to be activated">
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                      <input  id="practiceName"
+                                      maxlength="40"
+                                      name="Practice_Name__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required="" placeholder="Practice Name">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Management Software -->
+                                    <div class="form-group">
+                                      <select  id="PMS"
+                                      name="Practice_Management_Software__c"
+                                      title="Practice Management Software"
+                                      class="form-control validateThis"
+                                      required="" placeholder="Practice Management Software">
+                                       <option value="">Practice Management Software</option>
+                                       <option value="Dentrix">Dentrix</option>
+                                       <option value="Eaglesoft">Eaglesoft</option>
+                                       <option value="OpenDental">OpenDental</option>
+                                       <option value="Practice Web">Practice Web</option>
+                                       <option value="Fuse">Fuse</option>
+                                       <option value="Other">Other</option>
+                                      </select>
+                                    </div>
+                
+                                  </div>
+                                  
+                                  <div class="col-12 col-md-12">
+                
+                                    <!-- Address -->
+                                    <div class="form-group">
+                                      <input  id="address1"
+                                      maxlength="80"
+                                      name="Practice_Street_Address__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required="" placeholder="Address">
+                                    </div>
+                
+                                  </div>
+                                  
+                                    <div class="col-12 col-md-3">
+                  
+                                      <!-- Zip -->
+                                      <div class="form-group">
+                                        <input  id="zip"
+                                        pattern="[0-9]*" maxlength="5" required
+                                        name="Practice_Postal_Code__c"
+                                        size="20"
+                                        type="text"
+                                        class="form-control validateThis"
+                                        required="" placeholder="Zip">
+                                      </div>
+                  
+                                    </div>
+                                    <div class="col-12 col-md-3">
+                  
+                                      <!-- State -->
+                                      <div class="form-group">
+                                        <input          id="state"
+                                        maxlength="40"
+                                        name="Practice_State__c"
+                                        size="20"
+                                        type="text"
+                                        class="form-control validateThis"
+                                        required="" placeholder="State">
+                                      </div>
+                  
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                  
+                                      <!-- City -->
+                                      <div class="form-group">
+                                        <input  id="city"
+                                        maxlength="80"
+                                        name="Practice_City__c"
+                                        size="20"
+                                        type="text"
+                                        class="form-control validateThis"
+                                        required="" placeholder="City">
+                                      </div>
+                  
+                                    </div>
+     
+                                    <br/>
+                                    <div class="col-12" style="height: 50px;"></div>
+                                    <div class="col-12">
+                
+                                     <!-- Who should we send this info to? -->
+                                     <div class="form-group">
+                                       <select  id="Send_Sync_Credentials_To__c"
+                                       name="Send_Sync_Credentials_To__c"
+                                       title="Practice Management Software"
+                                       class="form-control "
+                                       required="" placeholder="Who should we send sync information to?">
+                                        <option value="">Who should we send sync information to?</option>
+                                        <option value="Partner Email and Practice Email">Partner Email and Practice Email</option>
+                                        <option value="Partner Email Only">Partner Email Only</option>
+                                       </select>
+                                     </div>
+                 
+                                   </div>
+                                 
+                                </div>
+        
+                                
+                                <div class="row justify-content-start justify-content-lg-end ">
+                                  <div class="col-auto">
+                                    <!-- Button -->
+                                    <input type="submit" name="submit" class="btn btn-primary lift form-btn" value="Submit">
+                                  </div>
+                                </div>
+        
+                                <div class="row">
+                                  <p class="tab-footnote">
+                                    *Please note that after the 30-day snapshot period, our sales team can engage with potential customers. If you are still working to sell the practice on Dental Intelligence, an extension of the snapshot must be requested at premiumsupport@dentalintel.com.
+                                  </p>
+                                </div>
+              
                               </div>
-          
-                            </div>
+                            </form> 
+              
                           </div>
-                           <div class="row justify-content-start justify-content-lg-end">
-                             <div class="col-auto">
-                               <!-- Button -->
-                               <button type="submit" class="btn btn-primary lift form-btn">
-                                 Submit
-                               </button>
-                             </div>
-                           </div>
-         
-                         </div>
-                       </form> 
-         
-                     </div>
-                   </div>
-                 </div>
-                 <div class="tab-pane fade" id="partner-bundle-tab-pane" role="tabpanel" aria-labelledby="partner-bundle-tab" tabindex="0">
-                  <div id="license-activation" class="">
-                    <div class="tab-heading-wrap">
-        
-                      <!-- Heading -->
-                      <h2 class="heading h2 text-center">
-                      Partner Bundle
-                      </h2>
-        
-                    </div>
-                    <div class="card-body">
-        
-                     <!-- Form -->
-                      <form  
-                      action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                      method="POST">
-                      <input type="hidden" id="external" name="external" value="1">
-                      <input type="hidden" name="orgid" value="00D6A000000uD5X" />
-                      <input
-                        type="hidden"
-                        name="retURL"
-                        value="http://www.dentalintel.com/partner-snapshot-success"
-                      />
-                      <input type="hidden" name="status" value="New" />
-                      <input
-                        type="hidden"
-                        name="recordType"
-                        value="0123o000001QGxG"
-                      />
-                      <input
-                        type="hidden"
-                        name="subject"
-                        value="Partner Bundle Request"
-                      />
-                        <div class="row">
-                          <div class="row form-row">
-                            <h3 class="heading h3 form-headings">
-                              Partner Information
-                            </h3>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Name -->
-                              <div class="form-group">
-                               <input    id="00N6A00000NVPQq"
-                               maxlength="50"
-                               name="00N6A00000NVPQq"
-                               size="20"
-                               type="text"
-                               class="form-control"
-                               required="" placeholder="Partner ID">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Email -->
-                              <div class="form-group">
-                                <input 
-                                id="00N3o000009DMor"
-                                maxlength="80"
-                                name="00N3o000009DMor"
-                                size="20"
-                                type="text"
-                                class="form-control"
-                                required="" placeholder="Partner Email">
-                              </div>
-          
-                            </div>
-                          </div>
-        
-                          <div class="row form-row">
-                            <h3 class="heading h3 form-headings">
-                              Practice Contact Information
-                            </h3>
-                          
-                                                  
-                            <div class="col-12 col-md-6">
-               
-                              <!-- First Name -->
-                              <div class="form-group">
-                              <input id="00N3o000009DMp1"
-                              maxlength="40"
-                              name="00N3o000009DMp1"
-                              size="20"
-                              type="text"
-                              class="form-control validateThis"
-                              required="" placeholder="Contact First Name">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Last Name -->
-                              <div class="form-group">
-                                <input id="00N3o000009DMp6"
-                                maxlength="40"
-                                name="00N3o000009DMp6"
-                                size="20"
-                                type="text"
-                                class="form-control validateThis"
-                                required="" placeholder="Contact Last Name">
-                              </div>
-
-                            </div>
-                            
-                            <div class="col-12 col-md-6">
-          
-                              <div class="form-group">
-                                <input  id="email"
-                                maxlength="80"
-                                name="email"
-                                size="20"
-                                class="form-control"
-                                required="" type="email" placeholder="Practice Email">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-           
-                              <!-- Phone -->
-                              <div class="form-group">
-                                <input  id="phone"
-                                maxlength="40"
-                                name="phone"
-                                size="20"
-                                type="text"
-                                class="form-control validateThis"
-                                required=""
-                                inputmode="text" placeholder="Practice Phone">
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-12">
-           
-                              <!-- Name -->
-                              <div class="form-group">
-                               <input  id="00N6A00000NVOap"
-                               maxlength="50"
-                               name="00N6A00000NVOap"
-                               size="20"
-                               type="text"
-                               class="form-control"
-                               required="" placeholder="Dental Intelligence Practice ID">
-                              </div>
-          
-                            </div>
-                          </div>
-
-
-                          
-  
-                          <div class="row justify-content-start justify-content-lg-end">
-                            <div class="col-auto">
-                              <!-- Button -->
-                              <button type="submit" class="btn btn-primary lift form-btn">
-                                Submit
-                              </button>
-                            </div>
-                          </div>
-        
                         </div>
-                      </form> 
+                      </div>
+                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                        <div id="license-activation" class="">
+                          <div class="tab-heading-wrap">
+              
+                            <!-- Heading -->
+                            <h2 class="heading h2 text-center">
+                              License Activation
+                            </h2>
+              
+                          </div>
+                          <div class="card-body">
+              
+                           <!-- Form -->
+                            <form  
+                            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                            method="POST">
+                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                            <input
+                              type="hidden"
+                              name="retURL"
+                              value="http://www.dentalintel.com/partner-snapshot-success"
+                            />
+                            <input type="hidden" name="status" value="New" />
+                            <input
+                              type="hidden"
+                              name="recordType"
+                              value="0126A000000luTi"
+                            />
+                            <input
+                              type="hidden"
+                              name="type"
+                              value="Partner License Activation"
+                            />
+                            <input
+                              type="hidden"
+                              name="subject"
+                              value="Partner License Change"
+                            />
+                            <input
+                              type="hidden"
+                              name="description"
+                              value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                            />
+                            <input
+                              type="hidden"
+                              name="00N2G00000ClUxV"
+                              value="Growth Platform"
+                            />
+                              <div class="row">
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Partner Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                     <input    id="00N6A00000NVPQq"
+                                     maxlength="50"
+                                     name="00N6A00000NVPQq"
+                                     size="20"
+                                     type="text"
+                                     class="form-control"
+                                     required="" placeholder="Partner ID">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                      <input 
+                                      id="email"
+                                      maxlength="80"
+                                      name="email"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required="" placeholder="Partner Email">
+                                    </div>
+                
+                                  </div>
+                                </div>
+              
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Practice Contact Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                      <input  id="00N6A00000NVZUe"
+                                      name="00N6A00000NVZUe"
+                                      type="text"
+                                      wrap="soft"
+                                      class="form-control"
+                                      size="20"
+                                      maxlength="50"
+                                      required="" placeholder="Practice Name">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                      <input  id="00N6A00000NVPQ7"
+                                      name="00N6A00000NVPQ7"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      maxlength="50"
+                                      required="" placeholder="Practice Account Number">
+                                    </div>
+                
+                                  </div>
+                                </div>
+                                <div class="row form-row">
+                                 <h3 class="heading h3 form-headings">
+                                   Product Information
+                                 </h3>
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Product -->
+                                   <div class="form-group" >
+                                     <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
+                                       <option value="Analytics">Analytics</option>
+                                       <option value="Engagement">Engagement</option>
+                                       <option value="LocalMed">LocalMed</option>
+                                       <option value="DSO Reports">DSO Reports</option>
+                                       <option value="Data Reports">Data Reports</option>
+                                     </select>
+                                   </div>
+               
+                                 </div>
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Date -->
+                                   <div class="form-group">
+                                     <input  id="Partner_Activation_Cancellation_Date__c"
+                                     name="Partner_Activation_Cancellation_Date__c"
+                                     
+                                     class="form-control datepicker"
+                                     data-date-format="mm/dd/yyyy"
+                                     required="" placeholder="Date to be activated">
+                                   </div>
+               
+                                 </div>
+                               </div>
+                                <div class="row justify-content-start justify-content-lg-end">
+                                  <div class="col-auto">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-primary lift form-btn">
+                                      Submit
+                                    </button>
+                                  </div>
+                                </div>
+              
+                              </div>
+                            </form> 
+              
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="partner-bundle-tab-pane" role="tabpanel" aria-labelledby="partner-bundle-tab" tabindex="0">
+                        <div id="license-activation" class="">
+                          <div class="tab-heading-wrap">
+              
+                            <!-- Heading -->
+                            <h2 class="heading h2 text-center">
+                            Partner Bundle
+                            </h2>
+              
+                          </div>
+                          <div class="card-body">
+              
+                           <!-- Form -->
+                            <form  
+                            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                            method="POST">
+                            <input type="hidden" id="external" name="external" value="1">
+                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                            <input
+                              type="hidden"
+                              name="retURL"
+                              value="http://www.dentalintel.com/partner-snapshot-success"
+                            />
+                            <input type="hidden" name="status" value="New" />
+                            <input
+                              type="hidden"
+                              name="recordType"
+                              value="0123o000001QGxG"
+                            />
+                            <input
+                              type="hidden"
+                              name="subject"
+                              value="Partner Bundle Request"
+                            />
+                              <div class="row">
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Partner Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                     <input    id="00N6A00000NVPQq"
+                                     maxlength="50"
+                                     name="00N6A00000NVPQq"
+                                     size="20"
+                                     type="text"
+                                     class="form-control"
+                                     required="" placeholder="Partner ID">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                      <input 
+                                      id="00N3o000009DMor"
+                                      maxlength="80"
+                                      name="00N3o000009DMor"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required="" placeholder="Partner Email">
+                                    </div>
+                
+                                  </div>
+                                </div>
+              
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Practice Contact Information
+                                  </h3>
+                                
+                                                        
+                                  <div class="col-12 col-md-6">
+                     
+                                    <!-- First Name -->
+                                    <div class="form-group">
+                                    <input id="00N3o000009DMp1"
+                                    maxlength="40"
+                                    name="00N3o000009DMp1"
+                                    size="20"
+                                    type="text"
+                                    class="form-control validateThis"
+                                    required="" placeholder="Contact First Name">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Last Name -->
+                                    <div class="form-group">
+                                      <input id="00N3o000009DMp6"
+                                      maxlength="40"
+                                      name="00N3o000009DMp6"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required="" placeholder="Contact Last Name">
+                                    </div>
+      
+                                  </div>
+                                  
+                                  <div class="col-12 col-md-6">
+                
+                                    <div class="form-group">
+                                      <input  id="email"
+                                      maxlength="80"
+                                      name="email"
+                                      size="20"
+                                      class="form-control"
+                                      required="" type="email" placeholder="Practice Email">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                 
+                                    <!-- Phone -->
+                                    <div class="form-group">
+                                      <input  id="phone"
+                                      maxlength="40"
+                                      name="phone"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      inputmode="text" placeholder="Practice Phone">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-12">
+                 
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                     <input  id="00N6A00000NVOap"
+                                     maxlength="50"
+                                     name="00N6A00000NVOap"
+                                     size="20"
+                                     type="text"
+                                     class="form-control"
+                                     required="" placeholder="Dental Intelligence Practice ID">
+                                    </div>
+                
+                                  </div>
+                                </div>
+      
+      
+                                
         
-                    </div>
-
-                    <div class="row new-tiers">
-                      <div class="col-md-4 col-xs-12">
-                        <div class="top-bundle" style="
+                                <div class="row justify-content-start justify-content-lg-end">
+                                  <div class="col-auto">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-primary lift form-btn">
+                                      Submit
+                                    </button>
+                                  </div>
+                                </div>
+              
+                              </div>
+                            </form> 
+              
+                          </div>
+      
+                          <div class="row new-tiers">
+                            <div class="col-md-4 col-xs-12">
+                              <div class="top-bundle" style="
+                                background-color: #005dc8;
+                                width: 100%;
+                                padding-bottom: 10px;
+                                padding-left: 40px;
+                                padding-top: 10px;
+                                color: white;
+                                  opacity: 0;
+                                                "><h4 style="
+                                text-align: center;
+                                font-family: 'Red Hat Text';
+                                ">Invisible</h4></div>
+                              <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
+                                <style>
+                                  .heading.h2.offering-heading {
+                                    font-size: 40px;
+                                  }
+                                </style>
+                                <div class="product-title-container">
+                                  <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6299126596e95e5ade4a1438_analyze.svg" loading="lazy" alt="" class="product-icon">
+                                  <h1 class="heading h2 offering-heading">Analytics</h1>
+                                </div>
+                                <style>
+                                  .heading.h2 span {     
+                                    font-size: 18px;
+                                    font-weight: 300;
+                                    font-family: Red Hat Text,sans-serif;
+                                    letter-spacing: normal;
+                                    padding-left: 10px; 
+                                  }
+      
+                                  .heading.h2.price {
+                                    font-size: 60px;
+                                  }
+                                </style>
+                                <h1 class="heading h2 price">$449<span>per month</span></h1>
+                                <hr style="
+                                    color: #002856;
+                                ">
+                                <!-- List -->
+                                    <p class="paragraph">This module includes:</p>
+                                    <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
+                                    <li>Daily, Weekly, and Monthly Practice Reports</li>
+                                    <li>Quarterly Growth Report</li>
+                                    <li>Profitability Formula®</li>
+                                    <li>Performance Dashboard</li>
+                                    <li>Collections Dashboard</li>
+                                    <li>Provider Pulse</li>
+                                    <li>Morning Huddle</li>
+                                    <li>Patient Finder</li>
+                                    <li>Follow Ups</li>
+                                    <li>Smart Schedule</li>
+                                    <li>Practice Mobile App</li>
+                                      
+                                  </ul>
+                                 
+                              </div>
+                            </div>
+                            <div class="col-md-8 col-xs-12 ">
+                              <div class="bundles" style="
+                              border-radius: 43px;
+                              opacity: 1;
+                              /* padding-bottom: 72px; */
+                              /* padding-left: 40px; */
+                              /* padding-top: 26px; */
+                              overflow: hidden;
+                          ">
+                          <div class="top-bundle" style="
                           background-color: #005dc8;
                           width: 100%;
                           padding-bottom: 10px;
                           padding-left: 40px;
                           padding-top: 10px;
                           color: white;
-                            opacity: 0;
-                                          "><h4 style="
-                          text-align: center;
-                          font-family: 'Red Hat Text';
-                          ">Invisible</h4></div>
-                        <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-                          <style>
-                            .heading.h2.offering-heading {
-                              font-size: 40px;
-                            }
-                          </style>
-                          <div class="product-title-container">
-                            <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6299126596e95e5ade4a1438_analyze.svg" loading="lazy" alt="" class="product-icon">
-                            <h1 class="heading h2 offering-heading">Analytics</h1>
-                          </div>
-                          <style>
-                            .heading.h2 span {     
-                              font-size: 18px;
-                              font-weight: 300;
-                              font-family: Red Hat Text,sans-serif;
-                              letter-spacing: normal;
-                              padding-left: 10px; 
-                            }
-
-                            .heading.h2.price {
-                              font-size: 60px;
-                            }
-                          </style>
-                          <h1 class="heading h2 price">$449<span>per month</span></h1>
-                          <hr style="
-                              color: #002856;
-                          ">
-                          <!-- List -->
-                              <p class="paragraph">This module includes:</p>
-                              <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                              <li>Daily, Weekly, and Monthly Practice Reports</li>
-                              <li>Quarterly Growth Report</li>
-                              <li>Profitability Formula®</li>
-                              <li>Performance Dashboard</li>
-                              <li>Collections Dashboard</li>
-                              <li>Provider Pulse</li>
-                              <li>Morning Huddle</li>
-                              <li>Patient Finder</li>
-                              <li>Follow Ups</li>
-                              <li>Smart Schedule</li>
-                              <li>Practice Mobile App</li>
-                                
-                            </ul>
-                           
+                      "><h4 style="
+      text-align: center;
+      font-family: 'Red Hat Text';
+      ">Exclusive Partner Bundle Price - $350 (save 36%!)</h4></div>
+                                                  <div class="bundle-price">
+                                                    <div class="row">
+                                                      <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                                                        <style>
+                                                          .heading.h2.offering-heading {
+                                                            font-size: 40px;
+                                                          }
+                                                        </style>
+                                                        <div class="product-title-container">
+                                                          <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62991265a78168236d28d0bc_engage.svg" loading="lazy" alt="" class="product-icon">
+                                                          <h1 class="heading h2 offering-heading">Engagement</h1>
+                                                        </div>
+                                                        <style>
+                                                          .heading.h2 span {
+                                                            font-size: 18px;
+                                                            font-weight: 300;
+                                                            font-family: Red Hat Text,sans-serif;
+                                                            letter-spacing: normal;
+                                                            padding-left: 10px;
+                                                          }
+                                                          .heading.h2.price {
+                                                            font-size: 60px;
+                                                          }
+                                                        </style>
+                                                        <h1 class="heading h2 price">$399<span>per month</span></h1>
+                                                        <hr style="
+                                                            color: #002856;
+                                                        ">
+                                                        <!-- List -->
+                                                        <p class="paragraph">This module includes:</p>
+                                                            <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
+                                                              <li>Online Scheduling</li>
+                                                              <li>Digital Forms and Consents</li>
+                                                              <li>2-Way and Mass Patient Communication</li>
+                                                              <li>Reminders and Confirmations</li>
+                                                              <li>Automated Recalls</li>
+                                                              <li>Treatment Plans</li>
+                                                              <li>Patient Financing</li>
+                                                              <li>Team Chat</li>
+                                                              <li>Voicemail Drops</li>
+                                                              <li>Virtual Check-In</li>
+                                                              <li>Kiosk</li>
+                                                              <li>Patient Portal</li>
+                                                              <li>Online Reviews and Marketing Tools</li>
+                                                              <li>Patient Loyalty Program</li>
+                                                              <li>LiveOps®</li>
+                                                              <li>Screen Pops</li>
+                                                      
+                                                          </ul>
+                                                      
+                                                      </div>
+                                                      <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                                                        <style>
+                                                          .heading.h2.offering-heading {
+                                                            font-size: 40px;
+                                                          }
+                                                        </style>
+                                                        <div class="product-title-container">
+                                                          <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6410bf04159e04ad938646db_Group%201018.svg" loading="lazy" alt="" class="product-icon">
+                                                          <h1 class="heading h2 offering-heading">Insurance</h1>
+                                                        </div>
+                                                        <style>
+                                                          .heading.h2 span {
+                                                            font-size: 18px;
+                                                            font-weight: 300;
+                                                            font-family: Red Hat Text,sans-serif;
+                                                            letter-spacing: normal;
+                                                            padding-left: 10px;
+                                                          }
+                                                          .heading.h2.price {
+                                                            font-size: 60px;
+                                                          }
+                                                        </style>
+                                                        <h1 class="heading h2 price">$149<span>per month</span></h1>
+                                                        <hr style="
+                                                            color: #002856;
+                                                        ">
+                                                        <!-- List -->
+                                                        <p class="paragraph">This module includes:</p>
+                                                            <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
+                                                              <li>Eligibility Verification</li>
+                                                              <li>Claims Processing</li>
+                                                              <li>Unlimited Narratives</li>
+                                                              <li>Unlimited Attachments</li>
+                                                              <li>Electronic Remittance Advice (ERA)</li>
+                                                              <li>Precision X12 Formatting</li>
+                                                              <li>End-to-End Claim Management</li>
+                                                              <li>Easy-sync to Bank Deposits</li>
+                                                              <li>Centralized Dashboard for DSOs</li>
+                                                      
+                                                          </ul>
+                                                      
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                              </div>
+                                                </div>
+                           </div>
                         </div>
                       </div>
-                      <div class="col-md-8 col-xs-12 ">
-                        <div class="bundles" style="
-                        border-radius: 43px;
-                        opacity: 1;
-                        /* padding-bottom: 72px; */
-                        /* padding-left: 40px; */
-                        /* padding-top: 26px; */
-                        overflow: hidden;
-                    ">
-                    <div class="top-bundle" style="
-                    background-color: #005dc8;
-                    width: 100%;
-                    padding-bottom: 10px;
-                    padding-left: 40px;
-                    padding-top: 10px;
-                    color: white;
-                "><h4 style="
-text-align: center;
-font-family: 'Red Hat Text';
-">Exclusive Partner Bundle Price - $350 (save 36%!)</h4></div>
-                                            <div class="bundle-price">
-                                              <div class="row">
-                                                <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                                  <style>
-                                                    .heading.h2.offering-heading {
-                                                      font-size: 40px;
-                                                    }
-                                                  </style>
-                                                  <div class="product-title-container">
-                                                    <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62991265a78168236d28d0bc_engage.svg" loading="lazy" alt="" class="product-icon">
-                                                    <h1 class="heading h2 offering-heading">Engagement</h1>
-                                                  </div>
-                                                  <style>
-                                                    .heading.h2 span {
-                                                      font-size: 18px;
-                                                      font-weight: 300;
-                                                      font-family: Red Hat Text,sans-serif;
-                                                      letter-spacing: normal;
-                                                      padding-left: 10px;
-                                                    }
-                                                    .heading.h2.price {
-                                                      font-size: 60px;
-                                                    }
-                                                  </style>
-                                                  <h1 class="heading h2 price">$399<span>per month</span></h1>
-                                                  <hr style="
-                                                      color: #002856;
-                                                  ">
-                                                  <!-- List -->
-                                                  <p class="paragraph">This module includes:</p>
-                                                      <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                                        <li>Online Scheduling</li>
-                                                        <li>Digital Forms and Consents</li>
-                                                        <li>2-Way and Mass Patient Communication</li>
-                                                        <li>Reminders and Confirmations</li>
-                                                        <li>Automated Recalls</li>
-                                                        <li>Treatment Plans</li>
-                                                        <li>Patient Financing</li>
-                                                        <li>Team Chat</li>
-                                                        <li>Voicemail Drops</li>
-                                                        <li>Virtual Check-In</li>
-                                                        <li>Kiosk</li>
-                                                        <li>Patient Portal</li>
-                                                        <li>Online Reviews and Marketing Tools</li>
-                                                        <li>Patient Loyalty Program</li>
-                                                        <li>LiveOps®</li>
-                                                        <li>Screen Pops</li>
-                                                
-                                                    </ul>
-                                                
-                                                </div>
-                                                <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                                  <style>
-                                                    .heading.h2.offering-heading {
-                                                      font-size: 40px;
-                                                    }
-                                                  </style>
-                                                  <div class="product-title-container">
-                                                    <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6410bf04159e04ad938646db_Group%201018.svg" loading="lazy" alt="" class="product-icon">
-                                                    <h1 class="heading h2 offering-heading">Insurance</h1>
-                                                  </div>
-                                                  <style>
-                                                    .heading.h2 span {
-                                                      font-size: 18px;
-                                                      font-weight: 300;
-                                                      font-family: Red Hat Text,sans-serif;
-                                                      letter-spacing: normal;
-                                                      padding-left: 10px;
-                                                    }
-                                                    .heading.h2.price {
-                                                      font-size: 60px;
-                                                    }
-                                                  </style>
-                                                  <h1 class="heading h2 price">$149<span>per month</span></h1>
-                                                  <hr style="
-                                                      color: #002856;
-                                                  ">
-                                                  <!-- List -->
-                                                  <p class="paragraph">This module includes:</p>
-                                                      <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                                        <li>Eligibility Verification</li>
-                                                        <li>Claims Processing</li>
-                                                        <li>Unlimited Narratives</li>
-                                                        <li>Unlimited Attachments</li>
-                                                        <li>Electronic Remittance Advice (ERA)</li>
-                                                        <li>Precision X12 Formatting</li>
-                                                        <li>End-to-End Claim Management</li>
-                                                        <li>Easy-sync to Bank Deposits</li>
-                                                        <li>Centralized Dashboard for DSOs</li>
-                                                
-                                                    </ul>
-                                                
-                                                </div>
-                                              </div>
-                                            </div>
-                        </div>
-                                          </div>
-                     </div>
-                  </div>
-                </div>
-                 <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                   <div id="license-cancellation" class="">
-                     <div class="tab-heading-wrap">
-         
-                       <!-- Heading -->
-                       <h2 class="heading h2 text-center">
-                         License Cancellation
-                       </h2>
-         
-                     </div>
-                     <div class="card-body">
-         
-                      <!-- Form -->
-                       <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                       method="POST">
-                       <input type="hidden" name="orgid" value="00D6A000000uD5X" />
-                       <input
-                         type="hidden"
-                         name="retURL"
-                         value="http://www.dentalintel.com/partner-snapshot-success"
-                       />
-                       <input type="hidden" name="status" value="New" />
-                       <input
-                         type="hidden"
-                         name="recordType"
-                         value="0126A000000luTi"
-                       />
-                       <input
-                         type="hidden"
-                         name="type"
-                         value="Partner License Cancellation"
-                       />
-                       <input
-                         type="hidden"
-                         name="subject"
-                         value="Partner License Change"
-                       />
-                       <input
-                         type="hidden"
-                         name="description"
-                         value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
-                       />
-                       <input
-                         type="hidden"
-                         name="00N2G00000ClUxL"
-                         value="Growth Platform"
-                       />
-                       <input
-                  type="hidden"
-                  name="retURL"
-                  value="http://www.dentalintel.com/licensing"
-                />
-                         <div class="row">
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Partner Information
-                             </h3>
-                             <div class="col-12 col-md-6">
-           
-                              <!-- Email -->
-                              <div class="form-group">
-                                <input  id="email"
-                                maxlength="80"
-                                name="email"
-                                size="20"
-                                class="form-control"
-                                required="" type="email" placeholder="Partner Email">
-                              </div>
-          
-                            </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                <input  id="00N6A00000NVPQq"
-                                maxlength="50"
-                                name="00N6A00000NVPQq"
-                                size="20"
-                                type="text"
-                                class="form-control"
-                                required="" placeholder="Partner ID">
-                               </div>
-           
-                             </div>
-                             
-                           </div>
-         
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Practice Contact Information
-                             </h3>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                 <input  id="00N6A00000NVZUe"
-                                 name="00N6A00000NVZUe"
-                                 type="text"
-                                 wrap="soft"
-                                 class="form-control"
-                                 size="20"
-                                 maxlength="50"
-                                 required="" placeholder="Practice Name">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Email -->
-                               <div class="form-group">
-                                 <input           id="00N6A00000NVPQ7"
-                                 name="00N6A00000NVPQ7"
-                                 size="20"
-                                 type="text"
-                                 class="form-control"
-                                 maxlength="50"
-                                 required="" placeholder="Practice Account Number">
-                               </div>
-           
-                             </div>
-                           </div>
-                           <div class="row form-row">
-                            <h3 class="heading h3 form-headings">
-                              Product Information
-                            </h3>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Product -->
-                              <div class="form-group" >
-                                <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
-                                  <option value="Analytics">Analytics</option>
-                                  <option value="Engagement">Engagement</option>
-                                  <option value="LocalMed">LocalMed</option>
-                                  <option value="DSO Reports">DSO Reports</option>
-                                  <option value="Data Reports">Data Reports</option>
-                                </select>
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Product -->
-                              <div class="form-group" >
-                                <select name="Partner_Cancellation_Reason__c" id="Partner_Cancellation_Reason__c" required class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Reason for Cancellation" title="Reason for Cancellation">
-                                  <option value="Utilization">Utilization</option>
-                                  <option value="Functionality">Functionality</option>
-                                  <option value="Customer Experience">Customer Experience</option>
-                                  <option value="Practice Management System Compatibility">Practice Management System Compatibility</option>
-                                  <option value="Consulting Lifecycle">Consulting Lifecycle</option>
-                                  <option value="Switched to Competing Consultant">Switched to Competing Consultant</option>
-                                </select>
-                              </div>
-          
-                            </div>
-                            <div class="col-12 col-md-6">
-          
-                              <!-- Date -->
-                              <div class="form-group">
-                                <input  id="Partner_Activation_Cancellation_Date__c"
-                                name="Partner_Activation_Cancellation_Date__c"
-                                class="form-control datepicker"
-                                data-date-format="mm/dd/yyyy"
-                                data-date-start-date="+0d"
-                                required="" placeholder="Date to be cancelled">
-                              </div>
-                            </div>
+                      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+                        <div id="license-cancellation" class="">
+                          <div class="tab-heading-wrap">
+              
+                            <!-- Heading -->
+                            <h2 class="heading h2 text-center">
+                              License Cancellation
+                            </h2>
+              
                           </div>
-                           <div class="row justify-content-start justify-content-lg-end">
-                             <div class="col-auto">
-                               <!-- Button -->
-                               <button type="submit" class="btn btn-primary lift form-btn">
-                                 Submit
-                               </button>
-                             </div>
-                           </div>
-         
-                         </div>
-                       </form> 
-         
-                     </div>
-                   </div>
-                 </div>
-                 <div class="tab-pane fade" id="snapshot-tab-pane" role="tabpanel" aria-labelledby="snapshot-tab" tabindex="0">
-                   <div id="snapshot" class="">
-                     <div class="tab-heading-wrap">
-         
-                       <!-- Heading -->
-                       <h2 class="heading h2 text-center">
-                         Practice Snapshot Request
-                       </h2>
-         
-                     </div>
-                     <div class="card-body">
-         
-                      <!-- Form -->
-                       <form  name="snapshotRequestData"
-                       action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                       method="POST">
-                       <input
-                        type="hidden"
-                        name="retURL"
-                        value="http://dentalintel.com"
-                      />
-                      <input type="hidden" name="recordType" value="0126A000000luTi" />
-                      <input type="hidden" name="orgid" value="00D6A000000uD5X" />
-                      <input type="hidden" name="type" value="Partner Snapshot Request" />
-                      <input type="hidden" name="subject" value="Partner Snapshot Request" />
-                      <input type="hidden" name="status" value="New" />
-                      <input type="hidden" name="OwnerId" value="0053o000009YVPb" />
-                         <div class="row">
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Partner Information
-                             </h3>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                <input    id="partnerCode"
-                                maxlength="50"
-                                name="Partner_ID__c"
-                                size="20"
-                                type="text"
-                                class="form-control validateThis"
-                                required="" placeholder="Partner ID">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Email -->
-                               <div class="form-group">
-                                 <input  id="partnerEmail"
-                                 maxlength="50"
-                                 name="email"
-                                 size="20"
-                                 type="email"
-                                 class="form-control validateThis"
-                                 required="" placeholder="Partner Email">
-                               </div>
-           
-                             </div>
-                           </div>
-   
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Practice Owner / Doctor Information
-                             </h3>
-                             
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- First Name -->
+                          <div class="card-body">
+              
+                           <!-- Form -->
+                            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                            method="POST">
+                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                            <input
+                              type="hidden"
+                              name="retURL"
+                              value="http://www.dentalintel.com/partner-snapshot-success"
+                            />
+                            <input type="hidden" name="status" value="New" />
+                            <input
+                              type="hidden"
+                              name="recordType"
+                              value="0126A000000luTi"
+                            />
+                            <input
+                              type="hidden"
+                              name="type"
+                              value="Partner License Cancellation"
+                            />
+                            <input
+                              type="hidden"
+                              name="subject"
+                              value="Partner License Change"
+                            />
+                            <input
+                              type="hidden"
+                              name="description"
+                              value="A partner is making a change to one of there licenses. Please find the account and evaluate the change."
+                            />
+                            <input
+                              type="hidden"
+                              name="00N2G00000ClUxL"
+                              value="Growth Platform"
+                            />
+                            <input
+                       type="hidden"
+                       name="retURL"
+                       value="http://www.dentalintel.com/licensing"
+                     />
+                              <div class="row">
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Partner Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                   <!-- Email -->
                                    <div class="form-group">
-                                   <input id="contactFirstname"
-                                   maxlength="40"
-                                   name="Practice_Owner_First_Name__c"
-                                   size="20"
-                                   type="text"
-                                   class="form-control validateThis"
-                                   required="" placeholder="First Name">
+                                     <input  id="email"
+                                     maxlength="80"
+                                     name="email"
+                                     size="20"
+                                     class="form-control"
+                                     required="" type="email" placeholder="Partner Email">
                                    </div>
                
                                  </div>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Last Name -->
-                                   <div class="form-group">
-                                     <input id="contactLastname"
-                                     maxlength="40"
-                                     name="Practice_Owner_Last_Name__c"
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                     <input  id="00N6A00000NVPQq"
+                                     maxlength="50"
+                                     name="00N6A00000NVPQq"
                                      size="20"
                                      type="text"
-                                     class="form-control validateThis"
-                                     required="" placeholder="Last Name">
+                                     class="form-control"
+                                     required="" placeholder="Partner ID">
+                                    </div>
+                
+                                  </div>
+                                  
+                                </div>
+              
+                                <div class="row form-row">
+                                  <h3 class="heading h3 form-headings">
+                                    Practice Contact Information
+                                  </h3>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Name -->
+                                    <div class="form-group">
+                                      <input  id="00N6A00000NVZUe"
+                                      name="00N6A00000NVZUe"
+                                      type="text"
+                                      wrap="soft"
+                                      class="form-control"
+                                      size="20"
+                                      maxlength="50"
+                                      required="" placeholder="Practice Name">
+                                    </div>
+                
+                                  </div>
+                                  <div class="col-12 col-md-6">
+                
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                      <input           id="00N6A00000NVPQ7"
+                                      name="00N6A00000NVPQ7"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      maxlength="50"
+                                      required="" placeholder="Practice Account Number">
+                                    </div>
+                
+                                  </div>
+                                </div>
+                                <div class="row form-row">
+                                 <h3 class="heading h3 form-headings">
+                                   Product Information
+                                 </h3>
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Product -->
+                                   <div class="form-group" >
+                                     <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
+                                       <option value="Analytics">Analytics</option>
+                                       <option value="Engagement">Engagement</option>
+                                       <option value="LocalMed">LocalMed</option>
+                                       <option value="DSO Reports">DSO Reports</option>
+                                       <option value="Data Reports">Data Reports</option>
+                                     </select>
                                    </div>
                
                                  </div>
-                            
-                            
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Email -->
-                               <div class="form-group">
-                                <input  id="email"
-                                maxlength="80"
-                                name="Practice_Owner_Email__c"
-                                size="20"
-                                type="email"
-                                class="form-control validateThis"
-                                required="" placeholder="Email">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Phone -->
-                               <div class="form-group">
-                                 <input  id="phone"
-                                 maxlength="40"
-                                 name="Practice_Owner_Phone__c"
-                                 size="20"
-                                 type="text"
-                                 class="form-control validateThis"
-                                 required=""
-                                 inputmode="text" placeholder="Phone">
-                               </div>
-           
-                             </div>
-                         </div>
-         
-                           <div class="row form-row">
-                             <h3 class="heading h3 form-headings">
-                               Practice Contact Information
-                             </h3>
-                           
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Name -->
-                               <div class="form-group">
-                                 <input  id="practiceName"
-                                 maxlength="40"
-                                 name="Practice_Name__c"
-                                 size="20"
-                                 type="text"
-                                 class="form-control validateThis"
-                                 required="" placeholder="Practice Name">
-                               </div>
-           
-                             </div>
-                             <div class="col-12 col-md-6">
-           
-                               <!-- Management Software -->
-                               <div class="form-group">
-                                 <select  id="PMS"
-                                 name="Practice_Management_Software__c"
-                                 title="Practice Management Software"
-                                 class="form-control validateThis"
-                                 required="" placeholder="Practice Management Software">
-                                  <option value="">Practice Management Software</option>
-                                  <option value="Dentrix">Dentrix</option>
-                                  <option value="Eaglesoft">Eaglesoft</option>
-                                  <option value="OpenDental">OpenDental</option>
-                                  <option value="Practice Web">Practice Web</option>
-                                  <option value="Fuse">Fuse</option>
-                                  <option value="Other">Other</option>
-                                 </select>
-                               </div>
-           
-                             </div>
-                             
-                             <div class="col-12 col-md-12">
-           
-                               <!-- Address -->
-                               <div class="form-group">
-                                 <input  id="address1"
-                                 maxlength="80"
-                                 name="Practice_Street_Address__c"
-                                 size="20"
-                                 type="text"
-                                 class="form-control validateThis"
-                                 required="" placeholder="Address">
-                               </div>
-           
-                             </div>
-                             
-                               <div class="col-12 col-md-3">
-             
-                                 <!-- Zip -->
-                                 <div class="form-group">
-                                   <input  id="zip"
-                                   pattern="[0-9]*" maxlength="5" required
-                                   name="Practice_Postal_Code__c"
-                                   size="20"
-                                   type="text"
-                                   class="form-control validateThis"
-                                   required="" placeholder="Zip">
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Product -->
+                                   <div class="form-group" >
+                                     <select name="Partner_Cancellation_Reason__c" id="Partner_Cancellation_Reason__c" required class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Reason for Cancellation" title="Reason for Cancellation">
+                                       <option value="Utilization">Utilization</option>
+                                       <option value="Functionality">Functionality</option>
+                                       <option value="Customer Experience">Customer Experience</option>
+                                       <option value="Practice Management System Compatibility">Practice Management System Compatibility</option>
+                                       <option value="Consulting Lifecycle">Consulting Lifecycle</option>
+                                       <option value="Switched to Competing Consultant">Switched to Competing Consultant</option>
+                                     </select>
+                                   </div>
+               
                                  </div>
-             
-                               </div>
-                               <div class="col-12 col-md-3">
-             
-                                 <!-- State -->
-                                 <div class="form-group">
-                                   <input          id="state"
-                                   maxlength="40"
-                                   name="Practice_State__c"
-                                   size="20"
-                                   type="text"
-                                   class="form-control validateThis"
-                                   required="" placeholder="State">
+                                 <div class="col-12 col-md-6">
+               
+                                   <!-- Date -->
+                                   <div class="form-group">
+                                     <input  id="Partner_Activation_Cancellation_Date__c"
+                                     name="Partner_Activation_Cancellation_Date__c"
+                                     class="form-control datepicker"
+                                     data-date-format="mm/dd/yyyy"
+                                     data-date-start-date="+0d"
+                                     required="" placeholder="Date to be cancelled">
+                                   </div>
                                  </div>
-             
                                </div>
-                               <div class="col-12 col-md-6">
-             
-                                 <!-- City -->
-                                 <div class="form-group">
-                                   <input  id="city"
-                                   maxlength="80"
-                                   name="Practice_City__c"
-                                   size="20"
-                                   type="text"
-                                   class="form-control validateThis"
-                                   required="" placeholder="City">
-                                 </div>
-             
-                               </div>
-
-                               <br/>
-                               <div class="col-12" style="height: 50px;"></div>
-                               <div class="col-12">
-           
-                                <!-- Who should we send this info to? -->
-                                <div class="form-group">
-                                  <select  id="Send_Sync_Credentials_To__c"
-                                  name="Send_Sync_Credentials_To__c"
-                                  title="Practice Management Software"
-                                  class="form-control "
-                                  required="" placeholder="Who should we send sync information to?">
-                                   <option value="">Who should we send sync information to?</option>
-                                   <option value="Partner Email and Practice Email">Partner Email and Practice Email</option>
-                                   <option value="Partner Email Only">Partner Email Only</option>
-                                  </select>
+                                <div class="row justify-content-start justify-content-lg-end">
+                                  <div class="col-auto">
+                                    <!-- Button -->
+                                    <button type="submit" class="btn btn-primary lift form-btn">
+                                      Submit
+                                    </button>
+                                  </div>
                                 </div>
-            
+              
                               </div>
-                            
-                           </div>
-   
-                           
-                           <div class="row justify-content-start justify-content-lg-end ">
-                             <div class="col-auto">
-                               <!-- Button -->
-                               <input type="submit" name="submit" class="btn btn-primary lift form-btn" value="Submit">
-                             </div>
-                           </div>
-   
-                           <div class="row">
-                             <p class="tab-footnote">
-                               *Please note that after the 30-day snapshot period, our sales team can engage with potential customers. If you are still working to sell the practice on Dental Intelligence, an extension of the snapshot must be requested at premiumsupport@dentalintel.com.
-                             </p>
-                           </div>
-         
-                         </div>
-                       </form> 
-         
-                     </div>
-                   </div>
+                            </form> 
+              
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                  </div>
+
+
+                 
+   
                </div>
    
              </div>
