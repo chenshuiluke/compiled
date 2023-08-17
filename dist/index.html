@@ -52,13 +52,18 @@
     padding-bottom: 1em;
     background-color: white;
     border-color: #335eea;
-    border-width: 2px;
+    border-width: 0px;
     border-style: solid;
+    border-radius: 10px;
     }
-    .subtab button {
+    .subtab.active {
+      border-width: 2px;
+      background-color: white;
+    }
+    .subtab p {
       background: transparent;
-    border-radius: 0px;
-    color: #002856 !important;
+      color: #002856 !important;
+      font-size: 23px;
     }
     </style>
   </head>
@@ -306,17 +311,17 @@
                  <div class="tab-pane" id="licensing-tab-pane" role="tabpanel">
                     <ul class="nav nav-pills nav-fill tab-nav-wrap" id="myTab" role="tablist">
                       <li class="nav-item subtab" role="presentation">
-                        <button class="nav-link" id="snapshot-tab" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Partner Snapshot</button>
+                        <p>Partner Snapshot</p>
                       </li>
-                      <li class="nav-item subtab" role="presentation">
+                      <li class="nav-item subtab" role="presentation" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="47px" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M192 64C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192s-86-192-192-192H192zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
-                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">License Activation</button>
+                        <p>License Activation</p>
                       </li>
-                      <li class="nav-item subtab" role="presentation">
-                        <button class="nav-link" id="partner-bundle-tab" data-bs-toggle="tab" data-bs-target="#partner-bundle-tab-pane" type="button" role="tab" aria-controls="partner-bundle-tab-pane" aria-selected="false">Partner Bundle</button>
+                      <li class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="#partner-bundle-tab-pane" type="button" role="tab" aria-controls="partner-bundle-tab-pane" aria-selected="false">
+                        <p>Partner Bundle</p>
                       </li>
-                      <li class="nav-item subtab" role="presentation">
-                        <button class="nav-link " id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">License Cancellation</button>
+                      <li class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
+                       <p>License Cancellation</p>
                       </li>
                     </ul>
                     <div class="tab-content">
