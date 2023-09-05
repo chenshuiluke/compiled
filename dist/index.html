@@ -1461,6 +1461,9 @@
         if(previousTab != null && previousTab.length > 0) {
           $('#licensing-tab').click()
           $('#' + previousTab).click()
+          document.getElementById(previousTab).scrollIntoView();
+          $('.modal-wrapper').show()
+          $('.modal-wrapper').css({opacity: 1})
         }
       })
       
