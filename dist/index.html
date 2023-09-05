@@ -1444,11 +1444,24 @@
     <!-- JAVASCRIPT -->
     <!-- Vendor JS -->
     <script>
-
+      function getParameterByName(name, url = window.location.href) {
+          name = name.replace(/[\[\]]/g, '\\$&');
+          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
       $(document).ready(function() {
-      $('[data-test-id="chat-widget-launcher"]').hide()
+        $('[data-test-id="chat-widget-launcher"]').hide()
         const element = document.getElementById("chatDiv")
         element.addEventListener("click", openContactChatWidget);
+
+        const previousTab = getParameterByName('lastTab')
+        if(previousTab != null && previousTab.length > 0) {
+          $('#licensing-tab').click()
+          $('#' + previousTab).click()
+        }
       })
       
       </script>
