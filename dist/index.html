@@ -1474,8 +1474,9 @@
         var lastTab = ''
         function setLastTab(tabName) {
           lastTab = tabName
-          const input = $('input[name="retURL"]')
-          input.val(window.location.origin + '/partner-snapshot?lastTab='  + lastTab)
+          const input = $('input[name="retURL"]').each(function() {
+            $(this).val(window.location.origin + '/partner-snapshot?lastTab='  + lastTab)
+          })
         }
       </script>
 <script>
