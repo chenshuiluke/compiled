@@ -1511,13 +1511,11 @@
         }
       </script>
 <script>
+  var nextMonth = new Date();
+  nextMonth.setMonth(nextMonth.getMonth() + 1, 1);
   $('.datepicker:not(.cancellation)').datepicker();
   $('.datepicker.cancellation').datepicker({
-    beforeShowDay: function(d){
-      let nextMonth = new Date();
-      nextMonth.setMonth(nextMonth.getMonth() + 1, 1);
-      return !(d < nextMonth)
-  },
+    startDate: nextMonth,
   });
   function is_int(value){ 
     if ((parseFloat(value) == parseInt(value)) && !isNaN(value)) {
