@@ -1305,9 +1305,8 @@
                                    <div class="form-group">
                                      <input  id="Partner_Activation_Cancellation_Date__c"
                                      name="Partner_Activation_Cancellation_Date__c"
-                                     class="form-control datepicker"
+                                     class="form-control datepicker cancellation"
                                      data-date-format="mm/dd/yyyy"
-                                     data-date-start-date="+0d"
                                      required="" placeholder="Date to be cancelled">
                                    </div>
                                  </div>
@@ -1512,7 +1511,14 @@
         }
       </script>
 <script>
-  $('.datepicker').datepicker();
+  $('.datepicker:not(.cancellation)').datepicker();
+  $('.datepicker.cancellation').datepicker({
+    beforeShowDay: function(d){
+      let nextMonth = new Date();
+      nextMonth.setMonth(nextMonth.getMonth() + 1, 1);
+      return !(d < nextMonth)
+  },
+  });
   function is_int(value){ 
     if ((parseFloat(value) == parseInt(value)) && !isNaN(value)) {
       return true;
