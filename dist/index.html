@@ -1,651 +1,924 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Title -->
-    <title>Dental Intelligence | Dental Analytics and Patient Communication</title>
+    <title>
+      Dental Intelligence | Dental Analytics and Patient Communication
+    </title>
     <style>
+      #license-activation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(2)
+        > div
+        > div,
+      #license-cancellation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(2)
+        > div
+        > div,
+      #license-cancellation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(3)
+        > div
+        > div {
+        border-bottom: 2px solid #002856 !important;
+      }
 
-#license-activation > div.card-body > form > div > div:nth-child(3) > div:nth-child(2) > div > div , #license-cancellation > div.card-body > form > div > div:nth-child(3) > div:nth-child(2) > div > div, #license-cancellation > div.card-body > form > div > div:nth-child(3) > div:nth-child(3) > div > div{
-      border-bottom: 2px solid #002856 !important;
-    }
+      #license-activation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(2)
+        > div
+        > div
+        > button,
+      #license-cancellation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(2)
+        > div
+        > div
+        > button,
+      #license-cancellation
+        > div.card-body
+        > form
+        > div
+        > div:nth-child(3)
+        > div:nth-child(3)
+        > div
+        > div
+        > button {
+        background-color: white !important;
+        color: #002856 !important;
+      }
 
-    #license-activation > div.card-body > form > div > div:nth-child(3) > div:nth-child(2) > div > div > button, #license-cancellation > div.card-body > form > div > div:nth-child(3) > div:nth-child(2) > div > div > button, #license-cancellation > div.card-body > form > div > div:nth-child(3) > div:nth-child(3) > div > div > button {
-      background-color: white !important;
-      color: #002856 !important;
+      .form-btn,
+      .tab-footnote {
+        font-family: "Red Hat Text" !important;
+      }
 
-    }
+      .dropdown-toggle:after {
+        border: none !important;
+        /* content: ""; */
+        font-family: Feather;
+        vertical-align: middle;
+      }
+      .bundle-price {
+        background: #cceeff !important;
+        background-image: initial;
+        background-position-x: 0px;
+        background-position-y: 0px;
+        background-size: initial;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+        background-attachment: initial;
+        background-origin: padding-box;
+        background-clip: padding-box;
+        opacity: 1;
+        padding-bottom: 72px;
+        padding-left: 40px;
+        padding-top: 26px;
+      }
+      .new-tiers .paragraph {
+        font-size: 20px;
+      }
 
-    .form-btn, .tab-footnote {
-        font-family: 'Red Hat Text' !important;
-    }
+      .subtab {
+        padding-top: 2em;
+        padding-bottom: 2em;
+        background-color: white;
+        border-color: #005dc8;
+        border-width: 0px;
+        border-style: solid;
+        border-radius: 10px;
+        filter: drop-shadow(5px 7px 10px #d6c7c7);
+        flex-grow: 0 !important;
+      }
+      .subtab.active {
+        border-width: 2px;
+        background-color: white;
+        filter: unset;
+      }
+      .subtab p {
+        font-family: greycliff-cf, sans-serif;
+        background: transparent;
+        color: #002856 !important;
+        font-size: 18px;
+        font-weight: bold;
+      }
 
-    .dropdown-toggle:after {
-    border: none!important;
-    /* content: ""; */
-    font-family: Feather;
-    vertical-align: middle;
-}
-    .bundle-price {
-      background:#CCEEFF !important;
-      background-image: initial;
-      background-position-x: 0px;
-      background-position-y: 0px;
-      background-size: initial;
-      background-repeat-x: no-repeat;
-      background-repeat-y: no-repeat;
-      background-attachment: initial;
-      background-origin: padding-box;
-      background-clip: padding-box;
-      opacity: 1;
-      padding-bottom: 72px;
-      padding-left: 40px;
-      padding-top: 26px;
-    }
-    .new-tiers .paragraph {
-      font-size: 20px;
-    }
+      .nav.spaced {
+        margin-top: 3em;
+        justify-content: space-between;
+        padding-left: unset !important;
+        gap: 10px;
+      }
+      .heading.h1 {
+        text-align: left;
+      }
+      .heading.h2 {
+        max-width: unset;
+      }
+      .resources-btn {
+        text-decoration: none;
+        max-width: 400px;
+      }
+      .resources-btn:hover {
+        color: white;
+      }
 
-    .subtab {
-      padding-top: 2em;
-    padding-bottom: 2em;
-    background-color: white;
-    border-color: #005DC8;
-    border-width: 0px;
-    border-style: solid;
-    border-radius: 10px;
-    filter: drop-shadow(5px 7px 10px #D6C7C7);
-    flex-grow: 0 !important;
-    }
-    .subtab.active {
-      border-width: 2px;
-      background-color: white;
-      filter: unset
-    }
-    .subtab p {
-      font-family: greycliff-cf,sans-serif;
-      background: transparent;
-      color: #002856 !important;
-      font-size: 18px;
-    font-weight: bold;
-    }
-
-    .nav.spaced {
-      margin-top: 3em;
-      justify-content: space-between;
-      padding-left: unset !important;
-      gap: 10px
-    }
-    .heading.h1 {
-      text-align: left
-    }
-    .heading.h2 {
-      max-width: unset;
-    }
-    .resources-btn {
-      text-decoration: none;
-      max-width: 400px;
-    }
-    .resources-btn:hover {
-      color: white
-    }
+      .reseller-container {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .reseller-header,
+      .reseller-tier-section {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .reseller-header h1 {
+        margin-bottom: 10px;
+      }
+      .reseller-general-perks,
+      .reseller-tiers {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .reseller-general-perks div,
+      .reseller-tier {
+        flex: 1;
+        padding: 10px;
+        margin: 5px;
+        background-color: #e7e7e7;
+        border-radius: 5px;
+      }
+      .reseller-tier img {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      .reseller-tier h2 {
+        margin-bottom: 10px;
+      }
+      .reseller-tier p {
+        text-align: left;
+      }
+      .reseller-footer {
+        text-align: center;
+        margin-top: 20px;
+      }
     </style>
   </head>
   <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="navbar7_container">
+        <!-- Brand -->
+        <a class="navbar7_logo-link w-nav-brand w--current" href="/">
+          <img
+            src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/DI-logo-header.svg"
+            class="navbar7_logo"
+            alt="..."
+          />
+        </a>
 
-       <!-- NAVBAR -->
-       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-         <div class="navbar7_container">
-       
-           <!-- Brand -->
-           <a class="navbar7_logo-link w-nav-brand w--current" href="/">
-             <img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/DI-logo-header.svg" class="navbar7_logo" alt="...">
-           </a>
-       
-           <!-- Toggler -->
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
-           </button>
-       
-           <!-- Collapse -->
-           <div class="collapse navbar-collapse" id="navbarCollapse">
-       
-             <!-- Toggler -->
-             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-               <i class="fe fe-x"></i>
-             </button>
-             
-           </div>
-       
-         </div>
-       </nav>
+        <!-- Toggler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- Toggler -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fe fe-x"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
 
-       <!-- WELCOME -->
-       <section class="pt-4 pt-md-11">
-         <div class="navbar7_container">
-           <div class="row align-items-center">
-             <div class="col-12 col-md-7 col-lg-6" data-aos="fade-up">
-   
-               <!-- Heading -->
-               <h1 class="heading h1">
-                 Dental Intelligence Reseller Partner Program
-               </h1>
-   
-               <!-- Text -->
-               <p id="paragraph-mobile" class="paragraph large bold-mobile hero-text">
-                 We pride ourselves on helping intelligently shape the future of dentistry, and we couldn’t do that without our valued partner relationships. Together, we can better the lives of dentists, team members, and patients. Visit our Reseller Program tab to learn more. We appreciate your partnership.            
-               </p>
-   
-             </div>
-   
-             <div class="col-12 col-md-5 col-lg-6">
-   
-               <!-- Image -->
-               <img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/di_reseller_badges_header.png" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-   
-             </div>
-           </div> <!-- / .row -->
-         </div> <!-- / .container -->
-       </section>
-   
-       <!-- FEATURES -->
-       <section class="py-8 py-md-11 border-bottom">
-         <div class="navbar7_container">
-           <div class="col-12 col-md-12" data-aos="fade-up">
-   
-             <!-- Card -->
-             <div class="card">
-               <div class=" card-bottom ">
-                   <!-- Tabs -->
-                   <ul class="nav nav-pills nav-fill tab-nav-wrap" id="myTab" role="tablist">
-                     <li class="nav-item" role="presentation">
-                       <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Reseller Program</button>
-                     </li>
-                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="licensing-tab" data-bs-toggle="tab" data-bs-target="#licensing-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Licensing</button>
+    <!-- WELCOME -->
+    <section class="pt-4 pt-md-11">
+      <div class="navbar7_container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-7 col-lg-6" data-aos="fade-up">
+            <!-- Heading -->
+            <h1 class="heading h1">
+              Dental Intelligence Reseller Partner Program
+            </h1>
+
+            <!-- Text -->
+            <p
+              id="paragraph-mobile"
+              class="paragraph large bold-mobile hero-text"
+            >
+              We pride ourselves on helping intelligently shape the future of
+              dentistry, and we couldn’t do that without our valued partner
+              relationships. Together, we can better the lives of dentists, team
+              members, and patients. Visit our Reseller Program tab to learn
+              more. We appreciate your partnership.
+            </p>
+          </div>
+
+          <div class="col-12 col-md-5 col-lg-6">
+            <!-- Image -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/di_reseller_badges_header.png"
+              class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0"
+              alt="..."
+              data-aos="fade-up"
+              data-aos-delay="100"
+            />
+          </div>
+        </div>
+        <!-- / .row -->
+      </div>
+      <!-- / .container -->
+    </section>
+
+    <!-- FEATURES -->
+    <section class="py-8 py-md-11 border-bottom">
+      <div class="navbar7_container">
+        <div class="col-12 col-md-12" data-aos="fade-up">
+          <!-- Card -->
+          <div class="card">
+            <div class="card-bottom">
+              <!-- Tabs -->
+              <ul
+                class="nav nav-pills nav-fill tab-nav-wrap"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link active"
+                    id="home-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#home-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="home-tab-pane"
+                    aria-selected="true"
+                  >
+                    Reseller Program
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="licensing-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#licensing-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="snapshot-tab-pane"
+                    aria-selected="false"
+                  >
+                    Licensing
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link"
+                    id="resources-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#resources-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="snapshot-tab-pane"
+                    aria-selected="false"
+                  >
+                    Resources
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <div class="col-12 col-md-12">
+                  <div class="reseller-container">
+                    <div class="reseller-header">
+                      <h1>Reseller Program Scope</h1>
+                      <p>
+                        The Dental Intelligence Reseller Program provides
+                        opportunities to partner with a trusted company in the
+                        dental space to propel your brand and monetary growth
+                        goals. We offer four different packages for our Reseller
+                        Partners with varying levels of involvement.
+                      </p>
+                    </div>
+
+                    <div class="reseller-general-perks">
+                      <div>
+                        <ul>
+                          <li>Preferred Reseller Pricing</li>
+                          <li>Annual Growth Reports</li>
+                          <li>Premium Support (chat, email, phone)</li>
+                          <li>In-App Product Training</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <ul>
+                          <li>On-Demand Learning</li>
+                          <li>Online Help Center</li>
+                          <li>DI Community Access</li>
+                          <li>Early Access Monthly Newsletter</li>
+                        </ul>
+                      </div>
+                      <div>
+                        <ul>
+                          <li>Swag Box</li>
+                          <li>Quarterly Partner Training Webinar</li>
+                          <li>Client Snapshots</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="reseller-tier-section">
+                      <div class="reseller-tier">
+                        <img src="silver.png" alt="Silver Tier" />
+                        <h2>Silver Perks</h2>
+                        <p>
+                          Best for coaches, consultants, and marketing companies
+                          who understand the Dental Intelligence modules and are
+                          looking to expand services and reach the new tier
+                          minimums in order to receive discounted pricing and
+                          gain additional perks.
+                        </p>
+                        <p>Includes all general perks, PLUS:</p>
+                        <ul>
+                          <li>
+                            Guest Opportunity on Growth in Dentistry Podcast
+                          </li>
+                          <li>Quarterly Business Review*</li>
+                          <li>Premium Intellicon Pricing</li>
+                          <li>Access to Partner Product Focus Group</li>
+                          <li>Access to Partner Success Manager</li>
+                        </ul>
+                        <p>*For $5k+ monthly</p>
+                      </div>
+                      <div class="reseller-tier">
+                        <img src="gold.png" alt="Gold Tier" />
+                        <h2>Gold Perks</h2>
+                        <p>
+                          Best for coaches, consultants, and marketing companies
+                          who understand the Dental Intelligence modules can
+                          activate clients and are looking to expand services to
+                          meet gold tier discounts and gain additional perks.
+                        </p>
+                        <p>Includes all general and silver tier perks, PLUS:</p>
+                        <ul>
+                          <li>Quarterly Business Review</li>
+                          <li>Dedicated Partner Success Manager</li>
+                          <li>Featured on DI Website as a Certified Partner</li>
+                        </ul>
+                      </div>
+                      <div class="reseller-tier">
+                        <img src="diamond.png" alt="Diamond Tier" />
+                        <h2>Diamond Perks</h2>
+                        <p>
+                          Best for coaches, consultants, and marketing companies
+                          who understand the Dental Intelligence modules can
+                          activate clients and are looking to expand services to
+                          meet diamond-tier discounts and gain additional perks.
+                        </p>
+                        <p>
+                          Includes all general, silver, and gold tier perks,
+                          PLUS:
+                        </p>
+                        <ul>
+                          <li>Host an Intellicon Breakout Session</li>
+                          <li>DI Executive Sponsor</li>
+                          <li>Annual Co-Branded Partner Case Study</li>
+                          <li>Participation in Sponsored Events</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="licensing-tab-pane" role="tabpanel">
+                  <ul
+                    class="nav nav-pills nav-fill tab-nav-wrap spaced"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li
+                      onclick="setLastTab('snapshot-btn')"
+                      id="snapshot-btn"
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target="#snapshot-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="snapshot-tab-pane"
+                      aria-selected="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        viewBox="0 0 512 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
+                          }
+                        </style>
+                        <path
+                          d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"
+                        />
+                      </svg>
+                      <p>Snapshot</p>
                     </li>
-                    <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">Resources</button>
+                    <li
+                      onclick="setLastTab('license-activation-btn')"
+                      id="license-activation-btn"
+                      class="nav-item subtab"
+                      role="presentation"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#profile-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="profile-tab-pane"
+                      aria-selected="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        viewBox="0 0 576 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
+                          }
+                        </style>
+                        <path
+                          d="M192 64C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192s-86-192-192-192H192zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"
+                        />
+                      </svg>
+                      <p>License Activation</p>
                     </li>
-                   </ul>
-               </div>
-               <div class="tab-content" id="myTabContent">
-                 <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                   <div class="col-12 col-md-12">
-   
-                     <!-- Card -->
-                     <div id="reseller-program" class="">
-                       <div class="tab-heading-wrap">
-           
-                         <!-- Heading -->
-                         <h2 class="heading h2 text-center">
-                           Reseller Program
-                         </h2>
-           
-                         <p id="paragraph-mobile" class="paragraph large bold-mobile text-center tab-subheading mx-auto">
-                           The Dental Intelligence Reseller Program provides opportunities to partner with a trusted company in the dental space to propel your brand and monetary growth goals. We offer four different packages for our Reseller Partners with varying levels of involvement. 
-                         </p>
-           
-                       </div>
-                       <style>
-                        .new-perks {
-                          padding: 20px !important;
-                          width: 100%;
-                          min-height: 40em;
-                        }
-                        .new-perks.resources {
-                          min-height: unset;
-                          margin-bottom: 5em;
-                          padding: 5em !important;
-                        }
-                        .new-paragraph {
-                          padding-top: 2em;
-                          /* padding-bottom: 5em; */
-                          min-height: 16em;
-                        }
-                        @media (max-width: 576px) {
-                          .new-tiers img {
-                              display: block;
-                              margin: 0px auto;
-                            }
-                          .new-perks {
-                            border-radius: 0px
+                    <li
+                      onclick="setLastTab('partner-bundle-btn')"
+                      id="partner-bundle-btn"
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target="#partner-bundle-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="partner-bundle-tab-pane"
+                      aria-selected="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        viewBox="0 0 640 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
                           }
-                          .new-paragraph {
-                            padding-top: 2em;
-                            padding-bottom: 2em;
+                        </style>
+                        <path
+                          d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176H96V304c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128H544h40 40c8.8 0 16 7.2 16 16V352c0 17.7-14.3 32-32 32H576c-11.8 0-22.2-6.4-27.7-16H463.4c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16H56 96h19.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9 .2 13.2 .6zM544 320V176H496c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1H544zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"
+                        />
+                      </svg>
+                      <p>Partner Bundle</p>
+                    </li>
+                    <li
+                      onclick="setLastTab('license-cancellation-btn')"
+                      id="license-cancellation-btn"
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target="#contact-tab-pane"
+                      type="button"
+                      role="tab"
+                      aria-controls="contact-tab-pane"
+                      aria-selected="false"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        viewBox="0 0 576 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
                           }
-                          ul { 
-                            list-style-type: none; 
-                            padding: 0; 
-                          } 
-                          li { 
-                            text-align: center; 
-                          } 
-                          li:not(.nav-item)::before { 
-                            content: '• '; 
-                          } 
-                          .new-perks {
-                            margin-bottom: 5em;
-                          }
-                          .new-paragraph {
-                            padding: 0 3em 0 3em;
-                          }
-                        }
-                       </style>
-                       <div class="row new-tiers">
-                        <div class="col-md-3 col-xs-12">
-                          <img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/bronze.png" class="img-fluid mw-md-130 mw-lg-10 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-                          <p class="paragraph large bold-mobile reseller-paragraph new-paragraph">
-                            Best for coaches, consultants, and marketing companies looking to understand Dental Intelligence and how to sell and activate new clients.
+                        </style>
+                        <path
+                          d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128H384zM576 256c0-106-86-192-192-192H192C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"
+                        />
+                      </svg>
+                      <p>License Cancellation</p>
+                    </li>
+                  </ul>
 
-                          </p>
-                          <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-                 
-                            <!-- Heading -->
-                            <h3 id="heading-h3" class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                                <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                  <li>Preferred Reseller Pricing</li>
-                                  <li>Annual Growth Reports</li>
-                                  <li>Premium Support (chat, email, phone)</li>
-                                  <li>In-App Product Training</li>
-                                  <li>On-Demand Learning</li>
-                                  <li>Online Help Center</li>
-                                  <!-- <li>DI Community Access</li> -->
-                                  <li>Early Access Monthly Newsletter</li>
-                                  <li>Swag Box</li>
-                                  <li>Quarterly Partner Training Webinar</li>
-                                  <li>Client Snapshots</li>
-                                  
-                              </ul>
-                             
-                          </div>
+                  <div class="tab-content">
+                    <div
+                      class="tab-pane fade"
+                      id="snapshot-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="snapshot-tab"
+                      tabindex="0"
+                    >
+                      <div id="snapshot" class="">
+                        <div class="tab-heading-wrap">
+                          <!-- Heading -->
+                          <h2 class="heading h2 text-center">
+                            Practice Snapshot Request
+                          </h2>
                         </div>
-                        <div class="col-md-3 col-xs-12"><img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/silver.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-                          <p class="paragraph large bold-mobile reseller-paragraph new-paragraph">
-                            Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules and are looking to expand services and reach the new tier minimums in order to receive discounted pricing and gain additional perks.
-                          </p>
-                          <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-                            <!-- Heading -->
-                            <h3 id="heading-h3" class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                            <p class="paragraph large bold-mobile reseller-paragraph">Includes All Bronze Tier Perks, <strong>PLUS</strong></p>
-                                <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                  
-                                  <li>Guest Opportunity on Growth in Dentistry Podcast</li>
-                                  <li>Business Review Check-Ins from PSM</li>
-                                  <li>Premium Intellicon Pricing</li>
-                                  <li>Access to Partner Product Focus Group</li>
-                                  <li>Access to Partner Success Manager</li>
-                                  <br/>
-                                  
-                              </ul>
-                             
-                          </div></div>
-                        <div class="col-md-3 col-xs-12"><img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/gold.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-                          <p class="paragraph large bold-mobile reseller-paragraph new-paragraph">
-                            Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet gold tier discounts and gain additional perks.
-
-                          </p>
-                          <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-
-                            <!-- Heading -->
-                            <h3 id="heading-h3" class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                            <p class="paragraph large bold-mobile reseller-paragraph">Includes All Bronze and Silver Tier Perks, <strong>PLUS</strong></p>
-                                <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                  
-                                  <li>Featured on DI Website as a Certified Partner</li>
-                                  <li>Dedicated Partner Success Manager</li>
-                                  <li>Quarterly Business Review</li>
-                              </ul>
-                             
-                          </div></div>
-                        <div class="col-md-3 col-xs-12"><img src="https://cdn.jsdelivr.net/gh/chenshuiluke/compiled@0cae746c933074e102ef4dee124d47562001158c/dist/assets/img/illustrations/diamond.png" class="img-fluid mw-md-130 mw-lg-100 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100">
-                          <p class="paragraph large bold-mobile reseller-paragraph new-paragraph">
-                            Best for coaches, consultants, and marketing companies who understand the Dental Intelligence modules can activate clients and are looking to expand services to meet diamond-tier discounts and gain additional perks. 
-
-                          </p>
-                          <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-                            <!-- Heading -->
-                            <h3 id="heading-h3" class="heading h3">
-                              Perks
-                            </h3>
-                
-                            <!-- List -->
-                            <p class="paragraph large bold-mobile reseller-paragraph">Includes All Bronze, Silver, and Gold Tier Perks, <strong>PLUS</strong></p>
-                                <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                 
-                                  <li>Host an Intellicon Breakout Session</li>
-                                  <li>DI Executive Sponsor</li>
-                                  <li>Annual Co-Branded Partner Case Study</li>
-                                  <li>Participation in Sponsored Events</li>
-                                  
-                              </ul>
-                             
-                          </div></div>
-                       </div>
-                     </div>
-           
-                   </div>
-                 </div>
-                 <div class="tab-pane" id="licensing-tab-pane" role="tabpanel">
-                    <ul class="nav nav-pills nav-fill tab-nav-wrap spaced" id="myTab" role="tablist">
-                      <li onclick="setLastTab('snapshot-btn')"  id="snapshot-btn" class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="#snapshot-tab-pane" type="button" role="tab" aria-controls="snapshot-tab-pane" aria-selected="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M64 64c0-17.7-14.3-32-32-32S0 46.3 0 64V400c0 44.2 35.8 80 80 80H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H80c-8.8 0-16-7.2-16-16V64zm406.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L320 210.7l-57.4-57.4c-12.5-12.5-32.8-12.5-45.3 0l-112 112c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L240 221.3l57.4 57.4c12.5 12.5 32.8 12.5 45.3 0l128-128z"/></svg>
-                        <p>Snapshot</p>
-                      </li>
-                      <li onclick="setLastTab('license-activation-btn')"  id="license-activation-btn" class="nav-item subtab" role="presentation" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47px" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M192 64C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192s-86-192-192-192H192zm192 96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
-                        <p>License Activation</p>
-                      </li>
-                      <li onclick="setLastTab('partner-bundle-btn')"  id="partner-bundle-btn" class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="#partner-bundle-tab-pane" type="button" role="tab" aria-controls="partner-bundle-tab-pane" aria-selected="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47px" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M272.2 64.6l-51.1 51.1c-15.3 4.2-29.5 11.9-41.5 22.5L153 161.9C142.8 171 129.5 176 115.8 176H96V304c20.4 .6 39.8 8.9 54.3 23.4l35.6 35.6 7 7 0 0L219.9 397c6.2 6.2 16.4 6.2 22.6 0c1.7-1.7 3-3.7 3.7-5.8c2.8-7.7 9.3-13.5 17.3-15.3s16.4 .6 22.2 6.5L296.5 393c11.6 11.6 30.4 11.6 41.9 0c5.4-5.4 8.3-12.3 8.6-19.4c.4-8.8 5.6-16.6 13.6-20.4s17.3-3 24.4 2.1c9.4 6.7 22.5 5.8 30.9-2.6c9.4-9.4 9.4-24.6 0-33.9L340.1 243l-35.8 33c-27.3 25.2-69.2 25.6-97 .9c-31.7-28.2-32.4-77.4-1.6-106.5l70.1-66.2C303.2 78.4 339.4 64 377.1 64c36.1 0 71 13.3 97.9 37.2L505.1 128H544h40 40c8.8 0 16 7.2 16 16V352c0 17.7-14.3 32-32 32H576c-11.8 0-22.2-6.4-27.7-16H463.4c-3.4 6.7-7.9 13.1-13.5 18.7c-17.1 17.1-40.8 23.8-63 20.1c-3.6 7.3-8.5 14.1-14.6 20.2c-27.3 27.3-70 30-100.4 8.1c-25.1 20.8-62.5 19.5-86-4.1L159 404l-7-7-35.6-35.6c-5.5-5.5-12.7-8.7-20.4-9.3C96 369.7 81.6 384 64 384H32c-17.7 0-32-14.3-32-32V144c0-8.8 7.2-16 16-16H56 96h19.8c2 0 3.9-.7 5.3-2l26.5-23.6C175.5 77.7 211.4 64 248.7 64H259c4.4 0 8.9 .2 13.2 .6zM544 320V176H496c-5.9 0-11.6-2.2-15.9-6.1l-36.9-32.8c-18.2-16.2-41.7-25.1-66.1-25.1c-25.4 0-49.8 9.7-68.3 27.1l-70.1 66.2c-10.3 9.8-10.1 26.3 .5 35.7c9.3 8.3 23.4 8.1 32.5-.3l71.9-66.4c9.7-9 24.9-8.4 33.9 1.4s8.4 24.9-1.4 33.9l-.8 .8 74.4 74.4c10 10 16.5 22.3 19.4 35.1H544zM64 336a16 16 0 1 0 -32 0 16 16 0 1 0 32 0zm528 16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z"/></svg>
-                        <p>Partner Bundle</p>
-                      </li>
-                      <li  onclick="setLastTab('license-cancellation-btn')"  id="license-cancellation-btn" class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47px" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M384 128c70.7 0 128 57.3 128 128s-57.3 128-128 128H192c-70.7 0-128-57.3-128-128s57.3-128 128-128H384zM576 256c0-106-86-192-192-192H192C86 64 0 150 0 256S86 448 192 448H384c106 0 192-86 192-192zM192 352a96 96 0 1 0 0-192 96 96 0 1 0 0 192z"/></svg>
-                       <p>License Cancellation</p>
-                      </li>
-                    </ul>
-
-                    <div class="tab-content">
-                      <div class="tab-pane fade" id="snapshot-tab-pane" role="tabpanel" aria-labelledby="snapshot-tab" tabindex="0">
-                        <div id="snapshot" class="">
-                          <div class="tab-heading-wrap">
-              
-                            <!-- Heading -->
-                            <h2 class="heading h2 text-center">
-                              Practice Snapshot Request
-                            </h2>
-              
-                          </div>
-                          <div class="card-body">
-              
-                           <!-- Form -->
-                            <form  name="snapshotRequestData"
+                        <div class="card-body">
+                          <!-- Form -->
+                          <form
+                            name="snapshotRequestData"
                             action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                            method="POST">
+                            method="POST"
+                          >
                             <input
-                             type="hidden"
-                             name="retURL"
-                             value="http://dentalintel.com"
-                           />
-                           <input type="hidden" name="recordType" value="0126A000000luTi" />
-                           <input type="hidden" name="orgid" value="00D6A000000uD5X" />
-                           <input type="hidden" name="type" value="Partner Snapshot Request" />
-                           <input type="hidden" name="subject" value="Partner Snapshot Request" />
-                           <input type="hidden" name="status" value="New" />
-                           <input type="hidden" name="OwnerId" value="0053o000009YVPb" />
-                              <div class="row">
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Partner Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                     <input    id="partnerCode"
-                                     maxlength="50"
-                                     name="Partner_ID__c"
-                                     size="20"
-                                     type="text"
-                                     class="form-control validateThis"
-                                     required="" placeholder="Partner ID">
-                                    </div>
-                
+                              type="hidden"
+                              name="retURL"
+                              value="http://dentalintel.com"
+                            />
+                            <input
+                              type="hidden"
+                              name="recordType"
+                              value="0126A000000luTi"
+                            />
+                            <input
+                              type="hidden"
+                              name="orgid"
+                              value="00D6A000000uD5X"
+                            />
+                            <input
+                              type="hidden"
+                              name="type"
+                              value="Partner Snapshot Request"
+                            />
+                            <input
+                              type="hidden"
+                              name="subject"
+                              value="Partner Snapshot Request"
+                            />
+                            <input type="hidden" name="status" value="New" />
+                            <input
+                              type="hidden"
+                              name="OwnerId"
+                              value="0053o000009YVPb"
+                            />
+                            <div class="row">
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Partner Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="partnerCode"
+                                      maxlength="50"
+                                      name="Partner_ID__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="Partner ID"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                      <input  id="partnerEmail"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
+                                      id="partnerEmail"
                                       maxlength="50"
                                       name="email"
                                       size="20"
                                       type="email"
                                       class="form-control validateThis"
-                                      required="" placeholder="Partner Email">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Partner Email"
+                                    />
                                   </div>
                                 </div>
-        
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Practice Owner / Doctor Information
-                                  </h3>
-                                  
-                                      <div class="col-12 col-md-6">
-                    
-                                        <!-- First Name -->
-                                        <div class="form-group">
-                                        <input id="contactFirstname"
-                                        maxlength="40"
-                                        name="Practice_Owner_First_Name__c"
-                                        size="20"
-                                        type="text"
-                                        class="form-control validateThis"
-                                        required="" placeholder="First Name">
-                                        </div>
-                    
-                                      </div>
-                                      <div class="col-12 col-md-6">
-                    
-                                        <!-- Last Name -->
-                                        <div class="form-group">
-                                          <input id="contactLastname"
-                                          maxlength="40"
-                                          name="Practice_Owner_Last_Name__c"
-                                          size="20"
-                                          type="text"
-                                          class="form-control validateThis"
-                                          required="" placeholder="Last Name">
-                                        </div>
-                    
-                                      </div>
-                                 
-                                 
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                     <input  id="email"
-                                     maxlength="80"
-                                     name="Practice_Owner_Email__c"
-                                     size="20"
-                                     type="email"
-                                     class="form-control validateThis"
-                                     required="" placeholder="Email">
-                                    </div>
-                
+                              </div>
+
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Practice Owner / Doctor Information
+                                </h3>
+
+                                <div class="col-12 col-md-6">
+                                  <!-- First Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="contactFirstname"
+                                      maxlength="40"
+                                      name="Practice_Owner_First_Name__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="First Name"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Phone -->
-                                    <div class="form-group">
-                                      <input  id="phone"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Last Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="contactLastname"
+                                      maxlength="40"
+                                      name="Practice_Owner_Last_Name__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="Last Name"
+                                    />
+                                  </div>
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
+                                      id="email"
+                                      maxlength="80"
+                                      name="Practice_Owner_Email__c"
+                                      size="20"
+                                      type="email"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="Email"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Phone -->
+                                  <div class="form-group">
+                                    <input
+                                      id="phone"
                                       maxlength="40"
                                       name="Practice_Owner_Phone__c"
                                       size="20"
                                       type="text"
                                       class="form-control validateThis"
                                       required=""
-                                      inputmode="text" placeholder="Phone">
-                                    </div>
-                
+                                      inputmode="text"
+                                      placeholder="Phone"
+                                    />
                                   </div>
+                                </div>
                               </div>
-              
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Practice Contact Information
-                                  </h3>
-                                
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                      <input  id="practiceName"
+
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Practice Contact Information
+                                </h3>
+
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="practiceName"
                                       maxlength="250"
                                       name="Practice_Name__c"
                                       size="20"
                                       type="text"
                                       class="form-control validateThis"
-                                      required="" placeholder="Practice Name">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Name"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Management Software -->
-                                    <div class="form-group">
-                                      <select  id="PMS"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Management Software -->
+                                  <div class="form-group">
+                                    <select
+                                      id="PMS"
                                       name="Practice_Management_Software__c"
                                       title="Practice Management Software"
                                       class="form-control validateThis"
-                                      required="" placeholder="Practice Management Software">
-                                       <option value="">Practice Management Software</option>
-                                       <option value="Dentrix">Dentrix</option>
-                                       <option value="Eaglesoft">Eaglesoft</option>
-                                       <option value="OpenDental">OpenDental</option>
-                                       <option value="Practice Web">Practice Web</option>
-                                       <option value="Fuse">Fuse</option>
-                                       <option value="Other">Other</option>
-                                      </select>
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Management Software"
+                                    >
+                                      <option value="">
+                                        Practice Management Software
+                                      </option>
+                                      <option value="Dentrix">Dentrix</option>
+                                      <option value="Eaglesoft">
+                                        Eaglesoft
+                                      </option>
+                                      <option value="OpenDental">
+                                        OpenDental
+                                      </option>
+                                      <option value="Practice Web">
+                                        Practice Web
+                                      </option>
+                                      <option value="Fuse">Fuse</option>
+                                      <option value="Other">Other</option>
+                                    </select>
                                   </div>
-                                  
-                                  <div class="col-12 col-md-12">
-                
-                                    <!-- Address -->
-                                    <div class="form-group">
-                                      <input  id="address1"
+                                </div>
+
+                                <div class="col-12 col-md-12">
+                                  <!-- Address -->
+                                  <div class="form-group">
+                                    <input
+                                      id="address1"
                                       maxlength="80"
                                       name="Practice_Street_Address__c"
                                       size="20"
                                       type="text"
                                       class="form-control validateThis"
-                                      required="" placeholder="Address">
-                                    </div>
-                
-                                  </div>
-                                  
-                                    <div class="col-12 col-md-3">
-                  
-                                      <!-- Zip -->
-                                      <div class="form-group">
-                                        <input  id="zip"
-                                        pattern="[0-9]*" maxlength="5" required
-                                        name="Practice_Postal_Code__c"
-                                        size="20"
-                                        type="text"
-                                        class="form-control validateThis"
-                                        required="" placeholder="Zip">
-                                      </div>
-                  
-                                    </div>
-                                    <div class="col-12 col-md-3">
-                  
-                                      <!-- State -->
-                                      <div class="form-group">
-                                        <input          id="state"
-                                        maxlength="40"
-                                        name="Practice_State__c"
-                                        size="20"
-                                        type="text"
-                                        class="form-control validateThis"
-                                        required="" placeholder="State">
-                                      </div>
-                  
-                                    </div>
-                                    <div class="col-12 col-md-6">
-                  
-                                      <!-- City -->
-                                      <div class="form-group">
-                                        <input  id="city"
-                                        maxlength="80"
-                                        name="Practice_City__c"
-                                        size="20"
-                                        type="text"
-                                        class="form-control validateThis"
-                                        required="" placeholder="City">
-                                      </div>
-                  
-                                    </div>
-     
-                                    <br/>
-                                    <div class="col-12" style="height: 50px;"></div>
-                                    <div class="col-12">
-                
-                                     <!-- Who should we send this info to? -->
-                                     <div class="form-group">
-                                       <select  id="Send_Sync_Credentials_To__c"
-                                       name="Send_Sync_Credentials_To__c"
-                                       title="Practice Management Software"
-                                       class="form-control "
-                                       required="" placeholder="Who should we send sync information to?">
-                                        <option value="">Who should we send sync information to?</option>
-                                        <option value="Partner Email and Practice Email">Partner Email and Practice Email</option>
-                                        <option value="Partner Email Only">Partner Email Only</option>
-                                       </select>
-                                     </div>
-                 
-                                   </div>
-                                 
-                                </div>
-        
-                                
-                                <div class="row justify-content-start justify-content-lg-end ">
-                                  <div class="col-auto">
-                                    <!-- Button -->
-                                    <input type="submit" name="submit" class="btn btn-primary lift form-btn" value="Submit">
+                                      required=""
+                                      placeholder="Address"
+                                    />
                                   </div>
                                 </div>
-        
-                                <div class="row">
-                                  <p class="tab-footnote">
-                                    *Please note that after the 30-day snapshot period, our sales team can engage with potential customers. If you are still working to sell the practice on Dental Intelligence, an extension of the snapshot must be requested at premiumsupport@dentalintel.com.
-                                  </p>
+
+                                <div class="col-12 col-md-3">
+                                  <!-- Zip -->
+                                  <div class="form-group">
+                                    <input
+                                      id="zip"
+                                      pattern="[0-9]*"
+                                      maxlength="5"
+                                      required
+                                      name="Practice_Postal_Code__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="Zip"
+                                    />
+                                  </div>
                                 </div>
-              
+                                <div class="col-12 col-md-3">
+                                  <!-- State -->
+                                  <div class="form-group">
+                                    <input
+                                      id="state"
+                                      maxlength="40"
+                                      name="Practice_State__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="State"
+                                    />
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- City -->
+                                  <div class="form-group">
+                                    <input
+                                      id="city"
+                                      maxlength="80"
+                                      name="Practice_City__c"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="City"
+                                    />
+                                  </div>
+                                </div>
+
+                                <br />
+                                <div class="col-12" style="height: 50px"></div>
+                                <div class="col-12">
+                                  <!-- Who should we send this info to? -->
+                                  <div class="form-group">
+                                    <select
+                                      id="Send_Sync_Credentials_To__c"
+                                      name="Send_Sync_Credentials_To__c"
+                                      title="Practice Management Software"
+                                      class="form-control"
+                                      required=""
+                                      placeholder="Who should we send sync information to?"
+                                    >
+                                      <option value="">
+                                        Who should we send sync information to?
+                                      </option>
+                                      <option
+                                        value="Partner Email and Practice Email"
+                                      >
+                                        Partner Email and Practice Email
+                                      </option>
+                                      <option value="Partner Email Only">
+                                        Partner Email Only
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
                               </div>
-                            </form> 
-              
-                          </div>
+
+                              <div
+                                class="row justify-content-start justify-content-lg-end"
+                              >
+                                <div class="col-auto">
+                                  <!-- Button -->
+                                  <input
+                                    type="submit"
+                                    name="submit"
+                                    class="btn btn-primary lift form-btn"
+                                    value="Submit"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <p class="tab-footnote">
+                                  *Please note that after the 30-day snapshot
+                                  period, our sales team can engage with
+                                  potential customers. If you are still working
+                                  to sell the practice on Dental Intelligence,
+                                  an extension of the snapshot must be requested
+                                  at premiumsupport@dentalintel.com.
+                                </p>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-                        <div id="license-activation" class="">
-                          <div class="tab-heading-wrap">
-              
-                            <!-- Heading -->
-                            <h2 class="heading h2 text-center">
-                              License Activation
-                            </h2>
-              
-                          </div>
-                          <div class="card-body">
-              
-                           <!-- Form -->
-                            <form  
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="profile-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="profile-tab"
+                      tabindex="0"
+                    >
+                      <div id="license-activation" class="">
+                        <div class="tab-heading-wrap">
+                          <!-- Heading -->
+                          <h2 class="heading h2 text-center">
+                            License Activation
+                          </h2>
+                        </div>
+                        <div class="card-body">
+                          <!-- Form -->
+                          <form
                             action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                            method="POST">
-                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                            method="POST"
+                          >
+                            <input
+                              type="hidden"
+                              name="orgid"
+                              value="00D6A000000uD5X"
+                            />
                             <input
                               type="hidden"
                               name="retURL"
@@ -677,143 +950,175 @@
                               name="00N2G00000ClUxV"
                               value="Growth Platform"
                             />
-                              <div class="row">
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Partner Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                     <input    id="00N6A00000NVPQq"
-                                     maxlength="50"
-                                     name="00N6A00000NVPQq"
-                                     size="20"
-                                     type="text"
-                                     class="form-control"
-                                     required="" placeholder="Partner ID">
-                                    </div>
-                
+                            <div class="row">
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Partner Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVPQq"
+                                      maxlength="50"
+                                      name="00N6A00000NVPQq"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required=""
+                                      placeholder="Partner ID"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                      <input 
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
                                       id="email"
                                       maxlength="80"
                                       name="email"
                                       size="20"
                                       type="text"
                                       class="form-control"
-                                      required="" placeholder="Partner Email">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Partner Email"
+                                    />
                                   </div>
                                 </div>
-              
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Practice Contact Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                      <input  id="00N6A00000NVZUe"
+                              </div>
+
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Practice Contact Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVZUe"
                                       name="00N6A00000NVZUe"
                                       type="text"
                                       wrap="soft"
                                       class="form-control"
                                       size="20"
                                       maxlength="250"
-                                      required="" placeholder="Practice Name">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Name"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                      <input  id="00N6A00000NVPQ7"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVPQ7"
                                       name="00N6A00000NVPQ7"
                                       size="20"
                                       type="text"
                                       class="form-control"
                                       maxlength="50"
-                                      required="" placeholder="Practice Account Number">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Account Number"
+                                    />
                                   </div>
                                 </div>
-                                <div class="row form-row">
-                                 <h3 class="heading h3 form-headings">
-                                   Product Information
-                                 </h3>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Product -->
-                                   <div class="form-group" >
-                                     <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
-                                       <option value="Analytics">Analytics</option>
-                                       <option value="Engagement">Engagement</option>
-                                       <option value="Insurance">Insurance</option>
-                                       <option value="LocalMed">LocalMed</option>
-                                       <option value="DSO Reports">DSO Reports</option>
-                                       <option value="Data Reports">Data Reports</option>
-                                       
-                                     </select>
-                                   </div>
-               
-                                 </div>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Date -->
-                                   <div class="form-group">
-                                     <input  id="Partner_Activation_Cancellation_Date__c"
-                                     name="Partner_Activation_Cancellation_Date__c"
-                                     
-                                     class="form-control datepicker"
-                                     data-date-format="mm/dd/yyyy"
-                                     required="" placeholder="Date to be activated">
-                                   </div>
-               
-                                 </div>
-                               </div>
-                                <div class="row justify-content-start justify-content-lg-end">
-                                  <div class="col-auto">
-                                    <!-- Button -->
-                                    <button type="submit" class="btn btn-primary lift form-btn">
-                                      Submit
-                                    </button>
-                                  </div>
-                                </div>
-              
                               </div>
-                            </form> 
-              
-                          </div>
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Product Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Product -->
+                                  <div class="form-group">
+                                    <select
+                                      name="Partner_Activation_Cancellation_Products__c"
+                                      id="Partner_Activation_Cancellation_Products__c"
+                                      required
+                                      multiple
+                                      class="selectpicker form-control"
+                                      data-style="btn-primary"
+                                      data-none-selected-text="Select Product"
+                                    >
+                                      <option value="Analytics">
+                                        Analytics
+                                      </option>
+                                      <option value="Engagement">
+                                        Engagement
+                                      </option>
+                                      <option value="Insurance">
+                                        Insurance
+                                      </option>
+                                      <option value="LocalMed">LocalMed</option>
+                                      <option value="DSO Reports">
+                                        DSO Reports
+                                      </option>
+                                      <option value="Data Reports">
+                                        Data Reports
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Date -->
+                                  <div class="form-group">
+                                    <input
+                                      id="Partner_Activation_Cancellation_Date__c"
+                                      name="Partner_Activation_Cancellation_Date__c"
+                                      class="form-control datepicker"
+                                      data-date-format="mm/dd/yyyy"
+                                      required=""
+                                      placeholder="Date to be activated"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row justify-content-start justify-content-lg-end"
+                              >
+                                <div class="col-auto">
+                                  <!-- Button -->
+                                  <button
+                                    type="submit"
+                                    class="btn btn-primary lift form-btn"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="partner-bundle-tab-pane" role="tabpanel" aria-labelledby="partner-bundle-tab" tabindex="0">
-                        <div id="license-activation" class="">
-                          <div class="tab-heading-wrap">
-              
-                            <!-- Heading -->
-                            <h2 class="heading h2 text-center">
-                            Partner Bundle
-                            </h2>
-              
-                          </div>
-                          <div class="card-body">
-              
-                           <!-- Form -->
-                            <form  
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="partner-bundle-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="partner-bundle-tab"
+                      tabindex="0"
+                    >
+                      <div id="license-activation" class="">
+                        <div class="tab-heading-wrap">
+                          <!-- Heading -->
+                          <h2 class="heading h2 text-center">Partner Bundle</h2>
+                        </div>
+                        <div class="card-body">
+                          <!-- Form -->
+                          <form
                             action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                            method="POST">
-                            <input type="hidden" id="external" name="external" value="1">
-                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                            method="POST"
+                          >
+                            <input
+                              type="hidden"
+                              id="external"
+                              name="external"
+                              value="1"
+                            />
+                            <input
+                              type="hidden"
+                              name="orgid"
+                              value="00D6A000000uD5X"
+                            />
                             <input
                               type="hidden"
                               name="retURL"
@@ -830,333 +1135,418 @@
                               name="subject"
                               value="Partner Bundle Request"
                             />
-                              <div class="row">
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Partner Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                     <input    id="00N6A00000NVPQq"
-                                     maxlength="50"
-                                     name="00N6A00000NVPQq"
-                                     size="20"
-                                     type="text"
-                                     class="form-control"
-                                     required="" placeholder="Partner ID">
-                                    </div>
-                
+                            <div class="row">
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Partner Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVPQq"
+                                      maxlength="50"
+                                      name="00N6A00000NVPQq"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required=""
+                                      placeholder="Partner ID"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                      <input 
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
                                       id="00N3o000009DMor"
                                       maxlength="80"
                                       name="00N3o000009DMor"
                                       size="20"
                                       type="text"
                                       class="form-control"
-                                      required="" placeholder="Partner Email">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Partner Email"
+                                    />
                                   </div>
                                 </div>
-              
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Practice Contact Information
-                                  </h3>
-                                
-                                                        
-                                  <div class="col-12 col-md-6">
-                     
-                                    <!-- First Name -->
-                                    <div class="form-group">
-                                    <input id="00N3o000009DMp1"
-                                    maxlength="40"
-                                    name="00N3o000009DMp1"
-                                    size="20"
-                                    type="text"
-                                    class="form-control validateThis"
-                                    required="" placeholder="Contact First Name">
-                                    </div>
-                
+                              </div>
+
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Practice Contact Information
+                                </h3>
+
+                                <div class="col-12 col-md-6">
+                                  <!-- First Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N3o000009DMp1"
+                                      maxlength="40"
+                                      name="00N3o000009DMp1"
+                                      size="20"
+                                      type="text"
+                                      class="form-control validateThis"
+                                      required=""
+                                      placeholder="Contact First Name"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Last Name -->
-                                    <div class="form-group">
-                                      <input id="00N3o000009DMp6"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Last Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N3o000009DMp6"
                                       maxlength="40"
                                       name="00N3o000009DMp6"
                                       size="20"
                                       type="text"
                                       class="form-control validateThis"
-                                      required="" placeholder="Contact Last Name">
-                                    </div>
-      
+                                      required=""
+                                      placeholder="Contact Last Name"
+                                    />
                                   </div>
-                                  
-                                  <div class="col-12 col-md-6">
-                
-                                    <div class="form-group">
-                                      <input  id="email"
+                                </div>
+
+                                <div class="col-12 col-md-6">
+                                  <div class="form-group">
+                                    <input
+                                      id="email"
                                       maxlength="80"
                                       name="email"
                                       size="20"
                                       class="form-control"
-                                      required="" type="email" placeholder="Practice Email">
-                                    </div>
-                
+                                      required=""
+                                      type="email"
+                                      placeholder="Practice Email"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                 
-                                    <!-- Phone -->
-                                    <div class="form-group">
-                                      <input  id="phone"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Phone -->
+                                  <div class="form-group">
+                                    <input
+                                      id="phone"
                                       maxlength="40"
                                       name="phone"
                                       size="20"
                                       type="text"
                                       class="form-control validateThis"
                                       required=""
-                                      inputmode="text" placeholder="Practice Phone">
-                                    </div>
-                
-                                  </div>
-                                  <div class="col-12 col-md-12">
-                 
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                     <input  id="00N6A00000NVOap"
-                                     maxlength="50"
-                                     name="00N6A00000NVOap"
-                                     size="20"
-                                     type="text"
-                                     class="form-control"
-                                     required="" placeholder="Dental Intelligence Practice ID">
-                                    </div>
-                
+                                      inputmode="text"
+                                      placeholder="Practice Phone"
+                                    />
                                   </div>
                                 </div>
-      
-      
-                                
-        
-                                <div class="row justify-content-start justify-content-lg-end">
-                                  <div class="col-auto">
-                                    <!-- Button -->
-                                    <button type="submit" class="btn btn-primary lift form-btn">
-                                      Submit
-                                    </button>
+                                <div class="col-12 col-md-12">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVOap"
+                                      maxlength="50"
+                                      name="00N6A00000NVOap"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required=""
+                                      placeholder="Dental Intelligence Practice ID"
+                                    />
                                   </div>
                                 </div>
-              
                               </div>
-                            </form> 
-              
-                          </div>
-      
-                          <div class="row new-tiers">
-                            <div class="col-md-4 col-xs-12">
-                              <div class="top-bundle" style="
+
+                              <div
+                                class="row justify-content-start justify-content-lg-end"
+                              >
+                                <div class="col-auto">
+                                  <!-- Button -->
+                                  <button
+                                    type="submit"
+                                    class="btn btn-primary lift form-btn"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+
+                        <div class="row new-tiers">
+                          <div class="col-md-4 col-xs-12">
+                            <div
+                              class="top-bundle"
+                              style="
                                 background-color: #005dc8;
                                 width: 100%;
                                 padding-bottom: 10px;
                                 padding-left: 40px;
                                 padding-top: 10px;
                                 color: white;
-                                  opacity: 0;
-                                                "><h4 style="
-                                text-align: center;
-                                font-family: 'Red Hat Text';
-                                ">Invisible</h4></div>
-                              <div class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks" data-aos="fade-up" data-aos-delay="100">
-                                <style>
-                                  .heading.h2.offering-heading {
-                                    font-size: 40px;
-                                  }
-                                </style>
-                                <div class="product-title-container">
-                                  <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6299126596e95e5ade4a1438_analyze.svg" loading="lazy" alt="" class="product-icon">
-                                  <h1 class="heading h2 offering-heading">Analytics</h1>
+                                opacity: 0;
+                              "
+                            >
+                              <h4
+                                style="
+                                  text-align: center;
+                                  font-family: 'Red Hat Text';
+                                "
+                              >
+                                Invisible
+                              </h4>
+                            </div>
+                            <div
+                              class="col-md-3 col-xs-12-12 col-md-3 col-xs-12-md-5 aos-init aos-animate perks-wrap new-perks"
+                              data-aos="fade-up"
+                              data-aos-delay="100"
+                            >
+                              <style>
+                                .heading.h2.offering-heading {
+                                  font-size: 40px;
+                                }
+                              </style>
+                              <div class="product-title-container">
+                                <img
+                                  src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6299126596e95e5ade4a1438_analyze.svg"
+                                  loading="lazy"
+                                  alt=""
+                                  class="product-icon"
+                                />
+                                <h1 class="heading h2 offering-heading">
+                                  Analytics
+                                </h1>
+                              </div>
+                              <style>
+                                .heading.h2 span {
+                                  font-size: 18px;
+                                  font-weight: 300;
+                                  font-family: Red Hat Text, sans-serif;
+                                  letter-spacing: normal;
+                                  padding-left: 10px;
+                                }
+
+                                .heading.h2.price {
+                                  font-size: 60px;
+                                }
+                              </style>
+                              <h1 class="heading h2 price">
+                                $449<span>per month</span>
+                              </h1>
+                              <hr style="color: #002856" />
+                              <!-- List -->
+                              <p class="paragraph">This module includes:</p>
+                              <ul
+                                id="paragraph-mobile"
+                                class="paragraph large bold-mobile reseller-paragraph"
+                              >
+                                <li>
+                                  Daily, Weekly, and Monthly Practice Reports
+                                </li>
+                                <li>Quarterly Growth Report</li>
+                                <li>Profitability Formula®</li>
+                                <li>Performance Dashboard</li>
+                                <li>Collections Dashboard</li>
+                                <li>Provider Pulse</li>
+                                <li>Morning Huddle</li>
+                                <li>Patient Finder</li>
+                                <li>Follow Ups</li>
+                                <li>Smart Schedule</li>
+                                <li>Practice Mobile App</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="col-md-8 col-xs-12">
+                            <div
+                              class="bundles"
+                              style="
+                                border-radius: 43px;
+                                opacity: 1;
+                                /* padding-bottom: 72px; */
+                                /* padding-left: 40px; */
+                                /* padding-top: 26px; */
+                                overflow: hidden;
+                              "
+                            >
+                              <div
+                                class="top-bundle"
+                                style="
+                                  background-color: #005dc8;
+                                  width: 100%;
+                                  padding-bottom: 10px;
+                                  padding-left: 40px;
+                                  padding-top: 10px;
+                                  color: white;
+                                "
+                              >
+                                <h4
+                                  style="
+                                    text-align: center;
+                                    font-family: 'Red Hat Text';
+                                  "
+                                >
+                                  Exclusive Partner Bundle Price - $350 (save
+                                  36%!)
+                                </h4>
+                              </div>
+                              <div class="bundle-price">
+                                <div class="row">
+                                  <div
+                                    class="col-md-6 aos-init aos-animate"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100"
+                                  >
+                                    <style>
+                                      .heading.h2.offering-heading {
+                                        font-size: 40px;
+                                      }
+                                    </style>
+                                    <div class="product-title-container">
+                                      <img
+                                        src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62991265a78168236d28d0bc_engage.svg"
+                                        loading="lazy"
+                                        alt=""
+                                        class="product-icon"
+                                      />
+                                      <h1 class="heading h2 offering-heading">
+                                        Engagement
+                                      </h1>
+                                    </div>
+                                    <style>
+                                      .heading.h2 span {
+                                        font-size: 18px;
+                                        font-weight: 300;
+                                        font-family: Red Hat Text, sans-serif;
+                                        letter-spacing: normal;
+                                        padding-left: 10px;
+                                      }
+                                      .heading.h2.price {
+                                        font-size: 60px;
+                                      }
+                                    </style>
+                                    <h1 class="heading h2 price">
+                                      $399<span>per month</span>
+                                    </h1>
+                                    <hr style="color: #002856" />
+                                    <!-- List -->
+                                    <p class="paragraph">
+                                      This module includes:
+                                    </p>
+                                    <ul
+                                      id="paragraph-mobile"
+                                      class="paragraph large bold-mobile reseller-paragraph"
+                                    >
+                                      <li>Online Scheduling</li>
+                                      <li>Digital Forms and Consents</li>
+                                      <li>
+                                        2-Way and Mass Patient Communication
+                                      </li>
+                                      <li>Reminders and Confirmations</li>
+                                      <li>Automated Recalls</li>
+                                      <li>Treatment Plans</li>
+                                      <li>Patient Financing</li>
+                                      <li>Team Chat</li>
+                                      <li>Voicemail Drops</li>
+                                      <li>Virtual Check-In</li>
+                                      <li>Kiosk</li>
+                                      <li>Patient Portal</li>
+                                      <li>
+                                        Online Reviews and Marketing Tools
+                                      </li>
+                                      <li>Patient Loyalty Program</li>
+                                      <li>LiveOps®</li>
+                                      <li>Screen Pops</li>
+                                    </ul>
+                                  </div>
+                                  <div
+                                    class="col-md-6 aos-init aos-animate"
+                                    data-aos="fade-up"
+                                    data-aos-delay="100"
+                                  >
+                                    <style>
+                                      .heading.h2.offering-heading {
+                                        font-size: 40px;
+                                      }
+                                    </style>
+                                    <div class="product-title-container">
+                                      <img
+                                        src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6410bf04159e04ad938646db_Group%201018.svg"
+                                        loading="lazy"
+                                        alt=""
+                                        class="product-icon"
+                                      />
+                                      <h1 class="heading h2 offering-heading">
+                                        Insurance
+                                      </h1>
+                                    </div>
+                                    <style>
+                                      .heading.h2 span {
+                                        font-size: 18px;
+                                        font-weight: 300;
+                                        font-family: Red Hat Text, sans-serif;
+                                        letter-spacing: normal;
+                                        padding-left: 10px;
+                                      }
+                                      .heading.h2.price {
+                                        font-size: 60px;
+                                      }
+                                    </style>
+                                    <h1 class="heading h2 price">
+                                      $149<span>per month</span>
+                                    </h1>
+                                    <hr style="color: #002856" />
+                                    <!-- List -->
+                                    <p class="paragraph">
+                                      This module includes:
+                                    </p>
+                                    <ul
+                                      id="paragraph-mobile"
+                                      class="paragraph large bold-mobile reseller-paragraph"
+                                    >
+                                      <li>Eligibility Verification</li>
+                                      <li>Claims Processing</li>
+                                      <li>Unlimited Narratives</li>
+                                      <li>Unlimited Attachments</li>
+                                      <li>
+                                        Electronic Remittance Advice (ERA)
+                                      </li>
+                                      <li>Precision X12 Formatting</li>
+                                      <li>End-to-End Claim Management</li>
+                                      <li>Easy-sync to Bank Deposits</li>
+                                      <li>Centralized Dashboard for DSOs</li>
+                                    </ul>
+                                  </div>
                                 </div>
-                                <style>
-                                  .heading.h2 span {     
-                                    font-size: 18px;
-                                    font-weight: 300;
-                                    font-family: Red Hat Text,sans-serif;
-                                    letter-spacing: normal;
-                                    padding-left: 10px; 
-                                  }
-      
-                                  .heading.h2.price {
-                                    font-size: 60px;
-                                  }
-                                </style>
-                                <h1 class="heading h2 price">$449<span>per month</span></h1>
-                                <hr style="
-                                    color: #002856;
-                                ">
-                                <!-- List -->
-                                    <p class="paragraph">This module includes:</p>
-                                    <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                    <li>Daily, Weekly, and Monthly Practice Reports</li>
-                                    <li>Quarterly Growth Report</li>
-                                    <li>Profitability Formula®</li>
-                                    <li>Performance Dashboard</li>
-                                    <li>Collections Dashboard</li>
-                                    <li>Provider Pulse</li>
-                                    <li>Morning Huddle</li>
-                                    <li>Patient Finder</li>
-                                    <li>Follow Ups</li>
-                                    <li>Smart Schedule</li>
-                                    <li>Practice Mobile App</li>
-                                      
-                                  </ul>
-                                 
                               </div>
                             </div>
-                            <div class="col-md-8 col-xs-12 ">
-                              <div class="bundles" style="
-                              border-radius: 43px;
-                              opacity: 1;
-                              /* padding-bottom: 72px; */
-                              /* padding-left: 40px; */
-                              /* padding-top: 26px; */
-                              overflow: hidden;
-                          ">
-                          <div class="top-bundle" style="
-                          background-color: #005dc8;
-                          width: 100%;
-                          padding-bottom: 10px;
-                          padding-left: 40px;
-                          padding-top: 10px;
-                          color: white;
-                      "><h4 style="
-      text-align: center;
-      font-family: 'Red Hat Text';
-      ">Exclusive Partner Bundle Price - $350 (save 36%!)</h4></div>
-                                                  <div class="bundle-price">
-                                                    <div class="row">
-                                                      <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                                        <style>
-                                                          .heading.h2.offering-heading {
-                                                            font-size: 40px;
-                                                          }
-                                                        </style>
-                                                        <div class="product-title-container">
-                                                          <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/62991265a78168236d28d0bc_engage.svg" loading="lazy" alt="" class="product-icon">
-                                                          <h1 class="heading h2 offering-heading">Engagement</h1>
-                                                        </div>
-                                                        <style>
-                                                          .heading.h2 span {
-                                                            font-size: 18px;
-                                                            font-weight: 300;
-                                                            font-family: Red Hat Text,sans-serif;
-                                                            letter-spacing: normal;
-                                                            padding-left: 10px;
-                                                          }
-                                                          .heading.h2.price {
-                                                            font-size: 60px;
-                                                          }
-                                                        </style>
-                                                        <h1 class="heading h2 price">$399<span>per month</span></h1>
-                                                        <hr style="
-                                                            color: #002856;
-                                                        ">
-                                                        <!-- List -->
-                                                        <p class="paragraph">This module includes:</p>
-                                                            <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                                              <li>Online Scheduling</li>
-                                                              <li>Digital Forms and Consents</li>
-                                                              <li>2-Way and Mass Patient Communication</li>
-                                                              <li>Reminders and Confirmations</li>
-                                                              <li>Automated Recalls</li>
-                                                              <li>Treatment Plans</li>
-                                                              <li>Patient Financing</li>
-                                                              <li>Team Chat</li>
-                                                              <li>Voicemail Drops</li>
-                                                              <li>Virtual Check-In</li>
-                                                              <li>Kiosk</li>
-                                                              <li>Patient Portal</li>
-                                                              <li>Online Reviews and Marketing Tools</li>
-                                                              <li>Patient Loyalty Program</li>
-                                                              <li>LiveOps®</li>
-                                                              <li>Screen Pops</li>
-                                                      
-                                                          </ul>
-                                                      
-                                                      </div>
-                                                      <div class="col-md-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
-                                                        <style>
-                                                          .heading.h2.offering-heading {
-                                                            font-size: 40px;
-                                                          }
-                                                        </style>
-                                                        <div class="product-title-container">
-                                                          <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/6410bf04159e04ad938646db_Group%201018.svg" loading="lazy" alt="" class="product-icon">
-                                                          <h1 class="heading h2 offering-heading">Insurance</h1>
-                                                        </div>
-                                                        <style>
-                                                          .heading.h2 span {
-                                                            font-size: 18px;
-                                                            font-weight: 300;
-                                                            font-family: Red Hat Text,sans-serif;
-                                                            letter-spacing: normal;
-                                                            padding-left: 10px;
-                                                          }
-                                                          .heading.h2.price {
-                                                            font-size: 60px;
-                                                          }
-                                                        </style>
-                                                        <h1 class="heading h2 price">$149<span>per month</span></h1>
-                                                        <hr style="
-                                                            color: #002856;
-                                                        ">
-                                                        <!-- List -->
-                                                        <p class="paragraph">This module includes:</p>
-                                                            <ul id="paragraph-mobile" class="paragraph large bold-mobile reseller-paragraph">
-                                                              <li>Eligibility Verification</li>
-                                                              <li>Claims Processing</li>
-                                                              <li>Unlimited Narratives</li>
-                                                              <li>Unlimited Attachments</li>
-                                                              <li>Electronic Remittance Advice (ERA)</li>
-                                                              <li>Precision X12 Formatting</li>
-                                                              <li>End-to-End Claim Management</li>
-                                                              <li>Easy-sync to Bank Deposits</li>
-                                                              <li>Centralized Dashboard for DSOs</li>
-                                                      
-                                                          </ul>
-                                                      
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                              </div>
-                                                </div>
-                           </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-                        <div id="license-cancellation" class="">
-                          <div class="tab-heading-wrap">
-              
-                            <!-- Heading -->
-                            <h2 class="heading h2 text-center">
-                              License Cancellation
-                            </h2>
-              
-                          </div>
-                          <div class="card-body">
-              
-                           <!-- Form -->
-                            <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
-                            method="POST">
-                            <input type="hidden" name="orgid" value="00D6A000000uD5X" />
+                    </div>
+                    <div
+                      class="tab-pane fade"
+                      id="contact-tab-pane"
+                      role="tabpanel"
+                      aria-labelledby="contact-tab"
+                      tabindex="0"
+                    >
+                      <div id="license-cancellation" class="">
+                        <div class="tab-heading-wrap">
+                          <!-- Heading -->
+                          <h2 class="heading h2 text-center">
+                            License Cancellation
+                          </h2>
+                        </div>
+                        <div class="card-body">
+                          <!-- Form -->
+                          <form
+                            action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8"
+                            method="POST"
+                          >
+                            <input
+                              type="hidden"
+                              name="orgid"
+                              value="00D6A000000uD5X"
+                            />
                             <input
                               type="hidden"
                               name="retURL"
@@ -1189,268 +1579,524 @@
                               value="Growth Platform"
                             />
                             <input
-                       type="hidden"
-                       name="retURL"
-                       value="http://www.dentalintel.com/licensing"
-                     />
-                              <div class="row">
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Partner Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                   <!-- Email -->
-                                   <div class="form-group">
-                                     <input  id="email"
-                                     maxlength="80"
-                                     name="email"
-                                     size="20"
-                                     class="form-control"
-                                     required="" type="email" placeholder="Partner Email">
-                                   </div>
-               
-                                 </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                     <input  id="00N6A00000NVPQq"
-                                     maxlength="50"
-                                     name="00N6A00000NVPQq"
-                                     size="20"
-                                     type="text"
-                                     class="form-control"
-                                     required="" placeholder="Partner ID">
-                                    </div>
-                
+                              type="hidden"
+                              name="retURL"
+                              value="http://www.dentalintel.com/licensing"
+                            />
+                            <div class="row">
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Partner Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
+                                      id="email"
+                                      maxlength="80"
+                                      name="email"
+                                      size="20"
+                                      class="form-control"
+                                      required=""
+                                      type="email"
+                                      placeholder="Partner Email"
+                                    />
                                   </div>
-                                  
                                 </div>
-              
-                                <div class="row form-row">
-                                  <h3 class="heading h3 form-headings">
-                                    Practice Contact Information
-                                  </h3>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Name -->
-                                    <div class="form-group">
-                                      <input  id="00N6A00000NVZUe"
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVPQq"
+                                      maxlength="50"
+                                      name="00N6A00000NVPQq"
+                                      size="20"
+                                      type="text"
+                                      class="form-control"
+                                      required=""
+                                      placeholder="Partner ID"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Practice Contact Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Name -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVZUe"
                                       name="00N6A00000NVZUe"
                                       type="text"
                                       wrap="soft"
                                       class="form-control"
                                       size="20"
                                       maxlength="250"
-                                      required="" placeholder="Practice Name">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Name"
+                                    />
                                   </div>
-                                  <div class="col-12 col-md-6">
-                
-                                    <!-- Email -->
-                                    <div class="form-group">
-                                      <input           id="00N6A00000NVPQ7"
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Email -->
+                                  <div class="form-group">
+                                    <input
+                                      id="00N6A00000NVPQ7"
                                       name="00N6A00000NVPQ7"
                                       size="20"
                                       type="text"
                                       class="form-control"
                                       maxlength="50"
-                                      required="" placeholder="Practice Account Number">
-                                    </div>
-                
+                                      required=""
+                                      placeholder="Practice Account Number"
+                                    />
                                   </div>
                                 </div>
-                                <div class="row form-row">
-                                 <h3 class="heading h3 form-headings">
-                                   Product Information
-                                 </h3>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Product -->
-                                   <div class="form-group" >
-                                     <select name="Partner_Activation_Cancellation_Products__c" id="Partner_Activation_Cancellation_Products__c" required multiple class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Select Product">
-                                       <option value="Analytics">Analytics</option>
-                                       <option value="Engagement">Engagement</option>
-                                       <option value="Insurance">Insurance</option>
-                                       <option value="LocalMed">LocalMed</option>
-                                       <option value="DSO Reports">DSO Reports</option>
-                                       <option value="Data Reports">Data Reports</option>
-                                      
-                                     </select>
-                                   </div>
-               
-                                 </div>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Product -->
-                                   <div class="form-group" >
-                                     <select name="Partner_Cancellation_Reason__c" id="Partner_Cancellation_Reason__c" required class="selectpicker form-control" data-style="btn-primary" data-none-selected-text="Reason for Cancellation" title="Reason for Cancellation">
-                                       <option value="Utilization">Utilization</option>
-                                       <option value="Functionality">Functionality</option>
-                                       <option value="Customer Experience">Customer Experience</option>
-                                       <option value="Practice Management System Compatibility">Practice Management System Compatibility</option>
-                                       <option value="Consulting Lifecycle">Consulting Lifecycle</option>
-                                       <option value="Switched to Competing Consultant">Switched to Competing Consultant</option>
-                                       <option value="Practice Sold/New Owner">Practice Sold/New Owner</option>
-                                       
-                                     </select>
-                                   </div>
-               
-                                 </div>
-                                 <div class="col-12 col-md-6">
-               
-                                   <!-- Date -->
-                                   <div class="form-group">
-                                     <input  id="Partner_Activation_Cancellation_Date__c"
-                                     name="Partner_Activation_Cancellation_Date__c"
-                                     class="form-control datepicker cancellation"
-                                     data-date-format="mm/dd/yyyy"
-                                     required="" placeholder="Date to be cancelled">
-                                   </div>
-                                 </div>
-                               </div>
-                                <div class="row justify-content-start justify-content-lg-end">
-                                  <div class="col-auto">
-                                    <!-- Button -->
-                                    <button type="submit" class="btn btn-primary lift form-btn">
-                                      Submit
-                                    </button>
-                                  </div>
-                                </div>
-              
                               </div>
-                            </form> 
-              
-                          </div>
+                              <div class="row form-row">
+                                <h3 class="heading h3 form-headings">
+                                  Product Information
+                                </h3>
+                                <div class="col-12 col-md-6">
+                                  <!-- Product -->
+                                  <div class="form-group">
+                                    <select
+                                      name="Partner_Activation_Cancellation_Products__c"
+                                      id="Partner_Activation_Cancellation_Products__c"
+                                      required
+                                      multiple
+                                      class="selectpicker form-control"
+                                      data-style="btn-primary"
+                                      data-none-selected-text="Select Product"
+                                    >
+                                      <option value="Analytics">
+                                        Analytics
+                                      </option>
+                                      <option value="Engagement">
+                                        Engagement
+                                      </option>
+                                      <option value="Insurance">
+                                        Insurance
+                                      </option>
+                                      <option value="LocalMed">LocalMed</option>
+                                      <option value="DSO Reports">
+                                        DSO Reports
+                                      </option>
+                                      <option value="Data Reports">
+                                        Data Reports
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Product -->
+                                  <div class="form-group">
+                                    <select
+                                      name="Partner_Cancellation_Reason__c"
+                                      id="Partner_Cancellation_Reason__c"
+                                      required
+                                      class="selectpicker form-control"
+                                      data-style="btn-primary"
+                                      data-none-selected-text="Reason for Cancellation"
+                                      title="Reason for Cancellation"
+                                    >
+                                      <option value="Utilization">
+                                        Utilization
+                                      </option>
+                                      <option value="Functionality">
+                                        Functionality
+                                      </option>
+                                      <option value="Customer Experience">
+                                        Customer Experience
+                                      </option>
+                                      <option
+                                        value="Practice Management System Compatibility"
+                                      >
+                                        Practice Management System Compatibility
+                                      </option>
+                                      <option value="Consulting Lifecycle">
+                                        Consulting Lifecycle
+                                      </option>
+                                      <option
+                                        value="Switched to Competing Consultant"
+                                      >
+                                        Switched to Competing Consultant
+                                      </option>
+                                      <option value="Practice Sold/New Owner">
+                                        Practice Sold/New Owner
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                  <!-- Date -->
+                                  <div class="form-group">
+                                    <input
+                                      id="Partner_Activation_Cancellation_Date__c"
+                                      name="Partner_Activation_Cancellation_Date__c"
+                                      class="form-control datepicker cancellation"
+                                      data-date-format="mm/dd/yyyy"
+                                      required=""
+                                      placeholder="Date to be cancelled"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="row justify-content-start justify-content-lg-end"
+                              >
+                                <div class="col-auto">
+                                  <!-- Button -->
+                                  <button
+                                    type="submit"
+                                    class="btn btn-primary lift form-btn"
+                                  >
+                                    Submit
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
                         </div>
                       </div>
                     </div>
-                 </div>
-                 <div class="tab-pane" id="resources-tab-pane" role="tabpanel">
-                  <ul class="nav nav-pills nav-fill tab-nav-wrap spaced" id="myTab" role="tablist">
-                    <li class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false" onclick="document.getElementById('partner-training-toolkit').scrollIntoView();">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="47px" height="40px" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M176 64H336c8.8 0 16 7.2 16 16v48H160V80c0-8.8 7.2-16 16-16zM128 80v48H106.5c-17 0-33.3 6.7-45.3 18.7L18.7 189.3C6.7 201.3 0 217.5 0 234.5V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V234.5c0-17-6.7-33.3-18.7-45.3l-42.5-42.5c-12-12-28.3-18.7-45.3-18.7H384V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48zm16 80H368h37.5c8.5 0 16.6 3.4 22.6 9.4l42.5 42.5c6 6 9.4 14.1 9.4 22.6V304H352V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v32H192V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v32H32V234.5c0-8.5 3.4-16.6 9.4-22.6l42.5-42.5c6-6 14.1-9.4 22.6-9.4H144zM32 336H160v32c0 8.8 7.2 16 16 16s16-7.2 16-16V336H320v32c0 8.8 7.2 16 16 16s16-7.2 16-16V336H480v80c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V336z" fill="#002955"/></svg>
+                  </div>
+                </div>
+                <div class="tab-pane" id="resources-tab-pane" role="tabpanel">
+                  <ul
+                    class="nav nav-pills nav-fill tab-nav-wrap spaced"
+                    id="myTab"
+                    role="tablist"
+                  >
+                    <li
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target=""
+                      type="button"
+                      role="tab"
+                      aria-controls=""
+                      aria-selected="false"
+                      onclick="document.getElementById('partner-training-toolkit').scrollIntoView();"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        height="40px"
+                        viewBox="0 0 512 512"
+                      >
+                        <!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <path
+                          d="M176 64H336c8.8 0 16 7.2 16 16v48H160V80c0-8.8 7.2-16 16-16zM128 80v48H106.5c-17 0-33.3 6.7-45.3 18.7L18.7 189.3C6.7 201.3 0 217.5 0 234.5V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V234.5c0-17-6.7-33.3-18.7-45.3l-42.5-42.5c-12-12-28.3-18.7-45.3-18.7H384V80c0-26.5-21.5-48-48-48H176c-26.5 0-48 21.5-48 48zm16 80H368h37.5c8.5 0 16.6 3.4 22.6 9.4l42.5 42.5c6 6 9.4 14.1 9.4 22.6V304H352V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v32H192V272c0-8.8-7.2-16-16-16s-16 7.2-16 16v32H32V234.5c0-8.5 3.4-16.6 9.4-22.6l42.5-42.5c6-6 14.1-9.4 22.6-9.4H144zM32 336H160v32c0 8.8 7.2 16 16 16s16-7.2 16-16V336H320v32c0 8.8 7.2 16 16 16s16-7.2 16-16V336H480v80c0 17.7-14.3 32-32 32H64c-17.7 0-32-14.3-32-32V336z"
+                          fill="#002955"
+                        />
+                      </svg>
                       <p>Partner Training Toolkit</p>
                     </li>
-                    <li class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false" onclick="document.getElementById('knowledge-base').scrollIntoView();">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="47px" height="40px" viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/></svg>
+                    <li
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target=""
+                      type="button"
+                      role="tab"
+                      aria-controls=""
+                      aria-selected="false"
+                      onclick="document.getElementById('knowledge-base').scrollIntoView();"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        height="40px"
+                        viewBox="0 0 320 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
+                          }
+                        </style>
+                        <path
+                          d="M80 160c0-35.3 28.7-64 64-64h32c35.3 0 64 28.7 64 64v3.6c0 21.8-11.1 42.1-29.4 53.8l-42.2 27.1c-25.2 16.2-40.4 44.1-40.4 74V320c0 17.7 14.3 32 32 32s32-14.3 32-32v-1.4c0-8.2 4.2-15.8 11-20.2l42.2-27.1c36.6-23.6 58.8-64.1 58.8-107.7V160c0-70.7-57.3-128-128-128H144C73.3 32 16 89.3 16 160c0 17.7 14.3 32 32 32s32-14.3 32-32zm80 320a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
+                        />
+                      </svg>
                       <p>Knowledge Base</p>
                     </li>
-                    <li class="nav-item subtab" role="presentation" id="profile-tab" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false" onclick="document.getElementById('premium-support').scrollIntoView();">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="47px" height="40px" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#003856}</style><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg>
+                    <li
+                      class="nav-item subtab"
+                      role="presentation"
+                      id="profile-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target=""
+                      type="button"
+                      role="tab"
+                      aria-controls=""
+                      aria-selected="false"
+                      onclick="document.getElementById('premium-support').scrollIntoView();"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        height="40px"
+                        viewBox="0 0 448 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #003856;
+                          }
+                        </style>
+                        <path
+                          d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"
+                        />
+                      </svg>
                       <p>Premium Support</p>
                     </li>
-                    
-                    <li class="nav-item subtab" role="presentation" data-bs-toggle="tab" data-bs-target="" type="button" role="tab" aria-controls="" aria-selected="false" onclick="document.getElementById('podcast-request').scrollIntoView();">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="47px" height="40px" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#002856}</style><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"/></svg>
-                     <p>Podcast Request Form</p>
-                    </li>
 
+                    <li
+                      class="nav-item subtab"
+                      role="presentation"
+                      data-bs-toggle="tab"
+                      data-bs-target=""
+                      type="button"
+                      role="tab"
+                      aria-controls=""
+                      aria-selected="false"
+                      onclick="document.getElementById('podcast-request').scrollIntoView();"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="47px"
+                        height="40px"
+                        viewBox="0 0 384 512"
+                      >
+                        <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                        <style>
+                          svg {
+                            fill: #002856;
+                          }
+                        </style>
+                        <path
+                          d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"
+                        />
+                      </svg>
+                      <p>Podcast Request Form</p>
+                    </li>
                   </ul>
                   <div class="tab-heading-wrap">
-              
                     <!-- Heading -->
-                    <h2 class="heading h2 text-center" style="padding-bottom: 1em;">
+                    <h2
+                      class="heading h2 text-center"
+                      style="padding-bottom: 1em"
+                    >
                       Resources
                     </h2>
-      
-                   
                   </div>
                   <div class="row" id="partner-training-toolkit">
                     <div class="col-md-8">
-                      <div class="aos-init aos-animate perks-wrap new-perks resources" data-aos="fade-up" data-aos-delay="100">
+                      <div
+                        class="aos-init aos-animate perks-wrap new-perks resources"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
                         <!-- Heading -->
                         <h3 id="heading-h3" class="heading h3">
                           Partner Training Toolkit
                         </h3>
-            
+
                         <!-- List -->
-                        <p class="paragraph large bold-mobile reseller-paragraph">Streamline your Dental Intelligence journey with our Partner Training Toolkit. Whether you're a new DI partner or simply seeking a refresherr course, this toolkit offers comprehensive guidance to acquaint yourself with our software and highlights recommended features to optimize your experience.</p>
-                            
-                        <a class="resources-btn button" target="_blank" class="button" href="https://educate.dentalintel.com/en/articles/8358425-partner-training-toolkit">Go to Toolkit</a>
-                        
+                        <p
+                          class="paragraph large bold-mobile reseller-paragraph"
+                        >
+                          Streamline your Dental Intelligence journey with our
+                          Partner Training Toolkit. Whether you're a new DI
+                          partner or simply seeking a refresherr course, this
+                          toolkit offers comprehensive guidance to acquaint
+                          yourself with our software and highlights recommended
+                          features to optimize your experience.
+                        </p>
+
+                        <a
+                          class="resources-btn button"
+                          target="_blank"
+                          class="button"
+                          href="https://educate.dentalintel.com/en/articles/8358425-partner-training-toolkit"
+                          >Go to Toolkit</a
+                        >
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <img src="https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px" srcset="https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg 500w,https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg 836w" alt="" style="margin: 0px auto;
-                      display: block;
-                      margin-top: 50px;">
+                      <img
+                        src="https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg"
+                        loading="lazy"
+                        sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px"
+                        srcset="
+                          https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg 500w,
+                          https://uploads-ssl.webflow.com/6266d8ef8c92b1230d1e0cbb/65244234e53f951c5fce75eb_Grupo%20766.svg 836w
+                        "
+                        alt=""
+                        style="
+                          margin: 0px auto;
+                          display: block;
+                          margin-top: 50px;
+                        "
+                      />
                     </div>
-                    
                   </div>
                   <div class="row" id="knowledge-base">
                     <div class="col-md-4">
-                      <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 881px) 95vw, 837px" srcset="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1-p-500.png 500w, https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1-p-800.png 800w, https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1.png 837w" alt="">
+                      <img
+                        src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1.png"
+                        loading="lazy"
+                        sizes="(max-width: 479px) 92vw, (max-width: 881px) 95vw, 837px"
+                        srcset="
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1-p-500.png 500w,
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1-p-800.png 800w,
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea588d0b5407079281584_1_1.png       837w
+                        "
+                        alt=""
+                      />
                     </div>
                     <div class="col-md-8">
-                      <div class="aos-init aos-animate perks-wrap new-perks resources" data-aos="fade-up" data-aos-delay="100">
+                      <div
+                        class="aos-init aos-animate perks-wrap new-perks resources"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
                         <!-- Heading -->
                         <h3 id="heading-h3" class="heading h3">
                           Knowledge Base
                         </h3>
-            
+
                         <!-- List -->
-                        <p class="paragraph large bold-mobile reseller-paragraph">Browse our robust knowledge base to find answers to common questions and learn more about all the features Dental Intelligence has to offer. Articles and videos are searchable by keyword to help you quickly locate the content you need.</p>
-                            
-                        <a data-w-id="597e8f14-47ce-4612-3578-898ce204342c" class="resources-btn button" href="https://educate.dentalintel.com/en/" target="_blank" class="button">Go to Knowledge Base</a>
+                        <p
+                          class="paragraph large bold-mobile reseller-paragraph"
+                        >
+                          Browse our robust knowledge base to find answers to
+                          common questions and learn more about all the features
+                          Dental Intelligence has to offer. Articles and videos
+                          are searchable by keyword to help you quickly locate
+                          the content you need.
+                        </p>
+
+                        <a
+                          data-w-id="597e8f14-47ce-4612-3578-898ce204342c"
+                          class="resources-btn button"
+                          href="https://educate.dentalintel.com/en/"
+                          target="_blank"
+                          class="button"
+                          >Go to Knowledge Base</a
+                        >
                       </div>
                     </div>
                   </div>
                   <div class="row" id="premium-support">
                     <div class="col-md-8">
-                      <div class="aos-init aos-animate perks-wrap new-perks resources" data-aos="fade-up" data-aos-delay="100">
+                      <div
+                        class="aos-init aos-animate perks-wrap new-perks resources"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
                         <!-- Heading -->
                         <h3 id="heading-h3" class="heading h3">
                           Premium Support
                         </h3>
-            
+
                         <!-- List -->
-                        <p class="paragraph large bold-mobile reseller-paragraph">Partners have access to our premium support channels to help provide your customers with a white-glove experience. Our premium support hours are Monday-Friday, 6am-3pm MST. You can reach premium support at premiumsupport@dentalintel.com, or you can start a live chat below.</p>
-                            
-                        <a data-w-id="597e8f14-47ce-4612-3578-898ce204342c" class="resources-btn button" id="chatDiv" target="_blank" class="button" href="#">Start a live chat</a>
-                        
+                        <p
+                          class="paragraph large bold-mobile reseller-paragraph"
+                        >
+                          Partners have access to our premium support channels
+                          to help provide your customers with a white-glove
+                          experience. Our premium support hours are
+                          Monday-Friday, 6am-3pm MST. You can reach premium
+                          support at premiumsupport@dentalintel.com, or you can
+                          start a live chat below.
+                        </p>
+
+                        <a
+                          data-w-id="597e8f14-47ce-4612-3578-898ce204342c"
+                          class="resources-btn button"
+                          id="chatDiv"
+                          target="_blank"
+                          class="button"
+                          href="#"
+                          >Start a live chat</a
+                        >
                       </div>
                     </div>
                     <div class="col-md-4">
-                      <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px" srcset="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1-p-500.png 500w, https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1.png 836w" alt="">
+                      <img
+                        src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1.png"
+                        loading="lazy"
+                        sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px"
+                        srcset="
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1-p-500.png 500w,
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea58800cc375d8ea33ee8_2_1.png       836w
+                        "
+                        alt=""
+                      />
                     </div>
-                    
                   </div>
                   <div class="row" id="podcast-request">
                     <div class="col-md-4">
-                      <img src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1.png" loading="lazy" sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px" srcset="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1-p-500.png 500w, https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1-p-800.png 800w, https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1.png 836w" alt="">
+                      <img
+                        src="https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1.png"
+                        loading="lazy"
+                        sizes="(max-width: 479px) 92vw, (max-width: 880px) 95vw, 836px"
+                        srcset="
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1-p-500.png 500w,
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1-p-800.png 800w,
+                          https://assets-global.website-files.com/6266d8ef8c92b1230d1e0cbb/64dea5882e9ca5b77620edbb_4_1.png       836w
+                        "
+                        alt=""
+                      />
                     </div>
                     <div class="col-md-8">
-                      <div class="aos-init aos-animate perks-wrap new-perks resources" data-aos="fade-up" data-aos-delay="100">
+                      <div
+                        class="aos-init aos-animate perks-wrap new-perks resources"
+                        data-aos="fade-up"
+                        data-aos-delay="100"
+                      >
                         <!-- Heading -->
                         <h3 id="heading-h3" class="heading h3">
                           Podcast Guest Request Form
                         </h3>
-            
+
                         <!-- List -->
-                        <p class="paragraph large bold-mobile reseller-paragraph">Silver, Gold, and Diamond tier partners have the opportunity to be featured on the Dental Intelligence Growth in Dentistry podcast hosted by Steve Jensen. If you would like to be on the podcast, please fill out the form below and our marketing team will be in touch to get you scheduled.</p>
-                            
-                        <a data-w-id="597e8f14-47ce-4612-3578-898ce204342c" class="resources-btn button" href="https://form.asana.com/?k=T_jSoPLNzl7YpEcGVAjJxQ&d=1135814638938960" target="_blank" class="button">Submit request</a>
+                        <p
+                          class="paragraph large bold-mobile reseller-paragraph"
+                        >
+                          Silver, Gold, and Diamond tier partners have the
+                          opportunity to be featured on the Dental Intelligence
+                          Growth in Dentistry podcast hosted by Steve Jensen. If
+                          you would like to be on the podcast, please fill out
+                          the form below and our marketing team will be in touch
+                          to get you scheduled.
+                        </p>
+
+                        <a
+                          data-w-id="597e8f14-47ce-4612-3578-898ce204342c"
+                          class="resources-btn button"
+                          href="https://form.asana.com/?k=T_jSoPLNzl7YpEcGVAjJxQ&d=1135814638938960"
+                          target="_blank"
+                          class="button"
+                          >Submit request</a
+                        >
                       </div>
                     </div>
-                    
-                    
                   </div>
-                 </div>
-   
-               </div>
-   
-             </div>
-   
-             </div>
-   
-   
-           </div>
-         </div> <!-- / .container -->
-       </section>
-
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- / .container -->
+    </section>
 
     <!-- FOOTER -->
 
@@ -1458,83 +2104,72 @@
     <!-- Vendor JS -->
     <script>
       function getParameterByName(name, url = window.location.href) {
-          name = name.replace(/[\[\]]/g, '\\$&');
-          var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-              results = regex.exec(url);
-          if (!results) return null;
-          if (!results[2]) return '';
-          return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
       }
-      $(document).ready(function() {
-        $('[data-test-id="chat-widget-launcher"]').hide()
-        const element = document.getElementById("chatDiv")
+      $(document).ready(function () {
+        $('[data-test-id="chat-widget-launcher"]').hide();
+        const element = document.getElementById("chatDiv");
         element.addEventListener("click", openContactChatWidget);
 
-        const previousTab = getParameterByName('lastTab')
-        if(previousTab != null && previousTab.length > 0) {
-          $('#licensing-tab').click()
-          $('#' + previousTab).click()
+        const previousTab = getParameterByName("lastTab");
+        if (previousTab != null && previousTab.length > 0) {
+          $("#licensing-tab").click();
+          $("#" + previousTab).click();
           document.getElementById(previousTab).scrollIntoView();
-          $('.modal-wrapper').show()
-          $('.modal-wrapper').css({opacity: 1})
+          $(".modal-wrapper").show();
+          $(".modal-wrapper").css({ opacity: 1 });
         }
-      })
-      
-      </script>
-      <script>
-        var lastTab = ''
-        function setLastTab(tabName) {
-          lastTab = tabName
-          const input = $('input[name="retURL"]').each(function() {
-            $(this).val(window.location.origin + '/partners?lastTab='  + lastTab)
-          })
-        }
-      </script>
-<script>
-  var nextMonth = new Date();
-  nextMonth.setMonth(nextMonth.getMonth() + 1, 1);
-  $('.datepicker:not(.cancellation)').datepicker();
-  $('.datepicker.cancellation').datepicker({
-    startDate: nextMonth,
-  });
-  function is_int(value){ 
-    if ((parseFloat(value) == parseInt(value)) && !isNaN(value)) {
-      return true;
-    } else { 
-      return false;
-    } 
-  }
-  $("#zip").keyup(function() {
-  var el = $(this);
-
-  if ((el.val().length == 5) && (is_int(el.val()))) {
-   
-    $.ajax({
-      url: "https://zip.getziptastic.com/v2/US/" + el.val(),
-      cache: false,
-      dataType: "json",
-      type: "GET",
-      success: function(result, success) {
-        debugger
-
-        $("#city").val(result.city); /* Fill the data */
-        $("#state").val(result.state);
-
-
-        $("#state").focus(); /* Put cursor where they need it */
-
-      },
-      error: function(result, success) {
-
+      });
+    </script>
+    <script>
+      var lastTab = "";
+      function setLastTab(tabName) {
+        lastTab = tabName;
+        const input = $('input[name="retURL"]').each(function () {
+          $(this).val(window.location.origin + "/partners?lastTab=" + lastTab);
+        });
       }
+    </script>
+    <script>
+      var nextMonth = new Date();
+      nextMonth.setMonth(nextMonth.getMonth() + 1, 1);
+      $(".datepicker:not(.cancellation)").datepicker();
+      $(".datepicker.cancellation").datepicker({
+        startDate: nextMonth,
+      });
+      function is_int(value) {
+        if (parseFloat(value) == parseInt(value) && !isNaN(value)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      $("#zip").keyup(function () {
+        var el = $(this);
 
-    });
- 
-  }
+        if (el.val().length == 5 && is_int(el.val())) {
+          $.ajax({
+            url: "https://zip.getziptastic.com/v2/US/" + el.val(),
+            cache: false,
+            dataType: "json",
+            type: "GET",
+            success: function (result, success) {
+              debugger;
 
-  })
+              $("#city").val(result.city); /* Fill the data */
+              $("#state").val(result.state);
 
-
-</script>
+              $("#state").focus(); /* Put cursor where they need it */
+            },
+            error: function (result, success) {},
+          });
+        }
+      });
+    </script>
   </body>
 </html>
