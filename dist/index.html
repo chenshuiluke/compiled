@@ -140,48 +140,78 @@
       .resources-btn:hover {
         color: white;
       }
-
+    </style>
+    <style>
       .reseller-container {
         font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f4;
-        width: 80%;
         margin: 0 auto;
         padding: 20px;
         background-color: #fff;
+        width: 80%;
       }
-      .reseller-header,
-      .reseller-tier-section {
+      .reseller-header {
         text-align: center;
         margin-bottom: 20px;
       }
-      .reseller-header h1 {
+      .reseller-header p {
+        margin: 0 0 20px;
+      }
+      .reseller-general-perks {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+      }
+      .reseller-general-perks div {
+        flex: 1;
+        padding: 0 10px;
+      }
+      .reseller-general-perks ul {
+        list-style: none;
+        padding: 0;
+      }
+      .reseller-general-perks ul li {
         margin-bottom: 10px;
       }
-      .reseller-general-perks,
       .reseller-tiers {
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
       }
-      .reseller-general-perks div,
       .reseller-tier {
         flex: 1;
-        padding: 10px;
-        margin: 5px;
-        background-color: #e7e7e7;
-        border-radius: 5px;
+        text-align: center;
+        margin: 0 10px;
       }
       .reseller-tier img {
-        width: 50px;
+        width: 100px;
         margin-bottom: 10px;
       }
-      .reseller-tier h2 {
+      .reseller-tier h3 {
         margin-bottom: 10px;
       }
       .reseller-tier p {
         text-align: left;
+      }
+      .reseller-perks {
+        display: flex;
+        justify-content: space-between;
+      }
+      .reseller-perks .reseller-perk {
+        flex: 1;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+        margin: 0 10px;
+      }
+      .reseller-perks .reseller-perk ul {
+        list-style: none;
+        padding: 0;
+      }
+      .reseller-perks .reseller-perk ul li {
+        margin-bottom: 10px;
       }
       .reseller-footer {
         text-align: center;
@@ -340,7 +370,7 @@
                 <div class="col-12 col-md-12">
                   <div class="reseller-container">
                     <div class="reseller-header">
-                      <h1>Reseller Program Scope</h1>
+                      <h1>Reseller Program</h1>
                       <p>
                         The Dental Intelligence Reseller Program provides
                         opportunities to partner with a trusted company in the
@@ -376,10 +406,10 @@
                       </div>
                     </div>
 
-                    <div class="reseller-tier-section">
+                    <div class="reseller-tiers">
                       <div class="reseller-tier">
                         <img src="silver.png" alt="Silver Tier" />
-                        <h2>Silver Perks</h2>
+                        <h3>di SILVER</h3>
                         <p>
                           Best for coaches, consultants, and marketing companies
                           who understand the Dental Intelligence modules and are
@@ -387,6 +417,32 @@
                           minimums in order to receive discounted pricing and
                           gain additional perks.
                         </p>
+                      </div>
+                      <div class="reseller-tier">
+                        <img src="gold.png" alt="Gold Tier" />
+                        <h3>di GOLD</h3>
+                        <p>
+                          Best for coaches, consultants, and marketing companies
+                          who understand the Dental Intelligence modules can
+                          activate clients and are looking to expand services to
+                          meet gold tier discounts and gain additional perks.
+                        </p>
+                      </div>
+                      <div class="reseller-tier">
+                        <img src="diamond.png" alt="Diamond Tier" />
+                        <h3>di DIAMOND</h3>
+                        <p>
+                          Best for coaches, consultants, and marketing companies
+                          who understand the Dental Intelligence modules can
+                          activate clients and are looking to expand services to
+                          meet diamond-tier discounts and gain additional perks.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="reseller-perks">
+                      <div class="reseller-perk">
+                        <h3>Silver Perks</h3>
                         <p>Includes all general perks, PLUS:</p>
                         <ul>
                           <li>
@@ -399,15 +455,8 @@
                         </ul>
                         <p>*For $5k+ monthly</p>
                       </div>
-                      <div class="reseller-tier">
-                        <img src="gold.png" alt="Gold Tier" />
-                        <h2>Gold Perks</h2>
-                        <p>
-                          Best for coaches, consultants, and marketing companies
-                          who understand the Dental Intelligence modules can
-                          activate clients and are looking to expand services to
-                          meet gold tier discounts and gain additional perks.
-                        </p>
+                      <div class="reseller-perk">
+                        <h3>Gold Perks</h3>
                         <p>Includes all general and silver tier perks, PLUS:</p>
                         <ul>
                           <li>Quarterly Business Review</li>
@@ -415,15 +464,8 @@
                           <li>Featured on DI Website as a Certified Partner</li>
                         </ul>
                       </div>
-                      <div class="reseller-tier">
-                        <img src="diamond.png" alt="Diamond Tier" />
-                        <h2>Diamond Perks</h2>
-                        <p>
-                          Best for coaches, consultants, and marketing companies
-                          who understand the Dental Intelligence modules can
-                          activate clients and are looking to expand services to
-                          meet diamond-tier discounts and gain additional perks.
-                        </p>
+                      <div class="reseller-perk">
+                        <h3>Diamond Perks</h3>
                         <p>
                           Includes all general, silver, and gold tier perks,
                           PLUS:
@@ -435,6 +477,12 @@
                           <li>Participation in Sponsored Events</li>
                         </ul>
                       </div>
+                    </div>
+
+                    <div class="reseller-footer">
+                      <p>
+                        &copy; 2024 Dental Intelligence. All rights reserved.
+                      </p>
                     </div>
                   </div>
                 </div>
